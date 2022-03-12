@@ -10,6 +10,9 @@
 \usepackage{amssymb}
 \usepackage{mathtools}
 \renewcommand{\d}{\mathrm{d}}
+\renewcommand{\j}{\mathrm{j}}
+\newcommand{\e}{\mathrm{e}}
+\newcommand{\ubar}[1]{\text{\b{$#1$}}}
 
 \usepackage{amsthm}
 \newtheorem{lemma}{Lemme}[chapter]
@@ -24,6 +27,13 @@
 \usepackage{enumitem}
 
 \usepackage{import}
+
+%% Tikz
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.16}
+\usetikzlibrary{external}
+\tikzexternalize
+\tikzsetexternalprefix{tikz_figs/}
 
 \usepackage[french]{minitoc}
 
