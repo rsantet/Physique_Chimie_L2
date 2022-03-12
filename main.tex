@@ -1,0 +1,58 @@
+\documentclass[12pt]{book}
+
+\usepackage{ae,lmodern}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\renewcommand{\d}{\mathrm{d}}
+
+\usepackage{amsthm}
+\newtheorem{lemma}{Lemme}[chapter]
+\theoremstyle{definition}
+\newtheorem{definition}{Définition}[chapter]
+\newtheorem{corollary}{Corollaire}[chapter]
+\theoremstyle{remark}
+\newtheorem{example}{Exemple}[chapter]
+
+\usepackage{graphicx}
+
+\usepackage{enumitem}
+
+\usepackage[french]{minitoc}
+
+\begin{document}
+\begin{titlepage}
+    \centering
+    \includegraphics[width=0.15\textwidth]{img/logo_lycee_michel_montaigne.png}\par\vspace{1cm}
+    {\scshape Lycée Michel Montaigne \par}
+    \vspace{1cm}
+    {\scshape\Large Notes de cours\par}
+    \vspace{1.5cm}
+    {\huge\bfseries Physique-Chimie L2\par}
+    \vspace{2cm}
+    {\Large\itshape Régis Santet\par}
+    \vfill
+    Cours réalisé par\par
+    Professeur~N. \textsc{Choimet}
+
+    \vfill
+
+    % Bas de page
+    {\large Année scolaire 2015/2016\par}
+\end{titlepage}
+
+\dominitoc % Initialisation
+\tableofcontents
+
+% Première partie : mécanique
+\part{Mécanique}
+\include{cours/mecanique/referentiels_non_galileens}
+
+    
+
+\end{document}
