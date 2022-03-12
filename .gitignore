@@ -8,8 +8,8 @@
 *.toc
 *.lof
 *.auxlock
-figs/*.md5
-figs/*.dpth
+tikz_figs/*.md5
+tikz_figs/*.dpth
 *.maf
 *.mtc*
 
