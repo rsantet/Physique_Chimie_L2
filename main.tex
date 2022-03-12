@@ -23,6 +23,8 @@
 
 \usepackage{enumitem}
 
+\usepackage{import}
+
 \usepackage[french]{minitoc}
 
 \begin{document}
@@ -50,8 +52,7 @@
 \tableofcontents
 
 % Première partie : mécanique
-\part{Mécanique}
-\include{cours/mecanique/referentiels_non_galileens}
+\subimport{cours/}{mecanique.tex}
 
     
 
