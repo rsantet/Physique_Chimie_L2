@@ -10,3 +10,6 @@
 *.auxlock
 figs/*.md5
 figs/*.dpth
+*.maf
+*.mtc*
+
