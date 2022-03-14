@@ -1,0 +1,167 @@
+\section[Caractère galiléen de certains référentiels]{Caractère galiléen approché de quelques référentiels courants}
+
+    \subsection{Référentiel géocentrique et marée océanique}
+
+        On se place dans $\mathcal{R}_{G}$ en translation (environ) circulaire par rapport à $\mathcal{R}_{C}$, voir la Figure~\ref{fig:refentiel_geocentrique_copernic}. On considère le mouvement d'un point matériel $M$ de masse $m$ au voisinage de la surface de la Terre par rapport à $\mathcal{R}_{G}$. Alors 
+        \begin{equation*}
+            m\vec{a}(M)_{/\mathcal{R}_{G}}=\vec{f}+m\vec{g}_{T}(M)+\sum_{\neq i}m\vec{g}_{i}(M)-m\vec{a}(T)_{/\mathcal{R}_C},
+        \end{equation*}
+        où $\vec{f}$ représentent les forces de contact (par exemple la pression), $\vec{g}_{T}$ est le champ de pesanteur dû à la Terre, $\vec{g}_{i}$ représente le champ de gravitation dû à un autre astre du système solaire, et $m\vec{a}_{T/\mathcal{R}_{C}}$ est simplement la force d'entraînement $\vec{F}_{e}$.
+
+        En appliquant le principe fondamental de la dynamique à la terre par rapport à $\mathcal{R}_{C}$, on obtient 
+        \begin{equation*}
+            M_{T}\vec{a}(T)_{/\mathcal{R}_{C}}=\vec{R}^{\text{ext}}=\sum_{\neq i}M_T\vec{g}_i(T),
+        \end{equation*}
+        où l'on a fait l'hypothèse que la Terre était sphérique pour la dernière égalité. Ainsi, on a 
+        \begin{equation*}
+            \vec{a}(T)_{/\mathcal{R}_C}=\sum_{\neq i}\vec{g}_i(T).
+        \end{equation*}
+        Alors 
+        \begin{equation*}
+            \boxed{m\vec{a}(M)=\vec{f}+m\vec{g}_{T}(M)+m\left(\sum_{\neq i}\vec{g}_{i}(M)-\vec{g}_{i}(T)\right).}
+        \end{equation*}
+
+        \begin{definition}[Champ de marée]
+            L'expression
+            \begin{equation*}
+                \vec{C}(M)\coloneqq\left(\sum_{\neq i}\vec{g}_{i}(M)-\vec{g}_{i}(T)\right),
+            \end{equation*}
+            définit le \textit{champ de marée}. C'est un terme différentiel.
+        \end{definition}
+
+        Notamment, le champ de marée dû à la Lune uniquement est
+        \begin{equation*}
+            \vec{C}_L(M)=\vec{g}_L(M)-\vec{g}_L(T).
+        \end{equation*}
+
+        \paragraph{Ordre de grandeur de $\left\lVert\vec{C}_i\right\rVert_{\text{max}}$.} 
+            On a 
+            \begin{equation*}
+                \left\lVert \vec{C}_i\right\rVert=\mathcal{G}M_i\left\lvert\frac{1}{(D_i-R_T)^{2}}-\frac{1}{D_i^{2}}\right\rvert.
+            \end{equation*}
+            Si $D_i\gg R_T$, on a 
+            \begin{equation*}
+                \frac{1}{(D_i-R_T)^{2}}=\frac{1}{D_i^{2}}\frac{1}{\left(1-\frac{R_T}{D_i}\right)^{2}}\sim\frac{1}{D_i^{2}}\left(1+\frac{2R_T}{D_i}\right).
+            \end{equation*}
+            Ainsi,
+            \begin{equation*}
+                \left\lVert \vec{C}_i\right\rVert_{\text{max}}=\mathcal{G}M_i\frac{2R_T}{D_i^{3}}=\left\lVert\vec{g}_i(T)\right\rVert\underbrace{\frac{2R_T}{D_i}}_{\ll1}\ll\left\lVert \vec{g}_i\right\rVert.
+            \end{equation*}
+            
+            On donne dans la Table~\ref{tab:champ_maree_soleil_lune} les ordres de grandeur des champs de marées dus au Soleil et à la Lune. On voit donc que le champ de marée lunaire est environ deux fois supérieur au solaire.
+            
+            \begin{table}
+                \centering
+                \begin{tabular}{l|c|c|c|c}
+                    \toprule
+                    & M (kg) & $D_i$ & $\left\lVert \vec{g}_i\right\rVert$ & $\left\lVert\vec{C}\right\rVert$\\ \midrule
+                    Soleil & $2.10^{30}$ & $1.10^{11}$ & $1.10^{-2}$ & $5.10^{-7}$\\ \midrule
+                    Lune & $7.10^{22}$ & $4.10^{8}$ & $3.10^{-5}$ & $1.10^{-6}$\\ \bottomrule
+                \end{tabular}    
+                \caption{Champs de marées dus au Soleil et à la Lune.}
+                \label{tab:champ_maree_soleil_lune}
+            \end{table}
+        
+        \paragraph{Interprétation du phénomène des marées océaniques.}
+            \subparagraph{Effet dominant de la Lune.}
+
+                Comme la période de révolution de la Lune autour de la Terre (environ 27 jours) est beaucoup moins longue que la période de révolution de la Terre autour de ses pôles (environ 24h), il y a deux marées hautes et deux marées basses par jour. Il y a un décalage d'environ 50 minutes par jour dû à la rotation de la Lune par rapport à la Terre.
+            
+            \subparagraph{Rôle du Soleil.}
+
+                Selon la position de la Lune par rapport à la Terre et au Soleil, les effets de marées peuvent être atténués ou renforcés, voir la Figure~\ref{fig:lune_soleil_maree}. Durant la nouvelle Lune et la pleine Lune, le Soleil renforce l'effet de la Lune, ce sont des marées de vives-eaux. Au contraire, lors du premier et du dernier quartier, il y a une compensant partielle de l'effet de la Lune par le Soleil. Ce sont les marées de mortes-eaux.
+
+                \begin{figure}
+                    \centering
+                    \tikzsetnextfilename{lune_soleil_maree}
+                    \begin{tikzpicture}[scale=1]  
+                        % \helpgrid{3}{3}
+                        \coordinate (T) at (0,0); \node at (T) [above left] {T};
+                        \draw [line width=1pt,fill=black] (T) circle (0.15cm); 
+                        \draw [dashed] (T) circle (2cm);
+                        
+                        \coordinate (S) at (8,0); \node at (S) [above right] {S}; \draw [line width=1pt] (S) circle (0.7cm);
+                        \node at (S) {$\bullet$};
+
+                        \coordinate (Lt) at (2,0); \node at (Lt) [above right] {L}; \node at (Lt) [below right] {Nouvelle lune}; \node at (Lt) [below left] {$t_0$};
+                        \draw [line width=1pt,fill=black] (Lt) circle (0.05cm);
+
+                        \coordinate (Ltt) at (0,2); \node at (Ltt) [above] {Premier quartier}; \node at (Ltt) [below] {$t_0+1\text{ sem}$};
+                        \draw [line width=1pt,fill=black] (Ltt) circle (0.05cm);
+
+                        \coordinate (Lttt) at (-2,0); \node at (Lttt) [below right] {Pleine lune}; \node at (Lttt) [below left] {$t_0+2\text{ sem}$};
+                        \draw [line width=1pt,fill=black] (Lttt) circle (0.05cm);
+
+                        \coordinate (Ltttt) at (0,-2); \node at (Ltttt) [below] {Dernier quartier}; \node at (Ltttt) [above] {$t_0+3\text{ sem}$};
+                        \draw [line width=1pt,fill=black] (Ltttt) circle (0.05cm);
+                    \end{tikzpicture}
+                    \caption{Atténuation ou renforcement des effets de marées selon la position de la Lune par rapport à la Terre et au Soleil.}    
+                    \label{fig:lune_soleil_maree}
+                \end{figure}
+
+    \subsection{Référentiel terrestre}
+                
+        On suppose le référentiel géocentrique $\mathcal{R}_{G}$ galiléen. On ne regarde que les effets de la rotation propre de la Terre.
+
+        \subsubsection{Effets de la force centrifuge}
+
+            On regarde de plus près la définition du poids. $\mathcal{R}_{T}$ est en rotation par rapport à $\mathcal{R}_{G}$ à une rotation angulaire
+            \begin{equation*}
+                \omega=\frac{2\pi}{T_{T}}=\frac{2\pi}{24\times3600}\approx 7.3.10^{-5}\text{rad}.s^{-1},
+            \end{equation*}
+            autour de l'axe $\vec{SN}$ fixe dans $\mathcal{R}_{G}$, voir la Figure~\ref{fig:rotation_terre_definition_poids}.
+
+            \begin{figure}
+                \centering
+                \tikzsetnextfilename{rotation_terre_definition_poids}
+                \begin{tikzpicture}[scale=1]  
+                    % \helpgrid{3}{3}
+                    \coordinate (T) at (0,0); \node at (T) [below left] {T};
+                    \draw (T) circle (1.5cm); \node at (T) {$\bullet$};
+
+                    \coordinate (S) at (0,-1.5); \node at (S) [below right] {S};
+                    \coordinate (N) at (0,1.5); \node at (N) [above right] {N};
+                    \draw [dashed] (S) -- (N);
+
+                    \draw [->] (-0.2,1.2) to [bend right=90] (0.2,1.2);
+                    \node at (0.2,0.85) [above right] {$\omega$};
+
+                    \coordinate (M) at (1.45,0.4); \node at (M) [above right] {M}; \draw (T) -- (M); \node at (M) {$\bullet$};
+                    \coordinate (H) at (0,0.4); \node at (H) [above left] {H}; \draw [dashed] (M) -- (H); \node at (H) {$\bullet$};
+                    \draw [fill=red](H) rectangle ++(0.25,0.25);
+
+                    \draw [red, ->, line width=2pt] (M) --++ (1,0) node [above] {$\vec{F}_e$};
+                    \draw [blue, ->, line width=2pt] (M) --++ (-0.7,-0.2) node [below right] {$\vec{g}_T(M)$};
+                \end{tikzpicture}
+                \caption{Rotation de la Terre et définition du poids.}    
+                \label{fig:rotation_terre_definition_poids}
+            \end{figure}
+
+            \paragraph{Équation du mouvement de M dans $\mathcal{R}_T$.}
+            On a 
+            \begin{equation*}
+                m\vec{a}(M)_{/\mathcal{R}_T}=\vec{F}_e+m\vec{g_T}(M)+m\omega^{2}\vec{HM}-2m\vec{\omega}\wedge\vec{v}(M)_{/\mathcal{R}_T}.
+            \end{equation*}
+
+            \paragraph{Définition du poids/de la pesanteur.}
+            Supposons qu'un fil à plomb soit en équilibre dans $\mathcal{R}_T$ et induise une tension (verticale) $\vec{T}$. Alors on a 
+            \begin{equation*}
+                \vec{0}=m\vec{g}_T+m\omega^{2}\vec{HM}+\vec{0}+\vec{T}.
+            \end{equation*}
+            Ainsi, $\vec{T}$, qui indique la verticale du lieu, est donné par
+            \begin{equation*}
+                \vec{T}=-m\left(g_T+\omega^{2}\vec{HM}\right).
+            \end{equation*}
+
+            \begin{definition}[Champ de pesanteur et champ de gravité]
+                    En notant $\vec{g}$ le champ de pesanteur et $\vec{g}_{T}$ le champ de gravité, on a
+                    \begin{equation*}
+                        \boxed{
+                        \vec{g}\coloneqq \vec{g}_T+\omega^{2}\vec{HM}.}
+                    \end{equation*}
+            \end{definition}
+
+            $\vec{g}$ n'est donc pas tout à fait diriger vers $\vec{T}$. À l'équateur, $\omega^{2}R_t\approx0.03~m.s^{-2}$ avec $R_T\approx 6400~km$. En dynamique terrestre, $\vec{g}$ inclut la force centrifuge.
+        
+
+        

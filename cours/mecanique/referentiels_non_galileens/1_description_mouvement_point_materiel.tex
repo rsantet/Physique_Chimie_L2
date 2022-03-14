@@ -13,7 +13,27 @@
             Il y a donc une seule inconnue : $\vec{OO'}(t)$.
 
             \begin{example}
-                Le référentiel géocentrique (origine au centre de la Terre et trois axes pointés vers trois étoiles lointaines \og fixes\fg) est (environ) en translation circulaire par rapport au référentiel de Copernic (origine au centre du système solaire et trois axes pointant vers trois étoiles \og fixes\fg).
+                Le référentiel géocentrique (origine au centre de la Terre et trois axes pointés vers trois étoiles lointaines \og fixes\fg) est (environ) en translation circulaire par rapport au référentiel de Copernic (origine au centre du système solaire et trois axes pointant vers trois étoiles \og fixes\fg), voir la Figure~\ref{fig:refentiel_geocentrique_copernic}.
+                \begin{figure}[!h]
+                    \centering
+                    \tikzsetnextfilename{refentiel_geocentrique_copernic}
+                    \begin{tikzpicture}[scale=1]  
+                        % \helpgrid{3}{3}
+                        \coordinate (S) at (0,0); \node at (S) [above left] {S};
+                        \draw [->,-latex] (S) --++ (-1,-2)	;   
+                        \draw [->,-latex] (S) --++ (2,0);
+                        \draw [->,-latex] (S) --++ (0,2) node [left] {$\mathcal{R}_C$}	; 
+                        \draw [line width=1pt,fill=black] (S) circle (0.15cm); 
+                        \draw [dashed] (S) ellipse (1.5cm and 1cm);
+                        \coordinate (T) at (0.75,-0.85); \node at (T) [below right] {T};
+                        \draw [line width=1pt,fill=black] (T) circle (0.15cm);                
+                        \draw [->,-latex] (T) --++ (-0.25,-0.5)	node [left] {$\mathcal{R}_G$};   
+                        \draw [->,-latex] (T) --++ (0.5,0);
+                        \draw [->,-latex] (T) --++ (0,0.5) 	;
+                    \end{tikzpicture}
+                    \caption{Référentiel géocentrique et de Copernic.}    
+                    \label{fig:refentiel_geocentrique_copernic}
+                \end{figure}
             \end{example}
 
         \subsubsection{Rotation uniforme autour d'un axe fixe}

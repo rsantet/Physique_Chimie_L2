@@ -101,7 +101,7 @@
 
             \begin{figure}
                 \centering
-                \tikzsetnextfilename{pendule_secoue.pdf}
+                \tikzsetnextfilename{pendule_secoue}
                 \begin{tikzpicture}
                     [scale=1,xscale=1,yscale=1]
                     
@@ -183,7 +183,7 @@
             \begin{example}
                 \begin{figure}
                     \centering
-                    \tikzsetnextfilename{pendule_train.pdf}
+                    \tikzsetnextfilename{pendule_train}
                     \begin{tikzpicture}
                         [scale=1,xscale=1,yscale=1]
                         
@@ -208,7 +208,7 @@
                     \caption{Pendule dans un train en accélération uniforme.}    
                     \label{fig:pendule_train}
                 \end{figure}
-                On considère un pendule dans un train, voir la FIgure~\ref{fig:pendule_train}. On cherche la valeur de $\theta_{\text{eq}}$.
+                On considère un pendule dans un train, voir la Figure~\ref{fig:pendule_train}. On cherche la valeur de $\theta_{\text{eq}}$.
                 \begin{itemize}
                     \item \underline{Première méthode} : on utilise $\vec{\mathcal{M}_{A}^{\text{tot}}}=\vec{0}$. En projetant, on trouve alors $mgl\sin\theta_{\text{eq}}=mal\cos\theta_{\text{eq}}$ d'où 
                     \begin{equation*}
@@ -221,3 +221,98 @@
                     d'où le résultat.
                 \end{itemize}
             \end{example}
+    
+    \subsection{Référentiel entraîné en rotation uniforme par rapport à un axe fixe}
+
+        On suppose que la rotation se fait selon l'axe $(Oz)$ à une vitesse angulaire $\omega$, voir la Figure~\ref{fig:rotation_uniforme}. $H$ est le projeté du point $M$ sur l'axe $(Oz)$. On a $\vec{F}_e=-2m\vec{\omega}\wedge\vec{v}$, qui est donc perpendiculaire au mouvement dans $\mathcal{R}'$.
+
+        \begin{figure}
+            \centering
+            \tikzsetnextfilename{axe_rotation_uniforme}
+            \begin{tikzpicture}[scale=1]  
+                % \helpgrid{3}{3}
+            \draw [->,-latex] (0,0) --++ (-1,-2) node [left] {$x'$}	;   
+            \draw [->,-latex] (0,0) --++ (2,0) node [below] {$y$}	;
+            \draw [->,-latex] (0,0) --++ (0,2) node [left] {$z$}	; 
+
+            \draw [->,-latex] (0,0) --++ (-2,-1.5) node [left] {$x$}	; 
+            \draw [->,-latex] (0,0) --++ (2,0.5) node [above] {$y'$}	; 
+            \coordinate (H) at (0,1); \node at (H) {$\bullet$};
+            \node at (H) [left] {H};
+            \coordinate (O) at (0,0); \node at (O) [above left] {O};                      
+            \coordinate (M) at (1,1); \node at (M) {$\bullet$}; \node at (M) [above] {M};
+            \draw [red, ->, line width=2pt] (M) -- (2,1) node [above] {$\vec{F}_e$};
+            \draw [dashed] (H) -- (M); 
+            \draw [fill=red](H) rectangle ++(0.25,0.25);
+
+            \draw [->] (-1.3,-1) to [bend right=45] (-0.65,-1.2); \node at (-1.3,-1.4) {$\omega t$}; 
+            \end{tikzpicture}
+            \caption{Rotation uniforme autour de l'axe $(Oz)$.}    
+            \label{fig:rotation_uniforme}
+        \end{figure}
+
+        \subsubsection{Exemple}
+
+            On considère le cas où l'on rajoute un ressort sur l'axe $(Ox')$, fixé en $O$, de constante de raideur $k$ et de longueur au repos $l_0$, avec au bout une masse $m$, voir la Figure~\ref{fig:exemple_rotation_uniforme}.           
+
+            \begin{figure}
+                \centering
+                \tikzsetnextfilename{exemple_axe_rotation_uniforme}
+                \begin{tikzpicture}[scale=1]  
+                    % \helpgrid{3}{3}
+                \draw [->,-latex] (0,0) --++ (-1,-2) node [left] {$x'$}	;   
+                \draw [->,-latex] (0,0) --++ (2,0) node [below] {$y$}	;
+                \draw [->,-latex] (0,0) --++ (0,2) node [left] {$z$}	; 
+    
+                \draw [->,-latex] (0,0) --++ (-2,-1.5) node [left] {$x$}	; 
+                \draw [->,-latex] (0,0) --++ (2,0.5) node [above] {$y'$}	; 
+                \coordinate (O) at (0,0); \node at (O) [above left] {O};                      
+    
+                \draw [->] (-1.3,-1) to [bend right=45] (-0.75,-1.3); \node at (-1.3,-1.4) {$\omega t$}; 
+                \draw [ressort,decorate,decoration={coil,aspect=0.3,segment length=1.5mm,amplitude=3mm}] (O)--++(-0.65,-1.3);
+                \node at (-0.65,-1.3) {$\bullet$}; \node at (-0.65,-1.3) [below right] {$m$};
+                \node at (0.3, -0.7) {$k$};
+                \end{tikzpicture}
+                \caption{Exemple de rotation uniforme autour de l'axe $(Oz)$ : ressort avec une masse.}    
+                \label{fig:exemple_rotation_uniforme}
+            \end{figure}
+            
+            On cherche l'expression de $x'(t)$. On a
+            \begin{equation*}
+                \left\lbrace
+                \begin{aligned}
+                    \vec{F}_e &= m\omega^{2}x'(t)\vec{u_{x'}},\\
+                    \vec{F}_c &= -2m\omega\vec{u_z}\wedge \dot{x'}(t)\vec{u_{x'}}=-2m\omega\dot{x'}(t)\vec{u_y}.
+                \end{aligned}
+                \right.
+            \end{equation*}
+            On projette le principe fondamental de la dynamique selon $\vec{u_x'}$ pour obtenir
+            \begin{equation*}
+                m\ddot{x'}(t)=-k\left(x'(t)-l_0\right)+m\omega^{2}x'(t).
+            \end{equation*}
+            En posant $\omega_{0}^{2}\coloneqq\frac{k}{m}$, on obtient 
+            \begin{equation*}
+                \ddot{x'}(t)+\left(\omega_{0}^{2}-\omega^{2}\right)x'(t)=\omega_{0}^{2}l_0.
+            \end{equation*}
+
+        \subsubsection{Énergie potentielle d'entraînement \og centrifuge\fg}
+            
+            Soit un déplacement $\vec{dl'}=dx'\vec{u_{x'}}$ dans $\mathcal{R}'$. On a 
+            \begin{equation*}
+                \delta W_{e}'=\vec{F}_e\cdot\vec{dl'}=m\omega^{2}x'\d x'=\d\left(m\omega^{2}\frac{x'^{2}}{2}\right)\coloneqq -\d E_p^{\text{ent}},
+            \end{equation*}
+            d'où $E_p^{\text{ent}}=-m\omega^{2}\frac{x'^{2}}{2}$.
+
+        \subsubsection{Retour sur l'exemple}
+
+            On applique le théorème d'énergie mécanique dans $\mathcal{R}'$ :
+            \begin{equation*}
+                E_{m_{tot}}'=\text{constante}=\frac{1}{2}m\dot{x'}^{2}+\frac{1}{2}k(x'-l_0)^{2}-m\omega^{2}\frac{x'^{2}}{2}.
+            \end{equation*}
+
+            On se donne comme conditions initiales $x'(0)=l_0$ et $\dot{x'}(0)=0$. On a alors 
+            \begin{equation*}
+                \boxed{
+                    \frac{1}{2}m\dot{x'}^{2}+\frac{1}{2}k(x'-l_0)^{2}-\frac{m\omega^{2}x'^{2}}{2}=-\frac{m\omega^{2}l_0^{2}}{2}.
+                }
+            \end{equation*}
