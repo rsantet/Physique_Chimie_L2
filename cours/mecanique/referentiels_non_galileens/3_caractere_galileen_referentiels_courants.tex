@@ -162,6 +162,194 @@
             \end{definition}
 
             $\vec{g}$ n'est donc pas tout à fait diriger vers $\vec{T}$. À l'équateur, $\omega^{2}R_t\approx0.03~m.s^{-2}$ avec $R_T\approx 6400~km$. En dynamique terrestre, $\vec{g}$ inclut la force centrifuge.
-        
+
+        \subsubsection{Effets qualitatifs de la force de Coriolis}
+
+            Dans $\mathcal{R}_T$, on a 
+            \begin{equation*}
+                m\vec{a}(M)_{/\mathcal{R}_T}=\vec{f}+m\vec{g}-2m\vec{\omega}\wedge\vec{v}(M)_{/\mathcal{R}_T},
+            \end{equation*}
+            où $m\vec{g}$ représente le poids.
+
+            \paragraph{Ordre de grandeur.}
+
+                \subparagraph{Composante verticale de $\vec{F}_{\text{cor}}$.}
+
+                    Elle est à comparer au poids. Elle vaut au maximum $2m\omega v$. Ainsi,
+                    \begin{equation*}
+                        \frac{\left\lVert\vec{F}_{\text{cor}}\right\rVert_{\text{max}}}{mg}=\frac{2\omega v}{g}\,\#\,\frac{14.10^{-5}}{10}\times v = 1,4.10^{-5}v.
+                    \end{equation*}
+                    Le plus souvent, la composante vertical est négligeable devant le poids. L'effet dominant est celui de la composante horizontale.
+
+                \subparagraph{Échelles de temps.}
+
+                    On compare le temps de l'expérience $T_{\text{exp}}$ au temps de révolution de la Terre $T_T$. On a 
+                    \begin{equation*}
+                        \frac{\left\lVert\vec{a}_{\text{cor}}\right\rVert}{\left\lVert\vec{a}(M)_{/\mathcal{R}T}\right\rVert}\,\#\,\frac{2\omega v}{v/T_{\text{exp}}}=2\omega T_{\text{exp}}=4\pi\frac{T_{\text{exp}}}{T_T}.
+                    \end{equation*}
+                    Le référentiel terrestre est quasi galiléen si $T_{\text{exp}}\ll 24h$.
+
+                \subparagraph{Échelles de distance.}
+
+                    On compare la longueur caractéristique présente dans l'expérience et $L_c$ (taille typique des déplacements dus à $\vec{F}_{\text{cor}}$). On a 
+                    \begin{equation*}
+                        \begin{aligned}
+                            L_c & \approx a_{\text{cor}}\times T_{\text{exp}}^{2}=2\omega vT_{\text{exp}}^{2},\\
+                            L_{\text{exp}} & \approx v\times T_{\text{exp}},
+                        \end{aligned}
+                    \end{equation*}
+                    d'où 
+                    \begin{equation*}
+                        \frac{L_c}{L_{\text{exp}}}\,\#\,2\omega T_{\text{exp}}=4\pi\frac{T_{\text{exp}}}{T_T}.
+                    \end{equation*}
+
+            \paragraph{Expression de $\vec{F}_{\text{cor}}$ à la surface de la Terre.}
+
+                On note $\lambda$ la latitude, voir la Figure~\ref{fig:expression_force_coriolis_surface_terre}. On note $(X,Y,Z)$ la base de projection (voir la Figure). On note 
+                \begin{equation*}
+                    \vec{v}(M)_{/\mathcal{R}_T}=\begin{pmatrix}
+                        \dot{X}\\\dot{Y}\\\dot{Z}
+                    \end{pmatrix}_{u_X,u_Y,u_Z}.
+                \end{equation*}
+                Alors
+                \begin{equation*}
+                    \vec{\omega}=\begin{pmatrix}
+                        -\omega\cos\lambda\\0\\\omega\sin\lambda
+                    \end{pmatrix},
+                \end{equation*}
+                d'où
+                \begin{equation*}
+                    \vec{\omega}\wedge\vec{v}=\begin{pmatrix}
+                        -\omega\cos\lambda\\0\\omega\sin\lambda
+                    \end{pmatrix}\wedge\begin{pmatrix}
+                        \dot{X}\\\dot{Y}\\\dot{Z}
+                    \end{pmatrix}=\begin{pmatrix}
+                        -\omega\dot{Y}\sin\lambda\\
+                        \omega\dot{X}\sin\lambda+\omega\dot{Z}\cos\lambda\\
+                        -\omega\dot{Y}\cos\lambda
+                    \end{pmatrix},
+                \end{equation*}
+                et
+                \begin{equation*}
+                    \vec{F}_{\text{cor}}=2m\omega\begin{pmatrix}
+                        \omega\dot{Y}\sin\lambda\\
+                        \omega\dot{X}\sin\lambda+\omega\dot{Z}\cos\lambda\\
+                        -\omega\dot{Y}\cos\lambda
+                    \end{pmatrix}.
+                \end{equation*}
+
+                \begin{figure}
+                    \centering
+                    \tikzsetnextfilename{expression_force_coriolis_surface_terre}
+                    \begin{tikzpicture}[scale=1]
+                        %\helpgrid{2}{2};
+                        \coordinate (O) at (0,0);
+                        \coordinate (M1) at (50:2cm);
+                        \draw [color=black,smooth] (0,0) circle (2);
+                        \draw (-2.5,0) --++ (5,0);
+                        \draw [->,-latex] (0,-2.5) --++(0,5) node [right] {$\overrightarrow{\omega}$};
+                        
+                        \node at (O) {$\cdot$};
+                        \node at (M1) {$\bullet$};
+                        \node at (M1) [left=1.5] {M};
+                        \draw [dashed] (O) -- (M1);
+                        \draw [->, color=red] (M1) --++ (1, 1) node [right] {$Z$};
+                        \draw [->, color=red] (M1) --++ (1, -1) node [below right] {$X$};
+                        \draw [->, color=green] (M1) --++ (0, 1) node [above] {$\vec{\omega}$};
+                        \draw [dashed, color=green] (1.3, 2.5) -- (1.7, 2);
+                        \draw  (1.3,2.1) to [bend right=45] (1.5,2.25);
+                        \draw  (0.5,0) to [bend right=45] (0.3,0.38);
+                        \node at (0.7,0.3) {$\lambda$};
+                    \end{tikzpicture}
+                    \caption{Expression de la force de Coriolis à la surface de la Terre.}
+                    \label{fig:expression_force_coriolis_surface_terre}
+                \end{figure}
+
+            \paragraph{Mouvements horizontaux : $\dot{Z}=0$.}
+
+                On a 
+                \begin{equation*}
+                    \vec{F}_{cor,\text{horizontale}}=2m\omega\sin\lambda\begin{pmatrix}
+                        \dot{Y}\\-\dot{X}\\0
+                    \end{pmatrix}=-2m\omega\sin\lambda \vec{u}_Z\wedge\vec{v}.
+                \end{equation*}
+                Ainsi, dans l'hémisphère sud, on a $\lambda<0$ et $\vec{F}_{\text{cor}}$ est dans le même sens que $\vec{u_Z}\wedge\vec{v}$ : il y a une déviation vers la gauche. Dans l'hémisphère nord, on a $\lambda>0$ et on voit donc une déviation vers la droite.
+
+                \subparagraph{Anticyclones et dépressions.}
+
+                    La force de Coriolis justifie les mouvements des anticyclones et dépressions. On montre ce qu'il se passe dans l'hémisphère nord sur la Figure~\ref{fig:anticyclone_depression_hemisphere_nord}. En ordre de grandeur, on a $L_{\text{exp}}\approx 1000~km$ et $v\approx 10~m.s^{-1}$. Ainsi, $T_{\text{exp}}\,\#\,10^{5}~s$. Or $T_T=86400~s\,\#\,10^{5}~s$. Ainsi, $L_c\approx L_{\text{exp}}$.
+
+                    \begin{figure}
+                        \centering
+                        \tikzsetnextfilename{anticyclone_depression_hemisphere_nord}
+                        \begin{tikzpicture}[scale=1]
+                            %\helpgrid{2}{2};
+                            
+                            \node at (0,2) {Anticyclone};
+                            \draw[
+                                decoration={markings, mark=at position 0.625 with {\arrow{<}}},
+                                postaction={decorate}
+                                ]
+                                (0,0) circle (1);
+                            \draw (0,0) circle (0.3); \node at (0,0) {$+$};
+
+                            \draw (60:1.5cm) circle (0.3); \node at (60:1.5cm) {$-$};
+                            \draw (0:1.5cm) circle (0.3); \node at (0:1.5cm) {$-$};
+                            \draw (-60:1.5cm) circle (0.3); \node at (-60:1.5cm) {$-$};
+                            \draw (120:1.5cm) circle (0.3); \node at (120:1.5cm) {$-$};
+                            \draw (-120:1.5cm) circle (0.3); \node at (-120:1.5cm) {$-$};
+                            \draw (180:1.5cm) circle (0.3); \node at (180:1.5cm) {$-$};
+
+                            \node at (5,2) {Dépression};
+                            \draw[
+                                decoration={markings, mark=at position 0.625 with {\arrow{>}}},
+                                postaction={decorate}
+                                ]
+                                (5,0) circle (1);
+                            \draw (5,0) circle (0.3); \node at (5,0) {$-$};
+
+                            \draw ($(5,0) + (60:1.5cm)$) circle (0.3); \node at ($(5,0) + (60:1.5cm)$) {$+$};
+                            \draw ($(5,0) + (0:1.5cm)$) circle (0.3); \node at ($(5,0) + (0:1.5cm)$) {$+$};
+                            \draw ($(5,0) + (-60:1.5cm)$) circle (0.3); \node at ($(5,0) + (-60:1.5cm)$) {$+$};
+                            \draw ($(5,0) + (120:1.5cm)$) circle (0.3); \node at ($(5,0) + (120:1.5cm)$) {$+$};
+                            \draw ($(5,0) + (-120:1.5cm)$) circle (0.3); \node at ($(5,0) + (-120:1.5cm)$) {$+$};
+                            \draw ($(5,0) + (180:1.5cm)$) circle (0.3); \node at ($(5,0) + (180:1.5cm)$) {$+$};
+                        \end{tikzpicture}
+                        \caption{Sens des anticyclones et dépressions dans l'hémisphère nord.}
+                        \label{fig:anticyclone_depression_hemisphere_nord}
+                    \end{figure}
+
+                \subparagraph{Tourbillons dans un lavabo.}
+
+                    On a $L_{\text{exp}}\approx 10~cm$, $v\approx 10~cm.s^{-1}$, $T_{\text{exp}}\approx 1~s$, ainsi 
+                    \begin{equation*}
+                        L_{\text{cor}}\,\#\,L_{\text{exp}}\frac{T_{\text{exp}}}{T_T}=10^{-6}~m=1~\mu m.
+                    \end{equation*}
+
+                \subparagraph{Pendule de Foucault (1851).} Ce pendule dévie vers la droite. À l'équateur, on a $\lambda=0$ donc il n'y a pas de déviation. Au pôle nord, l'effet est maximum. Le plan d'oscillation tourne à $\omega$ par rapport à $\mathcal{R}_{G}$.
+            
+            \paragraph{Mouvement vertical de chute libre : déviation vers l'est. Expérience de Reich (1833).}
+
+                On considère un puits de mine de profondeur $h=100~m$. Lorsqu'un objet tombe dans ce puits, on observe une légère déviation vers l'est (quelques millimètres). On reprend la Figure~\ref{fig:expression_force_coriolis_surface_terre} et on considère que $\left\lvert\dot{X}\right\rvert,\left\lvert\dot{Y}\right\rvert\ll\left\lvert\dot{Z}\right\rvert$. Alors 
+                \begin{equation*}
+                    \vec{F}_c=-2m\omega\dot{Z}\cos\lambda \vec{u_Y},
+                \end{equation*}
+                et $\dot{Z}<0$ donc $\vec{F}_c$ est dirigé vers l'est. En ordre de grandeur, on a 
+                \begin{equation*}
+                    L=\frac{1}{2}gt^{2},
+                \end{equation*}
+                donc 
+                \begin{equation*}
+                    T_{\text{exp}}=\sqrt{\frac{2h}{g}}\,\#\,\sqrt{\frac{h}{g}},
+                \end{equation*}
+                et ainsi
+                \begin{equation*}
+                    L_c\,\#\,\underbrace{L_{\text{exp}}}_{h}\times\frac{T_{\text{exp}}}{T_T}=\frac{h^{3/2}}{\sqrt{g}T_T}\,\#\,10^{-3}~m.
+                \end{equation*}
+
+                    
+
+            
+            
 
         
