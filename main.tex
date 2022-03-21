@@ -9,6 +9,7 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{mathtools}
+\usepackage{siunitx}
 \renewcommand{\d}{\mathrm{d}}
 \renewcommand{\j}{\mathrm{j}}
 \newcommand{\e}{\mathrm{e}}
@@ -20,10 +21,12 @@
 \newtheorem{definition}{Définition}[chapter]
 \newtheorem{corollary}{Corollaire}[chapter]
 \theoremstyle{remark}
+\newtheorem{remark}{Remarque}[chapter]
 \newtheorem{example}{Exemple}[chapter]
 
 \usepackage{graphicx}
 \usepackage{booktabs}
+\usepackage{multirow}
 
 \usepackage{enumitem}
 
@@ -66,6 +69,7 @@
 % Première partie : mécanique
 \subimport{cours/}{mecanique.tex}
 
-    
+% Deuxième partie : thermodynamique
+\subimport{cours/}{thermodynamique.tex}
 
 \end{document}
