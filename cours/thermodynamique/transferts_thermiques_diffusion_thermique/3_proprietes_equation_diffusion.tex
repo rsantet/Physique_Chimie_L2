@@ -1,1 +1,142 @@
 \section{Propriétés de l'équation de diffusion}
+    \subsection{Linéarité}
+
+        On a le théorème de superposition. Une analyse harmonique est donc possible.
+
+    \subsection{Irréversibilité}
+        Soit un processus diffusif décrit par $T(x,t)$ vérifiant
+        \begin{equation*}
+            \frac{\partial T}{\partial t}=D\frac{\partial^{2}T}{\partial x^{2}}.
+        \end{equation*}
+        Posons $t'=-t$. Soit $\widetilde{T}(t',x)=T(-t,x)$. Alors
+        \begin{equation*}
+            \frac{\partial\widetilde{T}}{\partial t'}=\frac{\partial T}{\partial(-t)}=-\frac{\partial T}{\partial t},\qquad\frac{\partial^{2}\widetilde{T}  }{\partial t^{2}}=\frac{\partial^{2}T}{\partial x^{2}}.
+        \end{equation*}
+        Ainsi, on a 
+        \begin{equation*}
+            \frac{\partial\widetilde{T}}{\partial t'}=-D\frac{\partial^{2}T}{\partial x^{2}}.
+        \end{equation*}
+        Ce n'est donc pas une équation de diffusion.
+
+    \subsection{Échelles de temps et de distance de diffusion}
+        
+        On se demande quelle est la durée typique $\tau$ du phénomène de diffusion sur une distance $L$.
+
+        \begin{itemize}
+            \item \underline{Réponse 1} : un seul paramètre dimensionnel dans l'équation de propagation. On cherche $\tau=f(L,D)$ si et seulement si $\tau=\mathrm{constante}\times L^{\alpha}D^{\beta}$, d'où $\beta=-1$ et $\alpha=2$ par analyse dimensionnelle. Donc
+            \begin{equation*}
+                \boxed{
+                    \tau\approx\frac{L^{2}}{D}.
+                }
+            \end{equation*}
+
+            \item \underline{Réponse 2} : équation de la chaleur adimensionnelle. On note $T_0$ la température caractéristique du problème. On note $T^{\star}(x,t)=T(x,t)/T_0$, $x^{\star}=x/L$ et $t^{\star}=t/\tau$. Alors
+            \begin{equation*}
+                \frac{\partial T^{\star}}{\partial t^{\star}}=\frac{D\tau}{L^{2}}\frac{\partial^{2}T^{\star}}{\partial^{2}x^{{\star}^{2}}}.
+            \end{equation*}
+            Si les échelles $\tau$ et $L$ sont adaptées, on a 
+            \begin{equation*}
+                \frac{\partial^{2}T^{\star}}{\partial x^{{\star}^{2}}}\approx\frac{\partial T^{\star}}{\partial t^{\star}},
+            \end{equation*}
+            et donc 
+            \begin{equation*}
+                \boxed{
+                    \tau\approx\frac{L^{2}}{D}.
+                }
+            \end{equation*}
+        \end{itemize}
+
+        \subsubsection{Nombre de Fourier}
+            On note le \textbf{nombre de Fourier}
+            \begin{equation*}
+                F_0(t)\coloneqq\frac{t}{\tau}=\frac{Dt}{L^{2}}.
+            \end{equation*}
+
+            Ainsi,
+            \begin{itemize}
+                \item \underline{Si $F_0\ll1$}, on a $t\ll\tau$ : le phénomène de diffusion thermique est trop lent pour avoir lieu. On est dans l'hypothèse adiabatique.
+                \item \underline{Si $F_0\gg1$}, on a $t\gg\tau$ : la diffusion est quasi instantanée.
+            \end{itemize}
+
+    \subsection{Conditions initiales. Conditions aux limites}
+
+        En 1D, l'équation aux dérivées partielles et du premier ordre par rapport à $t$ et du second ordre par rapport à $x$ : il y a donc une condition initiale et deux conditions aux limites. Par exemple, $T(x,0)=T_0(x)$ pour tout $x$ et $T(0,t)=T_1$, $T(L,t)=T_2$ pour tout $t$.
+
+    \subsection{Exemple de conditions aux limites : contact thermique parfait entre deux solides}
+
+        On considère la Figure~\ref{fig:contact_thermique_parfait_deux_solides}.
+
+        \begin{figure}
+            \centering
+            \tikzsetnextfilename{contact_thermique_parfait_deux_solides}
+            \begin{tikzpicture}[scale=1]  
+                % \helpgrid{3}{3}
+                \fill[pattern=north west lines] (-0.5,-2) rectangle++(1,4);
+                \draw (0,2)--(0,-2) node [below] {$x=0$};
+
+                \draw [color=black,smooth] (-2,2) circle (0.5) node {1};
+                \draw [color=black,smooth] (2,2) circle (0.5) node {2};
+                \node at (-2,-2) {$T_1(x<0,t)$};
+                \node at (2,-2) {$T_2(x>0,t)$};
+                \draw[-stealth] (-4,0)--(4,0) node [right] {$x$};
+            \end{tikzpicture}
+            \caption{Exemple de conditions aux limites pour la diffusion thermique.}    
+            \label{fig:contact_thermique_parfait_deux_solides}
+        \end{figure}
+
+        La continuité du flux thermique s'écrit $j_{\text{th}}(x=0^{-},t)=j_{\text{th}}(x=0^{+},t)$, donc
+        \begin{equation*}
+            \boxed{
+                -\lambda_1\frac{\partial T_1}{\partial x}(0^{-},t)=-\lambda_2\frac{\partial T_2}{\partial x}(0^{+},t).
+            }
+        \end{equation*}
+
+        Le contact thermique parfait impose la continuité de la température $T$. Ainsi,
+        \begin{equation*}
+            \boxed{
+                T_1(0^{-},t)=T_{2}(0^{+},t).
+            }
+        \end{equation*}
+
+    \subsection{Exemple de résolution numérique de l'équation de la diffusion}
+        \subsubsection{Problème bidimensionnel en régime permanent}
+            $T(x,y)$ est régit par $\Delta T=0$, c'est-à-dire
+            \begin{equation*}
+                \frac{\partial^{2}T}{\partial x^{2}}+\frac{\partial^{2}T}{\partial y^{2}}=0.
+            \end{equation*}
+
+            Avec une discrétisation donnée par la Figure~\ref{fig:discretisation_equation_diffusion_bidimensionnelle}.
+
+            \begin{figure}
+                \centering
+                \tikzsetnextfilename{discretisation_equation_diffusion_bidimensionnelle}
+                \begin{tikzpicture}[scale=1]  
+                    % \helpgrid{3}{3}
+                    \draw[step=1.0,black,thin] (0.5,0.5) grid (5.5,4.5);
+                    \node at (3,3) {$\bullet$};
+                    \node at (3,3) [above right] {$T_{k,l}$};
+                    \draw [<->,latex-latex] (0,3)--++(0,1) node [left,midway] {$a$};
+                    \draw [<->,latex-latex] (1,5)--++(1,0) node [above,midway] {$a$};
+                    \draw [->,-latex] (6,3)--++(0.5,0) node [right] {$x$};
+                    \draw [->,-latex] (6,3)--++(0,0.5) node [above] {$y$};
+
+                \end{tikzpicture}
+                \caption{Discrétisation de l'équation diffusion bidimensionnelle.}    
+                \label{fig:discretisation_equation_diffusion_bidimensionnelle}
+            \end{figure}
+
+            On écrit 
+            \begin{equation*}
+                \begin{aligned}
+                    T(x\pm a,y)
+                    &=T(x,y)\pm a\frac{\partial T}{\partial x}+\frac{a^{2}}{2}\frac{\partial^{2}T}{\partial x^{2}}\pm a^{3}\frac{\partial^{3} T}{\partial^{3}x}+\mathcal{O}(a^{4}),\\
+                    T(x,y\pm a)
+                    &=T(x,y)\pm a\frac{\partial T}{\partial y}+\frac{a^{2}}{2}\frac{\partial^{2}T}{\partial y^{2}}\pm a^{3}\frac{\partial^{3} T}{\partial^{3} y}+\mathcal{O}(a^{4}).
+                \end{aligned}
+            \end{equation*}
+            Ainsi,
+            \begin{equation*}
+                \boxed{
+                    T_{k+1,l}+T_{k-1,l}+T_{k,l+1}+T_{k,l-1}=4T_{k,l}+\mathcal{O}(a^{4}).
+                }
+            \end{equation*}
