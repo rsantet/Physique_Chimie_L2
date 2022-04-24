@@ -11,8 +11,11 @@
 \usepackage{mathtools}
 \usepackage{esint}
 \usepackage{siunitx}
+\usepackage[version=4]{mhchem}
 \renewcommand{\d}{\mathrm{d}}
 \renewcommand{\j}{\mathrm{j}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
 \newcommand{\e}{\mathrm{e}}
 \newcommand{\ubar}[1]{\text{\b{$#1$}}}
 
@@ -52,7 +55,7 @@
     \vspace{1cm}
     {\scshape\Large Notes de cours\par}
     \vspace{1.5cm}
-    {\huge\bfseries Physique-Chimie L2\par}
+    {\huge\bfseries Physique-Chimie MP\par}
     \vspace{2cm}
     {\Large\itshape Régis Santet\par}
     \vfill
@@ -71,7 +74,10 @@
 % Première partie : mécanique
 \subimport{cours/}{mecanique.tex}
 
-% Deuxième partie : thermodynamique
+% Deuxième partie : Électromagnétisme
+\subimport{cours/}{electromagnetisme.tex}
+
+% Troisième partie : thermodynamique
 \subimport{cours/}{thermodynamique.tex}
 
 \end{document}

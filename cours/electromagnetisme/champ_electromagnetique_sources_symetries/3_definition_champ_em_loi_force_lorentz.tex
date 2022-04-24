@@ -1,0 +1,76 @@
+\section[La loi de force de Lorentz]{Définition du champ électromagnétique : la loi de force de Lorentz}
+
+    On se demande quelle est l'action (à distance) de la distribution de charges et courants sur une particule chargée $q$ de vitesse $\vec{v}$, voir la Figure~\ref{fig:definition_champ_em_loi_force_lorentz}.
+
+    \begin{figure}
+        \centering
+        \tikzsetnextfilename{definition_champ_em_loi_force_lorentz}
+        \begin{tikzpicture}[scale=1]  
+            \draw (-3,1) ellipse (1.5 and 2.5);
+            \draw [pattern=north east lines, pattern color=blue] (-2.5,0.5) circle (0.5);
+            \draw [latex-,text=blue] (-2.5,0.5) -- (1,-0.5) node [right] {$\rho(\vec{r},t),\vec{j}(\vec{r},t)$};
+            \draw [-latex, text=red, draw=red] (1,2) --++(0.75,-0.75) node [right] {$\vec{v}$};
+            \node[red] at (1,2) {$\bullet$};
+            \node[red] at (1,2) [above right] {$q$};
+            \node[text width=3cm] at (-3,-2.5) {$\mathcal{D}$: distribution de charges et/ou de courants};
+        \end{tikzpicture}
+        \caption{Définition du champ électromagnétique : la loi de force de Lorentz.}    
+        \label{fig:definition_champ_em_loi_force_lorentz}
+    \end{figure}
+
+    Cette action se fait via le champ électromagnétique [$\vec{E},\vec{B}$], conséquence directe de [$\rho,\vec{j}$]. La loi de force de Lorentz s'écrit
+    \begin{equation*}
+        \boxed{
+            \vec{F}_L = q\left(\vec{E}+\vec{v}\wedge\vec{B}\right).
+        }
+    \end{equation*}
+    C'est un postulat. $\vec{E}$ est polaire et est considéré comme un \og vrai\fg~vecteur. $\vec{B}$ est axial est est considéré comme un \og pseudo-vecteur\fg.
+
+    \paragraph{Force de Lorentz méso/macroscopique : distribution continue de charges et courants.}
+
+        Il y a des porteurs de charges de type $k$ : $q_k,n_k [\si{\metre\per\cubed}],\langle\vec{v_k}\rangle$. Soit $\d V$ un volume mésoscopique contenant ces porteurs. Quelle est la force $\d\vec{F}_{em}$ subie par ce volume ? Un charge $k$ subit en moyenne 
+        \begin{equation*}
+            \vec{F}_{L_k}=q_k\left(\vec{E}+\langle\vec{v_k}\rangle\wedge \vec{B}\right).
+        \end{equation*}
+
+        Dans $\d V$, il y a $n_k\d V$ porteurs $k$. Ainsi, ils subissent
+        \begin{equation*}
+            n_k q_k\left(\vec{E}+\langle \vec{v_k}\rangle\wedge \vec{B}\right)\d V.
+        \end{equation*}
+        En sommant sur tout les porteurs $k$, on a 
+        \begin{align*}
+            \d\vec{F}_{\text{em}}
+            &=
+            \left[
+                \sum_{\neq~k}n_kq_k\left(\vec{E}+\langle\vec{v_k}\rangle\wedge\vec{B}\right)
+            \right]\d V,\\
+            &=
+            \left(
+                \left(\sum_{\neq~k}n_k q_k\right)\vec{E}+\left(\sum_{\neq~k}n_kq_k\langle\vec{v_k}\rangle\right)\wedge\vec{B}
+            \right),\\
+            &=
+            \left(\rho\vec{E}+\vec{j}\wedge\vec{B}\right)\d V.
+        \end{align*}
+
+        Ainsi, la force volumique est 
+        \begin{equation*}
+            \boxed{
+                \vec{f_{\text{vol}}^{\text{em}}}=\rho\vec{E}+\vec{j}\wedge\vec{B}.
+            }
+        \end{equation*}
+
+        \begin{example}
+            Dans un métal, c'est le force de Laplace : on a $\rho=0$ d'où 
+            \begin{equation*}
+                \boxed{
+                    \d\vec{F}_{\text{em}}=(\vec{j}\wedge\vec{B})\d V.
+                }
+            \end{equation*}
+
+            Pour une géométrie filiforme, on a $\vec{j}\d V=js\d l=i\vec{\d l}$, où $s$ est la section du fil. Ainsi
+            \begin{equation*}
+                \boxed{
+                    \d\vec{F_{\text{em}}}=i\vec{\d l}\wedge\vec{B}.
+                }
+            \end{equation*}
+        \end{example}
