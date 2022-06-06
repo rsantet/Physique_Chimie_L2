@@ -33,49 +33,49 @@
             \end{figure}
 
             La Figure~\ref{fig:echelle_meso_distribution_continue_charge} présente la matière à l'échelle mésoscopique : on a $\delta V\sim(\delta l)^{3}$, $L$ est une longueur typique de l'échelle macroscopique (1~\si{\milli\metre} jusqu'à 1~\si{\metre}). On se donne un longueur $a$ qui est caractéristique de l'échelle microscopique voire nanoscopique, par exemple la distance interatomique ou le libre parcours moyen d'un gaz. Alors
-            \begin{equation*}
+            \begin{equation}
                 \boxed{
                     a\ll \delta \ll L.
                 }
-            \end{equation*}
+            \end{equation}
             Cela vient du fait que dans $\delta V$, il y a un très grand nombres de constituants élémentaires, on peut donc faire un traitement statistique, d'autre part on cherche une description assez fine du phénomène. L'échelle mésoscopique est donc entre 0,1~\si{\micro\metre} et 1~\si{\micro\metre}. 
             À l'échelle mésoscopique, on adopte une description continue (moyennée) de la matière. Ceci implique une distribution continue de charges.
 
         \subsubsection{Densité volumique de charges}
 
             Dorénavant, on adopte le modèle continu. La quantité de charge $\delta Q$ dans un volume $\delta V$ est proportionnel à ce même volume, on définit alors la \textbf{densité volumique de charges} $\rho(\vec{r},t)$ par 
-            \begin{equation*}
+            \begin{equation}
                 \boxed{
                     \delta Q=\rho(\vec{r},t)\delta V.
                 }
-            \end{equation*}
+            \end{equation}
 
             Son unité est \si{\coulomb\per\metre\cubed}.
 
             \begin{example}
                 Dans un conducteur métallique (par exemple le cuivre), il y a $n_e$ électrons libres et $n_i$ ions fixes. Alors 
-                \begin{equation*}
+                \begin{equation}
                     \rho=(n_i-n_e)\e=0,
-                \end{equation*}
+                \end{equation}
                 à cause de la neutralité du métal.
             \end{example}
             \begin{example}
                 Dans un semi-conducteur, il y a des électrons (mobiles), des trous (places vides positives) et des ions fixes. Ainsi,
-                \begin{equation*}
+                \begin{equation}
                     \rho=(n_t-n_e+n_i)\e.
-                \end{equation*}
+                \end{equation}
             \end{example}
             \begin{example}
                 Dans une électrolyte, par exemple (\ce{Na+},\ce{Cl-}), on a 
-                \begin{equation*}
+                \begin{equation}
                     \rho=(n_{\ce{Na+}}-n_{\ce{Cl-}})\e.
-                \end{equation*}
+                \end{equation}
             \end{example}
 
             Ainsi, en général, on a
-            \begin{equation*}
+            \begin{equation}
                 \rho=\sum_{\substack{\neq\text{ types}\\\text{de porteurs}}}n_{k}q_{k},
-            \end{equation*}
+            \end{equation}
             où $n_k$ est en \si{\per\metre\cubed} et $q_k$ est en \si{\coulomb} et représente la charge algébrique d'un \og k\fg~porteur.
 
         \subsubsection{Modèles surfacique et linéique}
@@ -83,11 +83,11 @@
             \paragraph{Distribution de charges en surface : \og nappe\fg~ de charge.}
 
                 Les charges sont localisées au voisinage d'une surface. On considère la Figure~\ref{fig:modele_surfacique_distribution_charge}. On considère que l'on a $h\ll L$, et le volume $\delta V=h\d S$ contient $\delta Q=\rho h\d S$ charges. On modélise donc cette nappe de charge par une distribution surfacique de charges, avec une \textbf{densité superficielle de charge} $\sigma=\rho\times h$, en \si{\coulomb\per\metre\squared}. Ainsi, on a 
-                \begin{equation*}
+                \begin{equation}
                     \boxed{
                         \delta Q=\sigma\d S.
                     }
-                \end{equation*}
+                \end{equation}
 
                 \begin{figure}
                     \centering
@@ -119,11 +119,11 @@
             \paragraph{Distribution linéique de charges.}
 
                 On considère la Figure~\ref{fig:modele_lineique_distribution_charge}. Il y a $\delta Q=\rho S\d l$ charges dans la volume bleu. On définit alors la \textbf{densité linéique de charge} $\lambda=\rho S$, d'unité \si{\coulomb\per\metre}. On a alors
-                \begin{equation*}
+                \begin{equation}
                     \boxed{
                         \delta Q=\lambda\d l.
                     }
-                \end{equation*}
+                \end{equation}
 
                 \begin{figure}
                     \centering
@@ -178,11 +178,11 @@
             \end{figure}
 
             Le courant $i(t)$ est alors défini par 
-            \begin{equation*}
+            \begin{equation}
                 \boxed{
                     \delta Q=i(t)\d t.
                 }
-            \end{equation*}
+            \end{equation}
 
             Son unité est \si{\ampere}=\si{\coulomb\per\second}. C'est la charge algébrique traversant la surface orientée (S) par unité de temps.
 
@@ -212,19 +212,19 @@
                 \end{figure}
 
                 Le nombre $\delta N$ de porteurs traversant (S) pendant $\d t$ est 
-                \begin{equation*}
+                \begin{equation}
                     \delta N=n S v\d t=n\vec{v}\cdot(S\vec{n})\d t,
-                \end{equation*}
+                \end{equation}
                 d'où 
-                \begin{equation*}
+                \begin{equation}
                     \delta Q=\delta N\times q=nq\vec{v}\cdot(S\vec{n})\d t
-                \end{equation*}
+                \end{equation}
                 et finalement 
-                \begin{equation*}
+                \begin{equation}
                     \boxed{
                         i=nq\vec{v}\cdot\vec{n}S=\vec{j}\cdot(S\vec{n}),
                     }
-                \end{equation*}
+                \end{equation}
                 où $\vec{j}=nq\vec{v}$ est la \textbf{densité de courant}, d'unité \si{\ampere\per\metre\squared}.
 
                 Dans le cas où la vitesse n'est pas perpendiculaire à (S), le calcul reste le même (en prenant bien en compte le produit scalaire avec la normale extérieure $\vec{n}$).
@@ -232,11 +232,11 @@
             \paragraph{Définition de $\vec{j}$.}
 
                 De manière générale, on définit la densité de courant $\vec{j}(\vec{r},t)$ par 
-                \begin{equation*}
+                \begin{equation}
                     \boxed{
                         i_s(t)\coloneqq\iint_{S}\vec{j}(\vec{r},t)\cdot\vec{n}\d S.
                     }
-                \end{equation*}
+                \end{equation}
 
                 $i_s(t)$ est le flux de $\vec{j}$ à travers la surface $S$.
 
@@ -245,48 +245,48 @@
             \paragraph{Métal.} 
             
                 Les électrons libres génèrent une densité de courant 
-                \begin{equation*}
+                \begin{equation}
                     \vec{j}=-n\e \langle \vec{v}\rangle.
-                \end{equation*}
+                \end{equation}
 
                 Dans un fil de cuivre pour 1~\si{\ampere} et une longueur 2~\si{\milli\metre}, on a 
-                \begin{equation*}
+                \begin{equation}
                     n_\e\sim\frac{1}{(\text{qq}.10^{10})^{3}}\sim 10^{29}~\si{\per\metre\cubed}.
-                \end{equation*}
+                \end{equation}
                 Ainsi, l'ordre de grandeur de la vitesse des électrons dans le métal est 
-                \begin{equation*}
+                \begin{equation}
                     \langle v\rangle \sim \frac{1}{10^{29}\times10^{19}\times 2.10^{-6}}\sim3.10^{-5}~\si{\metre\per\second}.
-                \end{equation*}
+                \end{equation}
 
                 En considérant les électrons comme des particules classiques indépendantes, on a 
-                \begin{equation*}
+                \begin{equation}
                     \frac{1}{2}m\vec{v}^{2}=\frac{3}{2}k_b T,
-                \end{equation*}
+                \end{equation}
                 avec $k_B=R/\mathcal{N}_A\approx 1.38.10^{-23}~\si{\joule\per\kelvin}$.
 
                 Ainsi,
-                \begin{equation*}
+                \begin{equation}
                     v=\sqrt[]{\frac{3k_B T}{m}}\sim 10^{5}~\si{\metre\per\second},
-                \end{equation*}
+                \end{equation}
                 pour $m=0.9^{-30~\si{\kilo\gram}}$ et $T=300~\si{\kelvin}$.
 
             \paragraph{Semi-conducteur.} 
 
                 On a 
-                \begin{equation*}
+                \begin{equation}
                     \vec{j}=n_t\e\langle \vec{v_t}\rangle-n_\e\e\langle\vec{v}_\e\rangle.
-                \end{equation*}
+                \end{equation}
 
             \paragraph{Solution de \ce{NaCl}.}
 
                 On a 
-                \begin{equation*}
+                \begin{equation}
                     \vec{j}=n_{\ce{Na+}}\e\langle\vec{v}_{\ce{Na+}}\rangle-n_{\ce{Cl-}}\e\langle\vec{v}_{\ce{Cl-}}\rangle.
-                \end{equation*}
+                \end{equation}
 
             Finalement, on a 
-            \begin{equation*}
+            \begin{equation}
                 \boxed{
                     \vec{j}=\sum_{\substack{\neq\text{ types}\\\text{de particules libres}}}n_k q_k\langle \vec{v}_k\rangle.
                 }
-            \end{equation*}
+            \end{equation}
