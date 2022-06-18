@@ -34,7 +34,7 @@
 \usepackage{graphicx}
 \usepackage{booktabs}
 \usepackage{multirow}
-\usepackage{autonum}
+
 
 \usepackage{enumitem}
 
@@ -50,6 +50,10 @@
 \tikzset{ressort/.style={thick,gray,smooth}}
 
 \usepackage[french]{minitoc}
+% To remove etex warning when loading autonum, see https://tex.stackexchange.com/questions/285950/package-autonum-needs-the-obsolete-etex-package
+\expandafter\def\csname ver@etex.sty\endcsname{3000/12/31}
+\let\globcount\newcount
+\usepackage{autonum}
 
 \begin{document}
 \begin{titlepage}
