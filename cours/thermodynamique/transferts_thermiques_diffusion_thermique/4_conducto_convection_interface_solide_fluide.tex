@@ -1,4 +1,4 @@
-\section{Conducto-convection à l'interface d'un\\solide et d'un fluide}
+\section{Conducto-convection à l'interface d'un solide et d'un fluide}
 
     \subsection{Transfert conducto-convectif : loi de Newton empirique}
 
@@ -21,53 +21,53 @@
             \end{figure}
 
             Le flux surfacique conducto-convectif est proportionnel à $T_s-T_f$. La loi de Newton s'écrit dans ce cas
-            \begin{equation*}
+            \begin{equation}
                 \boxed{
                     \varphi_{\text{cc}}=h\left(T_s-T_f\right).
                 }
-            \end{equation*}
+            \end{equation}
             L'unité de $\varphi_{\text{cc}}$ est \si[]{\watt\per\metre\square} et est orienté du solide vers le fluide. Le facteur $h$ est le coefficient de transfert conducto-convectif d'unité \si[]{\watt\per\metre\square\per\kelvin}.
             Ainsi,
-            \begin{equation*}
+            \begin{equation}
                 \boxed{
                     P_{s\to f}=\varphi_{\text{cc}}\times S=hS\left(T_s-T_f\right).
                 }
-            \end{equation*}
+            \end{equation}
 
             \paragraph{Ordre de grandeur.} Pour le gaz, $h\sim 5$ à 30 \si[]{\watt\per\metre\square\per\kelvin}, pour le liquide, $h\sim 400$ à 10000 \si[]{\watt\per\metre\square\per\kelvin}, les deux pour la convection naturelle. Si le convection est forcée, on a un rapport 
-            \begin{equation*}
+            \begin{equation}
                 \frac{h_{\text{forcée}}}{h_{\text{naturelle}}}\sim 10\text{ à }50.
-            \end{equation*}
+            \end{equation}
 
         \subsubsection{Interprétation}
 
             Lors d'un écoulement fluide, il y a deux zones : une proche du sol, dite \og couche limite\fg. L'autre est lointaine, c'est l'écoulement extérieur. Alors
-            \begin{equation*}
+            \begin{equation}
                 \varphi_{\text{cc}}=j_{\text{th},C.L}=-\lambda_f\left(\frac{\partial T}{\partial x}\right)_{\text{fluide}}\approx-\lambda_f\frac{T_f-T_s}{\delta},
-            \end{equation*}
+            \end{equation}
             où $\delta\ll$ taille macroscopique de l'écoulement (taille de la couche limite). Dans la couche limite, le transfert thermique (pas dû à la convection mais à la conduction thermique dans la couche limite) a lieu perpendiculairement aux mouvement du fluide. Donc 
-            \begin{equation*}
+            \begin{equation}
                 \varphi_{\text{cc}}\approx\frac{\lambda_f}{\delta}\left(T_s-T_f\right),
-            \end{equation*}
+            \end{equation}
             d'où
-            \begin{equation*}
+            \begin{equation}
                 \boxed{
                     h=\frac{\lambda_f}{\delta}.
                 }
-            \end{equation*}
+            \end{equation}
 
             Comme $h\propto\lambda_f$, on a 
-            \begin{equation*}
+            \begin{equation}
                 \boxed{
                     h_{\text{liquide}}\gg h_{\text{gaz}}.
                 }
-            \end{equation*}
+            \end{equation}
             Comme $h\propto1/\delta$, et $\delta$ diminue si le brassage augmente, on a 
-            \begin{equation*}
+            \begin{equation}
                 \boxed{
                     h_{\text{forcée}}\gg h_{\text{naturelle}}.
                 }
-            \end{equation*}
+            \end{equation}
 
     \subsection{Application : ailette de refroidissement}
 
@@ -122,7 +122,7 @@
         \subsubsection{Profil $T(x)$}
 
             On ne peut pas utiliser l'équation de la chaleur, il faut passer par un bilan d'énergie local sur $[x,x+\d x]$. En régime permanent, on a 
-            \begin{align*}
+            \begin{align}
                 \frac{\d\left(\delta U\right)}{\d t}
                 &=
                 0,\\
@@ -130,37 +130,37 @@
                 P_{\text{th}}^{\text{ext}},\\
                 &=
                 j_{\text{th}}(x)\pi a^{2}-j_{\text{th}}(x+\d x)\pi a^{2}-h(T(x)-T_0)2\pi a\d x.
-            \end{align*}
+            \end{align}
             Ainsi, on obtient
-            \begin{equation*}
+            \begin{equation}
                 \pi a^{2}\frac{\partial j_{\text{th}}}{\partial x}\d x+h(T(x)-T_0)=0.
-            \end{equation*}
+            \end{equation}
             On pose $\theta(x)=T(x)-T_0$, et $\delta\coloneqq\sqrt{\dfrac{a\lambda}{2h}}$, et on obtient 
-            \begin{equation*}
+            \begin{equation}
                 \theta(x)=\alpha\e^{-x/\delta}+\beta\e^{x/\delta}.
-            \end{equation*}
+            \end{equation}
             On a $\beta =0$ car $\theta$ est fini en $+\infty$, et $\theta(0)=T_1-T_0=\alpha$. Finalement,
-            \begin{equation*}
+            \begin{equation}
                 \boxed{
                     T(x)=T_0+(T_1-T_0)\e^{-x/\delta}.
                 }
-            \end{equation*}
+            \end{equation}
 
             Notons que si l'ailette est \og finie\fg, c'est-à-dire $L\sim\delta$, la condition au limite est alors donnée par la \textbf{continuité du flux en $x=L$}, c'est-à-dire 
-            \begin{equation*}
+            \begin{equation}
                 \varphi_{\text{cc}}(L)=j_{\text{th}}(L),
-            \end{equation*}
+            \end{equation}
             soit
-            \begin{equation*}
+            \begin{equation}
                 \boxed{
                     h(T(L)-T_0)=-\lambda\left(\frac{\partial T}{\partial x}\right)_{L}.
                 }
-            \end{equation*}
+            \end{equation}
 
         \subsubsection{Efficacité}
 
             Sans l'ailette, la puissance thermique est $P_{\text{sans}}=h(T_1-T_0)S$, et la puissance avec l'ailette est $P_{\text{avec}}=-\lambda\left(\frac{\partial T}{\partial x}\right)_{0}S$. Ainsi, l'efficacité est 
-            \begin{align*}
+            \begin{align}
                 \eta\coloneqq
                 &=
                 \frac{P_{\text{avec}}}{P_{\text{sans}}},\\
@@ -168,22 +168,22 @@
                 \frac{\lambda\left(\frac{T_1-T_0}{\delta}\right)S}{h(T_1-T_0)S},\\
                 &=
                 \frac{\lambda}{\delta h}=\sqrt{\frac{2\lambda}{ah}}.
-            \end{align*}
+            \end{align}
 
             On a $\eta\sim 30$ pour $\lambda\approx100$\si[]{\watt\per\metre\per\kelvin}, $h\approx10$\si[]{\watt\per\metre\square} et $a\approx2.10^{-2}$\si[]{\metre}.
 
     \subsection{Nombre de Biot : conduction versus conducto-convection}
         \subsubsection{Validité de l'hypothèse de l'ailette}
             L'hypothèse de l'ailette est que la température est uniforme sur une section. Si $T$ n'est pas uniforme sur une section, on décompose le flux $\vec{j}_{\text{th}}=\vec{j}_{\text{th},\perp}+\vec{j}_{\text{th},\parallel}$ en ses composantes selon l'ailette (l'axe $x$) et selon l'axe perpendiculaire. Ainsi, si 
-            \begin{equation*}
+            \begin{equation}
                 \frac{\left\lVert\vec{j}_{\text{th},\perp}\right\rVert}{\left\lVert\vec{j}_{\text{th},\parallel}\right\rVert}\ll1,
-            \end{equation*}
+            \end{equation}
             alors l'approximation de l'ailette est bonne. Par continuité du flux, on a 
-            \begin{equation*}
+            \begin{equation}
                 \left\lVert\vec{j}_{\text{th},\perp}\right\rVert=\varphi_{\text{cc}}=h(T_S(x)-T_0),
-            \end{equation*}
+            \end{equation}
             donc
-            \begin{align*}
+            \begin{align}
                 \frac{\left\lVert\vec{j}_{\text{th},\perp}\right\rVert}{\left\lVert\vec{j}_{\text{th},\parallel}\right\rVert}
                 &\approx
                 \frac{h(T(x)-T_0)}{-\lambda\frac{\partial T}{\partial x}},\\
@@ -191,16 +191,16 @@
                 \frac{h(T_1-T_0)\e^{-x/\delta}}{\frac{\lambda}{\delta}(T_1-T_0)\e^{-x/\delta}},\\
                 &=
                 \frac{h\delta}{\lambda}=\sqrt{\frac{ah}{2\lambda}}\sim10^{-2}\ll1.
-            \end{align*}
+            \end{align}
 
         \subsubsection{Nombre de Biot}
 
             On note
-            \begin{equation*}
+            \begin{equation}
                 \boxed{
                     B_i\coloneqq\left(\frac{\varphi_{\text{cc},\perp}}{j_{\text{th},\parallel}}\right)^{2}=\frac{ah}{2\lambda}\approx\frac{ah}{\lambda}.
                 }
-            \end{equation*}
+            \end{equation}
 
             Si $B_i\ll1$, l'hypothèse de l'ailette est bonne. Le milieu thermique est mince, et c'est à favoriser pour augmenter l'efficacité $\eta$.
             Si $B_i\gg1$, l'hypothèse de l'ailette est mauvaise : le milieu thermique est épais.

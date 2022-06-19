@@ -3,50 +3,50 @@
     \subsection{Référentiel géocentrique et marée océanique}
 
         On se place dans $\mathcal{R}_{G}$ en translation (environ) circulaire par rapport à $\mathcal{R}_{C}$, voir la Figure~\ref{fig:refentiel_geocentrique_copernic}. On considère le mouvement d'un point matériel $M$ de masse $m$ au voisinage de la surface de la Terre par rapport à $\mathcal{R}_{G}$. Alors 
-        \begin{equation*}
+        \begin{equation}
             m\vec{a}(M)_{/\mathcal{R}_{G}}=\vec{f}+m\vec{g}_{T}(M)+\sum_{\neq i}m\vec{g}_{i}(M)-m\vec{a}(T)_{/\mathcal{R}_C},
-        \end{equation*}
+        \end{equation}
         où $\vec{f}$ représentent les forces de contact (par exemple la pression), $\vec{g}_{T}$ est le champ de pesanteur dû à la Terre, $\vec{g}_{i}$ représente le champ de gravitation dû à un autre astre du système solaire, et $m\vec{a}_{T/\mathcal{R}_{C}}$ est simplement la force d'entraînement $\vec{F}_{e}$.
 
         En appliquant le principe fondamental de la dynamique à la terre par rapport à $\mathcal{R}_{C}$, on obtient 
-        \begin{equation*}
+        \begin{equation}
             M_{T}\vec{a}(T)_{/\mathcal{R}_{C}}=\vec{R}^{\text{ext}}=\sum_{\neq i}M_T\vec{g}_i(T),
-        \end{equation*}
+        \end{equation}
         où l'on a fait l'hypothèse que la Terre était sphérique pour la dernière égalité. Ainsi, on a 
-        \begin{equation*}
+        \begin{equation}
             \vec{a}(T)_{/\mathcal{R}_C}=\sum_{\neq i}\vec{g}_i(T).
-        \end{equation*}
+        \end{equation}
         Alors 
-        \begin{equation*}
+        \begin{equation}
             \boxed{m\vec{a}(M)=\vec{f}+m\vec{g}_{T}(M)+m\left(\sum_{\neq i}\vec{g}_{i}(M)-\vec{g}_{i}(T)\right).}
-        \end{equation*}
+        \end{equation}
 
         \begin{definition}[Champ de marée]
             L'expression
-            \begin{equation*}
+            \begin{equation}
                 \vec{C}(M)\coloneqq\left(\sum_{\neq i}\vec{g}_{i}(M)-\vec{g}_{i}(T)\right),
-            \end{equation*}
+            \end{equation}
             définit le \textit{champ de marée}. C'est un terme différentiel.
         \end{definition}
 
         Notamment, le champ de marée dû à la Lune uniquement est
-        \begin{equation*}
+        \begin{equation}
             \vec{C}_L(M)=\vec{g}_L(M)-\vec{g}_L(T).
-        \end{equation*}
+        \end{equation}
 
         \paragraph{Ordre de grandeur de $\left\lVert\vec{C}_i\right\rVert_{\text{max}}$.} 
             On a 
-            \begin{equation*}
+            \begin{equation}
                 \left\lVert \vec{C}_i\right\rVert=\mathcal{G}M_i\left\lvert\frac{1}{(D_i-R_T)^{2}}-\frac{1}{D_i^{2}}\right\rvert.
-            \end{equation*}
+            \end{equation}
             Si $D_i\gg R_T$, on a 
-            \begin{equation*}
+            \begin{equation}
                 \frac{1}{(D_i-R_T)^{2}}=\frac{1}{D_i^{2}}\frac{1}{\left(1-\frac{R_T}{D_i}\right)^{2}}\sim\frac{1}{D_i^{2}}\left(1+\frac{2R_T}{D_i}\right).
-            \end{equation*}
+            \end{equation}
             Ainsi,
-            \begin{equation*}
+            \begin{equation}
                 \left\lVert \vec{C}_i\right\rVert_{\text{max}}=\mathcal{G}M_i\frac{2R_T}{D_i^{3}}=\left\lVert\vec{g}_i(T)\right\rVert\underbrace{\frac{2R_T}{D_i}}_{\ll1}\ll\left\lVert \vec{g}_i\right\rVert.
-            \end{equation*}
+            \end{equation}
             
             On donne dans la Table~\ref{tab:champ_maree_soleil_lune} les ordres de grandeur des champs de marées dus au Soleil et à la Lune. On voit donc que le champ de marée lunaire est environ deux fois supérieur au solaire.
             
@@ -106,9 +106,9 @@
         \subsubsection{Effets de la force centrifuge}
 
             On regarde de plus près la définition du poids. $\mathcal{R}_{T}$ est en rotation par rapport à $\mathcal{R}_{G}$ à une rotation angulaire
-            \begin{equation*}
+            \begin{equation}
                 \omega=\frac{2\pi}{T_{T}}=\frac{2\pi}{24\times3600}\approx 7.3.10^{-5}\text{rad}.s^{-1},
-            \end{equation*}
+            \end{equation}
             autour de l'axe $\vec{SN}$ fixe dans $\mathcal{R}_{G}$, voir la Figure~\ref{fig:rotation_terre_definition_poids}.
 
             \begin{figure}
@@ -139,26 +139,26 @@
 
             \paragraph{Équation du mouvement de M dans $\mathcal{R}_T$.}
             On a 
-            \begin{equation*}
+            \begin{equation}
                 m\vec{a}(M)_{/\mathcal{R}_T}=\vec{F}_e+m\vec{g_T}(M)+m\omega^{2}\vec{HM}-2m\vec{\omega}\wedge\vec{v}(M)_{/\mathcal{R}_T}.
-            \end{equation*}
+            \end{equation}
 
             \paragraph{Définition du poids/de la pesanteur.}
             Supposons qu'un fil à plomb soit en équilibre dans $\mathcal{R}_T$ et induise une tension (verticale) $\vec{T}$. Alors on a 
-            \begin{equation*}
+            \begin{equation}
                 \vec{0}=m\vec{g}_T+m\omega^{2}\vec{HM}+\vec{0}+\vec{T}.
-            \end{equation*}
+            \end{equation}
             Ainsi, $\vec{T}$, qui indique la verticale du lieu, est donné par
-            \begin{equation*}
+            \begin{equation}
                 \vec{T}=-m\left(g_T+\omega^{2}\vec{HM}\right).
-            \end{equation*}
+            \end{equation}
 
             \begin{definition}[Champ de pesanteur et champ de gravité]
                     En notant $\vec{g}$ le champ de pesanteur et $\vec{g}_{T}$ le champ de gravité, on a
-                    \begin{equation*}
+                    \begin{equation}
                         \boxed{
                         \vec{g}\coloneqq \vec{g}_T+\omega^{2}\vec{HM}.}
-                    \end{equation*}
+                    \end{equation}
             \end{definition}
 
             $\vec{g}$ n'est donc pas tout à fait diriger vers $\vec{T}$. À l'équateur, $\omega^{2}R_t\approx0.03~m.s^{-2}$ avec $R_T\approx 6400~km$. En dynamique terrestre, $\vec{g}$ inclut la force centrifuge.
@@ -166,9 +166,9 @@
         \subsubsection{Effets qualitatifs de la force de Coriolis}
 
             Dans $\mathcal{R}_T$, on a 
-            \begin{equation*}
+            \begin{equation}
                 m\vec{a}(M)_{/\mathcal{R}_T}=\vec{f}+m\vec{g}-2m\vec{\omega}\wedge\vec{v}(M)_{/\mathcal{R}_T},
-            \end{equation*}
+            \end{equation}
             où $m\vec{g}$ représente le poids.
 
             \paragraph{Ordre de grandeur.}
@@ -176,49 +176,49 @@
                 \subparagraph{Composante verticale de $\vec{F}_{\text{cor}}$.}
 
                     Elle est à comparer au poids. Elle vaut au maximum $2m\omega v$. Ainsi,
-                    \begin{equation*}
+                    \begin{equation}
                         \frac{\left\lVert\vec{F}_{\text{cor}}\right\rVert_{\text{max}}}{mg}=\frac{2\omega v}{g}\,\#\,\frac{14.10^{-5}}{10}\times v = 1,4.10^{-5}v.
-                    \end{equation*}
+                    \end{equation}
                     Le plus souvent, la composante vertical est négligeable devant le poids. L'effet dominant est celui de la composante horizontale.
 
                 \subparagraph{Échelles de temps.}
 
                     On compare le temps de l'expérience $T_{\text{exp}}$ au temps de révolution de la Terre $T_T$. On a 
-                    \begin{equation*}
+                    \begin{equation}
                         \frac{\left\lVert\vec{a}_{\text{cor}}\right\rVert}{\left\lVert\vec{a}(M)_{/\mathcal{R}T}\right\rVert}\,\#\,\frac{2\omega v}{v/T_{\text{exp}}}=2\omega T_{\text{exp}}=4\pi\frac{T_{\text{exp}}}{T_T}.
-                    \end{equation*}
+                    \end{equation}
                     Le référentiel terrestre est quasi galiléen si $T_{\text{exp}}\ll 24h$.
 
                 \subparagraph{Échelles de distance.}
 
                     On compare la longueur caractéristique présente dans l'expérience et $L_c$ (taille typique des déplacements dus à $\vec{F}_{\text{cor}}$). On a 
-                    \begin{equation*}
+                    \begin{equation}
                         \begin{aligned}
                             L_c & \approx a_{\text{cor}}\times T_{\text{exp}}^{2}=2\omega vT_{\text{exp}}^{2},\\
                             L_{\text{exp}} & \approx v\times T_{\text{exp}},
                         \end{aligned}
-                    \end{equation*}
+                    \end{equation}
                     d'où 
-                    \begin{equation*}
+                    \begin{equation}
                         \frac{L_c}{L_{\text{exp}}}\,\#\,2\omega T_{\text{exp}}=4\pi\frac{T_{\text{exp}}}{T_T}.
-                    \end{equation*}
+                    \end{equation}
 
             \paragraph{Expression de $\vec{F}_{\text{cor}}$ à la surface de la Terre.}
 
                 On note $\lambda$ la latitude, voir la Figure~\ref{fig:expression_force_coriolis_surface_terre}. On note $(X,Y,Z)$ la base de projection (voir la Figure). On note 
-                \begin{equation*}
+                \begin{equation}
                     \vec{v}(M)_{/\mathcal{R}_T}=\begin{pmatrix}
                         \dot{X}\\\dot{Y}\\\dot{Z}
                     \end{pmatrix}_{u_X,u_Y,u_Z}.
-                \end{equation*}
+                \end{equation}
                 Alors
-                \begin{equation*}
+                \begin{equation}
                     \vec{\omega}=\begin{pmatrix}
                         -\omega\cos\lambda\\0\\\omega\sin\lambda
                     \end{pmatrix},
-                \end{equation*}
+                \end{equation}
                 d'où
-                \begin{equation*}
+                \begin{equation}
                     \vec{\omega}\wedge\vec{v}=\begin{pmatrix}
                         -\omega\cos\lambda\\0\\omega\sin\lambda
                     \end{pmatrix}\wedge\begin{pmatrix}
@@ -228,15 +228,15 @@
                         \omega\dot{X}\sin\lambda+\omega\dot{Z}\cos\lambda\\
                         -\omega\dot{Y}\cos\lambda
                     \end{pmatrix},
-                \end{equation*}
+                \end{equation}
                 et
-                \begin{equation*}
+                \begin{equation}
                     \vec{F}_{\text{cor}}=2m\omega\begin{pmatrix}
                         \omega\dot{Y}\sin\lambda\\
                         \omega\dot{X}\sin\lambda+\omega\dot{Z}\cos\lambda\\
                         -\omega\dot{Y}\cos\lambda
                     \end{pmatrix}.
-                \end{equation*}
+                \end{equation}
 
                 \begin{figure}
                     \centering
@@ -268,11 +268,11 @@
             \paragraph{Mouvements horizontaux : $\dot{Z}=0$.}
 
                 On a 
-                \begin{equation*}
+                \begin{equation}
                     \vec{F}_{cor,\text{horizontale}}=2m\omega\sin\lambda\begin{pmatrix}
                         \dot{Y}\\-\dot{X}\\0
                     \end{pmatrix}=-2m\omega\sin\lambda \vec{u}_Z\wedge\vec{v}.
-                \end{equation*}
+                \end{equation}
                 Ainsi, dans l'hémisphère sud, on a $\lambda<0$ et $\vec{F}_{\text{cor}}$ est dans le même sens que $\vec{u_Z}\wedge\vec{v}$ : il y a une déviation vers la gauche. Dans l'hémisphère nord, on a $\lambda>0$ et on voit donc une déviation vers la droite.
 
                 \subparagraph{Anticyclones et dépressions.}
@@ -322,30 +322,30 @@
                 \subparagraph{Tourbillons dans un lavabo.}
 
                     On a $L_{\text{exp}}\approx 10~cm$, $v\approx 10~cm.s^{-1}$, $T_{\text{exp}}\approx 1~s$, ainsi 
-                    \begin{equation*}
+                    \begin{equation}
                         L_{\text{cor}}\,\#\,L_{\text{exp}}\frac{T_{\text{exp}}}{T_T}=10^{-6}~m=1~\mu m.
-                    \end{equation*}
+                    \end{equation}
 
                 \subparagraph{Pendule de Foucault (1851).} Ce pendule dévie vers la droite. À l'équateur, on a $\lambda=0$ donc il n'y a pas de déviation. Au pôle nord, l'effet est maximum. Le plan d'oscillation tourne à $\omega$ par rapport à $\mathcal{R}_{G}$.
             
             \paragraph{Mouvement vertical de chute libre : déviation vers l'est. Expérience de Reich (1833).}
 
                 On considère un puits de mine de profondeur $h=100~m$. Lorsqu'un objet tombe dans ce puits, on observe une légère déviation vers l'est (quelques millimètres). On reprend la Figure~\ref{fig:expression_force_coriolis_surface_terre} et on considère que $\left\lvert\dot{X}\right\rvert,\left\lvert\dot{Y}\right\rvert\ll\left\lvert\dot{Z}\right\rvert$. Alors 
-                \begin{equation*}
+                \begin{equation}
                     \vec{F}_c=-2m\omega\dot{Z}\cos\lambda \vec{u_Y},
-                \end{equation*}
+                \end{equation}
                 et $\dot{Z}<0$ donc $\vec{F}_c$ est dirigé vers l'est. En ordre de grandeur, on a 
-                \begin{equation*}
+                \begin{equation}
                     L=\frac{1}{2}gt^{2},
-                \end{equation*}
+                \end{equation}
                 donc 
-                \begin{equation*}
+                \begin{equation}
                     T_{\text{exp}}=\sqrt{\frac{2h}{g}}\,\#\,\sqrt{\frac{h}{g}},
-                \end{equation*}
+                \end{equation}
                 et ainsi
-                \begin{equation*}
+                \begin{equation}
                     L_c\,\#\,\underbrace{L_{\text{exp}}}_{h}\times\frac{T_{\text{exp}}}{T_T}=\frac{h^{3/2}}{\sqrt{g}T_T}\,\#\,10^{-3}~m.
-                \end{equation*}
+                \end{equation}
 
                     
 

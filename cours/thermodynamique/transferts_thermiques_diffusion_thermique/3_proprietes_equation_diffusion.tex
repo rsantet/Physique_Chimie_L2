@@ -5,17 +5,17 @@
 
     \subsection{Irréversibilité}
         Soit un processus diffusif décrit par $T(x,t)$ vérifiant
-        \begin{equation*}
+        \begin{equation}
             \frac{\partial T}{\partial t}=D\frac{\partial^{2}T}{\partial x^{2}}.
-        \end{equation*}
+        \end{equation}
         Posons $t'=-t$. Soit $\widetilde{T}(t',x)=T(-t,x)$. Alors
-        \begin{equation*}
+        \begin{equation}
             \frac{\partial\widetilde{T}}{\partial t'}=\frac{\partial T}{\partial(-t)}=-\frac{\partial T}{\partial t},\qquad\frac{\partial^{2}\widetilde{T}  }{\partial t^{2}}=\frac{\partial^{2}T}{\partial x^{2}}.
-        \end{equation*}
+        \end{equation}
         Ainsi, on a 
-        \begin{equation*}
+        \begin{equation}
             \frac{\partial\widetilde{T}}{\partial t'}=-D\frac{\partial^{2}T}{\partial x^{2}}.
-        \end{equation*}
+        \end{equation}
         Ce n'est donc pas une équation de diffusion.
 
     \subsection{Échelles de temps et de distance de diffusion}
@@ -24,33 +24,33 @@
 
         \begin{itemize}
             \item \underline{Réponse 1} : un seul paramètre dimensionnel dans l'équation de propagation. On cherche $\tau=f(L,D)$ si et seulement si $\tau=\mathrm{constante}\times L^{\alpha}D^{\beta}$, d'où $\beta=-1$ et $\alpha=2$ par analyse dimensionnelle. Donc
-            \begin{equation*}
+            \begin{equation}
                 \boxed{
                     \tau\approx\frac{L^{2}}{D}.
                 }
-            \end{equation*}
+            \end{equation}
 
             \item \underline{Réponse 2} : équation de la chaleur adimensionnelle. On note $T_0$ la température caractéristique du problème. On note $T^{\star}(x,t)=T(x,t)/T_0$, $x^{\star}=x/L$ et $t^{\star}=t/\tau$. Alors
-            \begin{equation*}
+            \begin{equation}
                 \frac{\partial T^{\star}}{\partial t^{\star}}=\frac{D\tau}{L^{2}}\frac{\partial^{2}T^{\star}}{\partial^{2}x^{{\star}^{2}}}.
-            \end{equation*}
+            \end{equation}
             Si les échelles $\tau$ et $L$ sont adaptées, on a 
-            \begin{equation*}
+            \begin{equation}
                 \frac{\partial^{2}T^{\star}}{\partial x^{{\star}^{2}}}\approx\frac{\partial T^{\star}}{\partial t^{\star}},
-            \end{equation*}
+            \end{equation}
             et donc 
-            \begin{equation*}
+            \begin{equation}
                 \boxed{
                     \tau\approx\frac{L^{2}}{D}.
                 }
-            \end{equation*}
+            \end{equation}
         \end{itemize}
 
         \subsubsection{Nombre de Fourier}
             On note le \textbf{nombre de Fourier}
-            \begin{equation*}
+            \begin{equation}
                 F_0(t)\coloneqq\frac{t}{\tau}=\frac{Dt}{L^{2}}.
-            \end{equation*}
+            \end{equation}
 
             Ainsi,
             \begin{itemize}
@@ -85,25 +85,25 @@
         \end{figure}
 
         La continuité du flux thermique s'écrit $j_{\text{th}}(x=0^{-},t)=j_{\text{th}}(x=0^{+},t)$, donc
-        \begin{equation*}
+        \begin{equation}
             \boxed{
                 -\lambda_1\frac{\partial T_1}{\partial x}(0^{-},t)=-\lambda_2\frac{\partial T_2}{\partial x}(0^{+},t).
             }
-        \end{equation*}
+        \end{equation}
 
         Le contact thermique parfait impose la continuité de la température $T$. Ainsi,
-        \begin{equation*}
+        \begin{equation}
             \boxed{
                 T_1(0^{-},t)=T_{2}(0^{+},t).
             }
-        \end{equation*}
+        \end{equation}
 
     \subsection{Exemple de résolution numérique de l'équation de la diffusion}
         \subsubsection{Problème bidimensionnel en régime permanent}
             $T(x,y)$ est régit par $\Delta T=0$, c'est-à-dire
-            \begin{equation*}
+            \begin{equation}
                 \frac{\partial^{2}T}{\partial x^{2}}+\frac{\partial^{2}T}{\partial y^{2}}=0.
-            \end{equation*}
+            \end{equation}
 
             Avec une discrétisation donnée par la Figure~\ref{fig:discretisation_equation_diffusion_bidimensionnelle}.
 
@@ -126,17 +126,17 @@
             \end{figure}
 
             On écrit 
-            \begin{equation*}
+            \begin{equation}
                 \begin{aligned}
                     T(x\pm a,y)
                     &=T(x,y)\pm a\frac{\partial T}{\partial x}+\frac{a^{2}}{2}\frac{\partial^{2}T}{\partial x^{2}}\pm a^{3}\frac{\partial^{3} T}{\partial^{3}x}+\mathcal{O}(a^{4}),\\
                     T(x,y\pm a)
                     &=T(x,y)\pm a\frac{\partial T}{\partial y}+\frac{a^{2}}{2}\frac{\partial^{2}T}{\partial y^{2}}\pm a^{3}\frac{\partial^{3} T}{\partial^{3} y}+\mathcal{O}(a^{4}).
                 \end{aligned}
-            \end{equation*}
+            \end{equation}
             Ainsi,
-            \begin{equation*}
+            \begin{equation}
                 \boxed{
                     T_{k+1,l}+T_{k-1,l}+T_{k,l+1}+T_{k,l-1}=4T_{k,l}+\mathcal{O}(a^{4}).
                 }
-            \end{equation*}
+            \end{equation}

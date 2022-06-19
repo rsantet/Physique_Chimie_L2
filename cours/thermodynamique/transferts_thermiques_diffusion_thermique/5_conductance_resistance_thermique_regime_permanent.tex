@@ -48,20 +48,20 @@
             \end{figure}
 
             On a $\Delta T=0=\dfrac{\d^{2}T}{\d x^{2}}$, donc $T(x)=\alpha+\beta x$. Avec les conditions aux limites, on a donc
-            \begin{equation*}
+            \begin{equation}
                 T(x)=T_1+\frac{T_2-T_1}{L}x.
-            \end{equation*}
+            \end{equation}
             Notons que l'on a $\vec{\mathrm{grad}}~T=\dfrac{T_2-T_1}{L}\vec{u_x}=\vec{\mathrm{constance}}$.
 
         \subsubsection{Résistance thermique}
 
             Pour la conduction thermique, on a $R=\dfrac{U}{I}$. Ainsi, pour la conduction thermique, on devrait avoir une expression du type
-            \begin{equation*}
+            \begin{equation}
                 \frac{T_2-T_1}{R_{\text{th}}}=\dots
-            \end{equation*}
+            \end{equation}
 
             On a 
-            \begin{align*}
+            \begin{align}
                 P_{\text{th}}
                 &=\iint_{S}\vec{j}_{\text{th}}\cdot\vec{dS},\\
                 &=
@@ -69,14 +69,14 @@
                 &=
                 \frac{\lambda(T_1-T_2)S}{L},\\
                 &=\frac{\lambda S}{L}(T_1-T_2).
-            \end{align*}
+            \end{align}
 
             Ainsi, on a 
-            \begin{equation*}
+            \begin{equation}
                 \boxed{
                     G_{\text{th}}=\frac{1}{R_{\text{th}}}=\frac{\lambda S}{L}.
                 }
-            \end{equation*}
+            \end{equation}
 
             On a donc le schéma équivalent donné à la Figure~\ref{fig:schema_equivalent_resistance_conductance_thermique}.
             \begin{figure}
@@ -104,15 +104,15 @@
     \subsection{Résistance thermique conducto-convective}
 
         On reprend le système décrit à la Figure~\ref{fig:transfert_conducto_convectif_fluide_brasse}. On a 
-        \begin{equation*}
+        \begin{equation}
             P_{\text{th}}^{\text{cc}}=\varphi_{\text{cc}}S=h(T_s-T_f)=hS(T_s-T_f),    
-        \end{equation*}
+        \end{equation}
         soit
-        \begin{equation*}
+        \begin{equation}
             \boxed{
                 G_{\text{cc}}=\frac{1}{R_{\text{cc}}}=hS.
             }
-        \end{equation*}
+        \end{equation}
 
     \subsection{Association en série : résistance \og multicouche\fg}
 
@@ -159,31 +159,31 @@
         \end{figure}
 
         La même puissance $P$ traverse toutes les couches : \textbf{elles sont montées en série}. On a alors
-        \begin{align*}
+        \begin{align}
             P
             &=h_iS(T_i-T_1)=\frac{\lambda_1 S}{e_1}(T_1-T_2),\\
             &=\frac{\lambda_2 S}{e_2}(T_2-T_3)=\frac{\lambda_3 S}{e_3}(T_4-T_3)=h_e S(T_4-T_e).
-        \end{align*}
+        \end{align}
 
         Ainsi,
-        \begin{align*}
+        \begin{align}
             T_i-T_e
             &=
             (T_i-T_1)+(T_1-T_2)+(T_2-T_3)+(T_3-T_4)+(T_4-T_e),\\
             &=\left[
                 \frac{1}{h_i S}+\frac{e_1}{\lambda_1 S}+\frac{e_2}{\lambda_2 S}+\frac{e_3}{\lambda_3 S}+\frac{1}{h_e S}
             \right]P.
-        \end{align*}
+        \end{align}
         Ainsi,
-        \begin{equation*}
+        \begin{equation}
             T_i-T_e=R_{\text{th}}^{\text{eq}}P,
-        \end{equation*}
+        \end{equation}
         avec la résistance équivalente donnée par
-        \begin{equation*}
+        \begin{equation}
             \boxed{
                 R_{\text{th}}^{\text{eq}}=\sum_{i}R_{\text{th},i}.
             }
-        \end{equation*}
+        \end{equation}
 
         Le schéma équivalent est donné à la Figure~\ref{fig:schema_equivalent_association_serie_resistance_thermique}.
 
@@ -279,11 +279,11 @@
         \end{figure}
 
         L'équivalent de la loi des n\oe uds donne
-        \begin{equation*}
+        \begin{equation}
             \boxed{
                 P_{\text{tot}}=P_{\text{mur}}+P_{\text{fenêtre}}.
             }
-        \end{equation*}
+        \end{equation}
 
         Le schéma équivalent est donné à la Figure~\ref{fig:schema_equivalent_association_parallele_resistance_thermique}.
         \begin{figure}
@@ -327,15 +327,15 @@
         \end{figure}
 
         Ainsi,
-        \begin{equation*}
+        \begin{equation}
             P_{\text{tot}}=G_f\times(T_i-T_e)+G_m\times(T_i-T_e)=G_{\text{eq}}\times(T_i-T_e),
-        \end{equation*}
+        \end{equation}
         avec
-        \begin{equation*}
+        \begin{equation}
             \boxed{
                 G_{\text{eq}}=\sum_{i}G_i,\qquad \frac{1}{R_{\text{th}}^{\text{eq}}}=\sum_{i}\frac{1}{R_{\text{th,i}}}.
             }
-        \end{equation*}
+        \end{equation}
 
         Il y a un \og court-circuit thermique\fg. Notamment, s'il y a un pont thermique, alors $G_{\text{pont}}\gg G_i$ et ainsi $G_{\text{eq}}\approx G_{\text{pont}}$.
 
@@ -364,14 +364,14 @@
 
             On suppose que l'on a les paramètres suivants : pour le côté extérieur, on a la conductance $G_e$, pour le côté intérieur on a la conductance $G_i$, pour la pièce il y a un chauffage $P_{\text{ch}}>0$ en \si{\watt}, et la capacité thermique de la chambre est $C$ en \si{\joule\per\kelvin}. Alors on a
 
-            \begin{equation*}
+            \begin{equation}
                 \frac{\d U}{\d t}=C\frac{\d T}{\d t}=P_{\text{ch}}-G_e(T(t)-T_e)-G_i(T(t)-T_i).
-            \end{equation*}
+            \end{equation}
 
             Ainsi,
-            \begin{equation*}
+            \begin{equation}
                 \frac{\d T}{\d t}+\frac{G_e+G_i}{C}T=\frac{P_{\text{ch}}+G_e T_e+G_i T_i}{C},
-            \end{equation*}
+            \end{equation}
             ce qui donne le schéma équivalent donné à la Figure~\ref{fig:ARQS_schema_equivalent}.
 
             \begin{figure}
@@ -403,26 +403,26 @@
             \end{figure}
 
             On pose 
-            \begin{equation*}
+            \begin{equation}
                 \boxed{
                     \frac{1}{\tau}=\frac{G_{\text{eq}}}{C},
                 }
-            \end{equation*}
+            \end{equation}
             et on obtient
-            \begin{equation*}
+            \begin{equation}
                 T(t)=A\e^{-t/\tau}+\frac{P_{\text{ch}}}{G_e+G_i}+\frac{G_e T_e+G_i T_i}{G_e+G_i}.
-            \end{equation*}
+            \end{equation}
             On résout ensuite avec d'éventuelles conditions initiales.
 
         \subsubsection{Qu'est-ce que l'ARQS ?}
             Ce qu'on a écrit suppose la validité du concept de résistance thermique. Dans chaque couche, on doit donc avoir un profil $T(x)$ environ affine. Cela suppose une diffusion thermique quasi instantanée, c'est-à-dire 
-            \begin{equation*}
+            \begin{equation}
                 \tau_{\text{diff}}\sim\frac{e^{2}}{D_{\text{th}}}\ll t,
-            \end{equation*}
+            \end{equation}
             i.e.~$F_0(t)\gg1$, c'est-à-dire
-            \begin{equation*}
+            \begin{equation}
                 \boxed{
                     t\gg\frac{e^{2}}{\frac{\lambda}{\mu c}},
                 }
-            \end{equation*}
+            \end{equation}
             dans chaque couche d'épaisseur $e$.

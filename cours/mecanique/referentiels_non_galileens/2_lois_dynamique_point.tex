@@ -5,9 +5,9 @@
         \begin{enumerate}[label=\arabic*.]
             \item Principe d'inertie.
             \item La dérivée de la quantité de mouvement est égal à la somme des forces extérieures s'appliquant sur le système considéré dans un référentiel galiléen, c'est-à-dire
-            \begin{equation*}
+            \begin{equation}
                 \frac{\d\vec{p}}{\d t}=\vec{F^{\text{ext}}},\qquad \vec{p}=\gamma m\vec{v}\text{ dans }\mathcal{R}_{\text{galiléen}}.
-            \end{equation*}
+            \end{equation}
             \item Principe d'action-réaction.
         \end{enumerate}
         On se place dans le cadre classique ou $\gamma=1$.
@@ -16,72 +16,72 @@
         \subsubsection{Loi de la quantité de mouvement}
 
             On considère un référentiel $\mathcal{R}'$ en mouvement accéléré par rapport à un référentiel galiléen $\mathcal{R}_{\text{galiléen}}\equiv\mathcal{R}$. Dans $\mathcal{R}$, on a 
-            \begin{align*}
+            \begin{align}
                 \frac{\d\vec{p}}{\d t}
                 &=
                 m\vec{a}(M)=\vec{F},\\
                 &=m(\vec{a'}(M)+\vec{a}_e(M)+\vec{a}_c(M))=\vec{F}.
-            \end{align*}
+            \end{align}
             On obtient ainsi
-            \begin{equation*}
+            \begin{equation}
                 m\vec{a'}(M)=\vec{F}+\vec{F}_e+\vec{F}_c,
-            \end{equation*}
+            \end{equation}
             où $\vec{F}_e=-m\vec{a}_e$ et $\vec{F}_e=-m\vec{a}_e$. Ce sont des \og pseudo\fg~forces d'inertie.
 
         \subsubsection{Loi du moment cinétique par rapport à $O'$ fixe dans $\mathcal{R}'$ non galiléen.}
 
             Dans $\mathcal{R}'$, on a
-            \begin{equation*}
+            \begin{equation}
                 \left(\vec{L}_{O'}\right)_{\mathcal{R}'}\coloneqq\vec{O'M}\wedge\vec{p'}=\vec{O'M}\wedge m\vec{v'}(M).
-            \end{equation*}
+            \end{equation}
             Ainsi,
-            \begin{align*}
+            \begin{align}
                 \left(\frac{\d \vec{L}_{O'}}{\d t}\right)
                 &=
                 m\underbrace{\left(\frac{\d \vec{O'M}}{\d t}\right)_{\mathcal{R}'}}_{\vec{v'}}\wedge\,\vec{v'}+\vec{O'M}\wedge\left(\frac{\d\vec{p}}{\d t}\right)_{\mathcal{R}'},\\
                 &=\underbrace{\vec{O'M}\wedge \vec{F}}_{\vec{\mathcal{M}}_{O'}}+\underbrace{\vec{O'M}\wedge\vec{F}_e}_{\vec{\mathcal{M}}^{\text{ent}}_{O'}}+\underbrace{\vec{O'M}\wedge\vec{F}_c}_{\vec{\mathcal{M}}^{\text{coriolis}}_{O'}}.
-            \end{align*}
+            \end{align}
 
         \subsubsection{Loi de l'énergie cinétique dans un référentiel non galiléen}
             
             \paragraph{Puissance des forces de Coriolis.}
                 On a 
-                \begin{equation*}
+                \begin{equation}
                     \vec{P}_{\text{cor}}=\vec{F}_e\cdot\vec{v'}=-m\left(2\vec{\omega}\wedge\vec{v'}\right)\wedge\vec{v'}=0.
-                \end{equation*}
+                \end{equation}
             
             \paragraph{Loi de l'énergie cinétique dans $\mathcal{R}'$.}
                 On a 
-                \begin{align*}
+                \begin{align}
                     \frac{\d E_{c}'}{\d t} 
                     &= \frac{\d}{\d t}\left(\frac{1}{2}m v'^{2}\right),\\
                     &= m\vec{v}\cdot\left(\frac{\d\vec{v'}}{\d t}\right)_{\mathcal{R}'},\\
                     &=\left(\vec{F}+\vec{F}_e+\vec{F}_c\right)\cdot\vec{v'},\\
                     &=\left(\vec{F}+\vec{F}_e\right)\cdot\vec{v'},\\
                     &=P' + P_e'.
-                \end{align*}
+                \end{align}
                 Ainsi, on a 
-                \begin{equation*}
+                \begin{equation}
                     \d E_c'=P'\d t+P_e'\d t=\vec{F}\cdot\underbrace{\vec{v'}\d t}_{\vec{\d l'}}+\vec{F}_e\cdot\underbrace{\vec{v'}_e\d t}_{\vec{\d l'}}=\delta W'+\delta W_e'.
-                \end{equation*}
+                \end{equation}
                 En intégrant, on obtient donc
-                \begin{equation*}
+                \begin{equation}
                     \boxed{\Delta E_c'=W'+W_e'.}    
-                \end{equation*}
+                \end{equation}
             
             \paragraph{Formulation en terme d'énergie mécanique.} Dans le cas où il existe des forces conservatives, on a $W_{\text{cons}}=-\Delta E_p$ (ou $\delta W_{\text{cons}}=-\d E_p$). Dans ce cas, on définit l'énergie mécanique par
-            \begin{equation*}
+            \begin{equation}
                 \boxed{E_m\coloneqq E_c+E_p.}
-            \end{equation*}
+            \end{equation}
 
             Ainsi, $\d E_c'=\delta W_{\text{nc}}-\d E_p'+\delta W_e'$ où $W_{\text{nc}}$ représente le travail venant de forces non conservatives. Alors 
-            \begin{equation*}
+            \begin{equation}
                 \d E_m'=\delta W_{\text{nc}}'+\delta W_{e}',
-            \end{equation*}
+            \end{equation}
             et on a donc
-            \begin{equation*}
+            \begin{equation}
                 \boxed{\Delta E_m'=W_{\text{nc}}'+W_e'.}
-            \end{equation*}
+            \end{equation}
         
     \subsection[Référentiel entraîné en translation accélérée]{Référentiel entraîné en translation accélérée ($\vec{\omega}=\vec{0}$)}
 
@@ -90,12 +90,12 @@
         \subsubsection{Freinage d'une voiture}
 
             On suppose que la voiture roule initialement à 50 km/h et qu'elle s'arrête en 1 seconde. Alors
-            \begin{equation*}
+            \begin{equation}
                 \begin{aligned}
                     \left\lVert\vec{a}_e\right\rVert&\approx\frac{\Delta v}{\Delta t}=14~m.s^{-2}>g,\\
                     \left\lVert\vec{F}_e\right\rVert&=m\left\lVert \vec{a}_e\right\rVert=1400~N.
                 \end{aligned}
-            \end{equation*}
+            \end{equation}
 
         \subsubsection{Pendule secoué}
 
@@ -128,56 +128,56 @@
             \end{figure}
             
             On considère un pendule secoué, voir la Figure~\ref{fig:pendule_secoue}. Le référentiel est $\mathcal{R}'=(Axyz)$ ($y$ est orienté vers nous). On suppose que le pendule situé en $A$ est secoué selon l'axe x : $x_{a}(t)=\alpha\cos(\omega t)$. Le théorème du moment cinétique par rapport à $A$ dans $\mathcal{R}'$ donne 
-            \begin{equation*}
+            \begin{equation}
                 \vec{L'_{A}}=J\dot{\theta}\vec{u_y}=ml^{2}\dot{\theta}\vec{u_y},
-            \end{equation*}
+            \end{equation}
             où $J$ est le moment d'inertie. On calcule la force d'entraînement :
-            \begin{equation*}
+            \begin{equation}
                 \left\lbrace
                 \begin{aligned}
                     \vec{a}_e &=\ddot{x_A}(t)\vec{u_x}=-\omega^{2}\alpha\cos(\omega t)\vec{u_x},\\
                     \vec{F}_e &= m\omega^{2}\alpha\cos(\omega t)\vec{u_x}.
                 \end{aligned}
                 \right.
-            \end{equation*}
+            \end{equation}
             Le théorème du moment cinétique selon $\vec{u_y}$ donne alors
-            \begin{equation*}
+            \begin{equation}
                 ml^{2}\ddot{\theta}=-mgl\sin\theta+m\omega^{2}\alpha\cos(\omega t)l\cos\theta.
-            \end{equation*}
+            \end{equation}
             En notant $\omega_{0}^{2}=\dfrac{g}{l}$, on a donc 
-            \begin{equation*}
+            \begin{equation}
                 \boxed{
                     \ddot{\theta}+\omega_{0}^{2}\sin\theta=\frac{\omega^{2}\alpha}{l}\cos(\omega t)\cos\theta.
                 }
-            \end{equation*}
+            \end{equation}
 
             Pour des petits mouvements, on a $\left\lvert\theta\right\rvert\ll1$ et on linéarise :
-            \begin{equation*}
+            \begin{equation}
                 \ddot{\theta}+\omega_{0}^{2}\theta=\frac{\omega^{2}\alpha}{l}\cos(\omega t).
-            \end{equation*}
+            \end{equation}
             En régime sinusoïdal forcé, $\ubar{\theta}(t)\propto\e^{\j \omega t}$ (où $\j$ est le nombre imaginaire tel que $j^{2}=-1$). Ainsi,
-            \begin{equation*}
+            \begin{equation}
                 \left(\omega_{0}^{2}-\omega^{2}\right)\ubar{\theta}(t)=\frac{\omega^{2}\alpha}{l}\e^{\j\omega t}.
-            \end{equation*}
+            \end{equation}
             En prenant la partie réelle, on obtient donc
-            \begin{equation*}
+            \begin{equation}
                 \boxed{
                     \theta(t)=\frac{\omega^{2}}{\omega_{0}^{2}-\omega^{2}}\frac{\alpha}{l}\cos(\omega t).
                 }
-            \end{equation*}
+            \end{equation}
 
             Si l'on suppose que le pendule est secoué selon l'axe z avec $z_{A}(t)=\alpha\cos(\omega t)$, on trouve pour équation du mouvement
-            \begin{equation*}
+            \begin{equation}
                 \ddot{\theta}+\omega_{0}^{2}\left(1+\frac{\alpha\omega^{2}}{g}\cos(\omega t)\right)\sin\theta = 0.
-            \end{equation*}
+            \end{equation}
             En posant $\Omega^{2}(t)=1+\dfrac{\alpha\omega^{2}}{g}\cos(\omega t)$, on voit qu'il s'agit d'un oscillateur paramétrique.
 
         \subsubsection{Énergie potentielle d'entraînement par translation uniformément accélérée}
             
             On a $\vec{a}_e=a\vec{u}_x$ et $\vec{F}_e=-ma\vec{u}_x$. Soit un déplacement élémentaire $\vec{\d l'}=\begin{pmatrix}\d x'\\\d y'\\\d z'\end{pmatrix} $ dans $\mathcal{R}'$. Alors 
-            \begin{equation*}
+            \begin{equation}
                 \delta W_e'=\vec{F}_e\cdot\vec{\d l'}=-ma\d x'=-\d(max')=-\d E_p^{\text{ent}}.
-            \end{equation*}
+            \end{equation}
             Ainsi, l'énergie potentielle d'entraînement vaut $E_{p}^{\text{ent}}=max'$ (à une constante près).
 
             \begin{example}
@@ -211,13 +211,13 @@
                 On considère un pendule dans un train, voir la Figure~\ref{fig:pendule_train}. On cherche la valeur de $\theta_{\text{eq}}$.
                 \begin{itemize}
                     \item \underline{Première méthode} : on utilise $\vec{\mathcal{M}_{A}^{\text{tot}}}=\vec{0}$. En projetant, on trouve alors $mgl\sin\theta_{\text{eq}}=mal\cos\theta_{\text{eq}}$ d'où 
-                    \begin{equation*}
+                    \begin{equation}
                         \tan\theta_{\text{eq}}=\frac{a}{g}.    
-                    \end{equation*}
+                    \end{equation}
                     \item \underline{Deuxième méthode} : On a $E_p^{\text{ent}}=-mal\sin\theta$ et $E_p^{\text{poids}}=-mgl\cos\theta$ (avec éventuellement des constantes). Alors 
-                    \begin{equation*}
+                    \begin{equation}
                         \frac{\d E_p^{\text{tot}}}{\d\theta}=0=-mal\cos\theta+mgl\sin\theta,
-                    \end{equation*}
+                    \end{equation}
                     d'où le résultat.
                 \end{itemize}
             \end{example}
@@ -278,41 +278,41 @@
             \end{figure}
             
             On cherche l'expression de $x'(t)$. On a
-            \begin{equation*}
+            \begin{equation}
                 \left\lbrace
                 \begin{aligned}
                     \vec{F}_e &= m\omega^{2}x'(t)\vec{u_{x'}},\\
                     \vec{F}_c &= -2m\omega\vec{u_z}\wedge \dot{x'}(t)\vec{u_{x'}}=-2m\omega\dot{x'}(t)\vec{u_y}.
                 \end{aligned}
                 \right.
-            \end{equation*}
+            \end{equation}
             On projette le principe fondamental de la dynamique selon $\vec{u_x'}$ pour obtenir
-            \begin{equation*}
+            \begin{equation}
                 m\ddot{x'}(t)=-k\left(x'(t)-l_0\right)+m\omega^{2}x'(t).
-            \end{equation*}
+            \end{equation}
             En posant $\omega_{0}^{2}\coloneqq\frac{k}{m}$, on obtient 
-            \begin{equation*}
+            \begin{equation}
                 \ddot{x'}(t)+\left(\omega_{0}^{2}-\omega^{2}\right)x'(t)=\omega_{0}^{2}l_0.
-            \end{equation*}
+            \end{equation}
 
         \subsubsection{Énergie potentielle d'entraînement \og centrifuge\fg}
             
             Soit un déplacement $\vec{dl'}=dx'\vec{u_{x'}}$ dans $\mathcal{R}'$. On a 
-            \begin{equation*}
+            \begin{equation}
                 \delta W_{e}'=\vec{F}_e\cdot\vec{dl'}=m\omega^{2}x'\d x'=\d\left(m\omega^{2}\frac{x'^{2}}{2}\right)\coloneqq -\d E_p^{\text{ent}},
-            \end{equation*}
+            \end{equation}
             d'où $E_p^{\text{ent}}=-m\omega^{2}\frac{x'^{2}}{2}$.
 
         \subsubsection{Retour sur l'exemple}
 
             On applique le théorème d'énergie mécanique dans $\mathcal{R}'$ :
-            \begin{equation*}
+            \begin{equation}
                 E_{m_{tot}}'=\text{constante}=\frac{1}{2}m\dot{x'}^{2}+\frac{1}{2}k(x'-l_0)^{2}-m\omega^{2}\frac{x'^{2}}{2}.
-            \end{equation*}
+            \end{equation}
 
             On se donne comme conditions initiales $x'(0)=l_0$ et $\dot{x'}(0)=0$. On a alors 
-            \begin{equation*}
+            \begin{equation}
                 \boxed{
                     \frac{1}{2}m\dot{x'}^{2}+\frac{1}{2}k(x'-l_0)^{2}-\frac{m\omega^{2}x'^{2}}{2}=-\frac{m\omega^{2}l_0^{2}}{2}.
                 }
-            \end{equation*}
+            \end{equation}

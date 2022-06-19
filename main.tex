@@ -9,18 +9,12 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 
+
 \usepackage{mathtools}
 \usepackage{esint}
 \usepackage{siunitx}
 \usepackage[version=4]{mhchem}
-\renewcommand{\d}{\mathrm{d}}
-\renewcommand{\j}{\mathrm{j}}
-\renewcommand{\div}{\mathrm{div}}
-\newcommand{\N}{\mathbb{N}}
-\newcommand{\Z}{\mathbb{Z}}
-\newcommand{\e}{\mathrm{e}}
-\newcommand{\grad}{\mathrm{grad}}
-\newcommand{\ubar}[1]{\text{\b{$#1$}}}
+
 
 \usepackage{amsthm}
 \newtheorem{lemma}{Lemme}[chapter]
@@ -35,6 +29,13 @@
 \usepackage{booktabs}
 \usepackage{multirow}
 
+\usepackage{silence}
+
+\WarningFilter{minitoc(hints)}{W0023}
+\WarningFilter{minitoc(hints)}{W0024}
+\WarningFilter{minitoc(hints)}{W0028}
+\WarningFilter{minitoc(hints)}{W0030}
+
 
 \usepackage{enumitem}
 
@@ -48,12 +49,36 @@
 \tikzexternalize
 \tikzsetexternalprefix{tikz_figs/}
 \tikzset{ressort/.style={thick,gray,smooth}}
+\tikzset{->-/.style={decoration={
+        markings,
+        mark=at position 0.5 with {\arrow[#1]{latex}}},postaction={decorate}}
+        }
+\def\centerarc[#1](#2)(#3:#4:#5){\draw[#1] ($(#2)+({#5*cos(#3)},{#5*sin(#3)})$) arc (#3:#4:#5);}
+% Syntax: [draw options] (center) (initial angle:final angle:radius)      
 
 \usepackage[french]{minitoc}
 % To remove etex warning when loading autonum, see https://tex.stackexchange.com/questions/285950/package-autonum-needs-the-obsolete-etex-package
 \expandafter\def\csname ver@etex.sty\endcsname{3000/12/31}
 \let\globcount\newcount
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdfpagemode=FullScreen,
+}
 \usepackage{autonum}
+\dominitoc % Initialisation du minitoc
+
+\renewcommand{\d}{\mathrm{d}}
+\renewcommand{\j}{\mathrm{j}}
+\renewcommand{\div}{\mathrm{div}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\e}{\mathrm{e}}
+\newcommand{\grad}{\mathrm{grad}}
+\newcommand{\ubar}[1]{\text{\b{$#1$}}}
 
 \begin{document}
 \begin{titlepage}
@@ -76,16 +101,18 @@
     {\large Année scolaire 2015/2016\par}
 \end{titlepage}
 
-\dominitoc % Initialisation
+
 \tableofcontents
+\listoffigures
+\listoftables
 
 % Première partie : mécanique
-%\subimport{cours/}{mecanique.tex}
+\subimport{cours/}{mecanique.tex}
 
 % Deuxième partie : Électromagnétisme
 \subimport{cours/}{electromagnetisme.tex}
 
 % Troisième partie : thermodynamique
-%\subimport{cours/}{thermodynamique.tex}
+\subimport{cours/}{thermodynamique.tex}
 
 \end{document}

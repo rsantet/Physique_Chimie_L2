@@ -146,14 +146,14 @@
             \end{figure}
 
             La Figure~\ref{fig:notion_vitesse_glissement} présente un solide en mouvement du solide (1) par rapport au sol (2). Alors la vitesse de glissement est définie par 
-            \begin{equation*}
+            \begin{equation}
                 \vec{v}_g(1/2)\coloneqq =\vec{v}_1-\vec{v}_2.
-            \end{equation*}
+            \end{equation}
 
             Il faut noter que cette définition est indépendante du référentiel : si $\mathcal{R}_2$ est un référentiel lié à 2, alors 
-            \begin{equation*}
+            \begin{equation}
                 \vec{v}'_{1/2}-\vec{v}'_{2/\mathcal{R}_2}=\vec{v}_1-\vec{v}_2=\vec{v}_g.
-            \end{equation*}
+            \end{equation}
 
         \paragraph{Cas du glissement.} 
             
@@ -166,24 +166,24 @@
         \paragraph{Cas du non glissement.} 
         
             On est donc dans le cas où $\vec{v}_g=\vec{0}$. Alors on a
-            \begin{equation*}
+            \begin{equation}
                 \left\lVert\vec{T}\right\rVert\leqslant f_s\left\lVert\vec{N}\right\rVert,
-            \end{equation*}
+            \end{equation}
             où $f_s$ est le coefficient de frottement statique. $f_s$ et $f_d$ ont les mêmes propriétés et en général, $f_s\geqslant f_d$.
 
 
         \paragraph{Cône de frottement.}
 
             \subparagraph{Non glissement.} Soit $\varphi_{s}$ tel que $f_s=\tan\varphi_s$. Alors 
-            \begin{equation*}
+            \begin{equation}
                 \left\lVert\vec{T}\right\rVert\leqslant f_s\left\lVert\vec{N}\right\rVert\Leftrightarrow\tan(\alpha)\leqslant\tan\varphi_s\Leftrightarrow\alpha\leqslant\varphi_s.
-            \end{equation*}
+            \end{equation}
             Il y a non glissement si la résultante $\vec{R}$ reste à l'intérieur du cône de frottement statique, voir la Figure~\ref{fig:cone_frottement_statique}.
 
             \subparagraph{Glissement.} Soit $\varphi_{d}$ tel que $f_d=\tan\varphi_d$. Alors 
-            \begin{equation*}
+            \begin{equation}
                 \left\lVert\vec{T}\right\rVert= f_d\left\lVert\vec{N}\right\rVert\Leftrightarrow\tan(\alpha)=\tan\varphi_d\Leftrightarrow\alpha=\varphi_d.
-            \end{equation*}
+            \end{equation}
             Il y a glissement si la résultante $\vec{R}$ coïncide avec le bord du cône de frottement dynamique, voir la Figure~\ref{fig:cone_frottement_dynamique}.
 
             \begin{figure}
@@ -274,23 +274,23 @@
         \end{figure}
 
         On se demande la condition sur $\alpha$ pour éviter tout glissement pour toute masse $m$. La condition de l'équilibre s'écrit $\vec{R}+m\vec{g}=\vec{0}$. En projetant sur $(Ox)$ puis $(Oy)$, on obtient
-        \begin{equation*}
+        \begin{equation}
             \begin{aligned}
                 mg\sin\alpha-T&=0,\\
                 -mg\cos\alpha+N=0.
             \end{aligned}
-        \end{equation*}
+        \end{equation}
         Ainsi, on a $\frac{T}{N}=\tan\alpha$. On a donc non glissement si $T\leqslant f_s N$ ou bien $\alpha\leqslant\varphi_s$. C'est l'effet d'arc-boutement : pas de glissement quelque soit la charge.
 
         \paragraph{Condition de non-basculement.}
 
             Les équations en translation et rotation s'écrivent
-            \begin{equation*}
+            \begin{equation}
                 \begin{aligned}
                     \vec{R^{\text{ext}}}&=\vec{0}=\vec{R}+m\vec{g},\\
                     \vec{\mathcal{M}_{G}^{\text{ext}}}=\vec{0}=\vec{GG}\wedge m\vec{g}+\vec{GI}\wedge\vec{I},
                 \end{aligned}
-            \end{equation*}
+            \end{equation}
             où $G$ est le centre de masse de la masse $m$, et $I$ est le point d'application de $\vec{R}$. Donc $\vec{GI}\parallel\vec{R}\parallel\vec{g}$. $I$ est donc à la vertical de $G$. On a non-basculement si $I$ reste sur la surface de contact : la limite du basculement est quand $I$ est sur l'arête. Ainsi, l'angle limite est tel que $\tan\alpha_{\text{lim}}=\frac{l}{h}$, où $l$ est la longueur de la masse et $h$ sa hauteur. Pour savoir s'il y a glissement ou basculement, il faut comparer $\frac{l}{h}$ et $f_s$.
 
     \subsection{Effet \og stick-slip\fg}
@@ -332,57 +332,57 @@
 
         \begin{itemize}
             \item \underline{Phase 1} : non glissement sur $[0,t_1]$. On a 
-            \begin{equation*}
+            \begin{equation}
                 m\ddot{x}=0=-kx+T,
-            \end{equation*}
+            \end{equation}
             doù $x(t)=Vt$. La fin de la phase 1 à $t_1$ a lieu quand $T=f_s N$. On a $T(t_1)=kx(t_1)=kVt_1$ et $N=mg$. Ainsi,
-            \begin{equation*}
+            \begin{equation}
                 f_1=f_s\frac{mg}{kV}=\frac{f_s g}{\omega_{0}^{2}V},
-            \end{equation*}
+            \end{equation}
             avec $\omega_{0}^{2}=\frac{k}{m}$.
 
             \item \underline{Phase 2} : on a glissement. $f_d\approx0$ donc il y a glissement sans frottement. Ainsi,
-            \item \begin{equation*}
+            \item \begin{equation}
                 m\ddot{x}=-kx+0,
-            \end{equation*}
+            \end{equation}
             d'où $\ddot{x}+\omega_{0}^{2}x=0$. Alors $x(t\geqslant t_1)=A\cos\left(\omega_0(t-t_1)+\alpha\right)$. La condition initiale est en $t=t_1$ : on a $x(t_1)=Vt_1=\frac{f_s g}{\omega_{0}^{2}}=A\cos\alpha$, et $\dot{x}(t_1)=V=-A\omega_0\sin\alpha$. Alors
-            \begin{equation*}
+            \begin{equation}
                 \tan\alpha=-\frac{\omega_0 V}{f_s g},\qquad A^{2}=\left(\frac{f_s g}{\omega_{0}^{2}}\right)^{2}+\left(\frac{V}{\omega_0}\right)^{2}.
-            \end{equation*}
+            \end{equation}
 
             On a fin du glissement à $t=t_2$, c'est-à-dire $Vg(t_2)=0$, d'où $\dot{x}(t_2)=V$. Alors
-            \begin{equation*}
+            \begin{equation}
                 -A\omega_0\sin\left(\omega_0(t_2-t_1)+\alpha\right)=V=-A\omega_0\sin\alpha,
-            \end{equation*}
+            \end{equation}
             puis
-            \begin{equation*}
+            \begin{equation}
                 \sin\left(\omega_0(t_2-t_1)+\alpha\right)=\sin\alpha,
-            \end{equation*}
+            \end{equation}
             d'où $\omega_0(t_2-t_1)+\alpha=\pi-\alpha$, ce qui donne enfin
-            \begin{equation*}
+            \begin{equation}
                 t_2-t_1=\frac{\pi}{\omega_0}-\frac{2\alpha}{\omega_0}.
-            \end{equation*}
+            \end{equation}
 
             \item \underline{Phase 3} : non glissement sur $[t_2,t_3]$, on a 
-            \begin{equation*}
+            \begin{equation}
                 \dot{x}(t_2\leqslant t\leqslant t_3)=V,
-            \end{equation*}
+            \end{equation}
             d'où $x(t_2\leqslant t_\leqslant t_3)=V(t-t_2)+K$. La condition initiale donne
-            \begin{equation*}
+            \begin{equation}
                 K=x(t_2)=A\cos\left(\omega_0(t_2-t_1)+\alpha\right)=A\cos\left(\pi-\alpha\right)=-A\cos\alpha.
-            \end{equation*}
+            \end{equation}
             Ainsi,
-            \begin{equation*}
+            \begin{equation}
                 x(t_2\leqslant t\leqslant t_3)=V(t-t_2)-A\cos\alpha.
-            \end{equation*}
+            \end{equation}
             Le fin de la phase 3 a lieu en $t_3$ quand $T(t_3)=f_s N=f_s mg$. Or $m\ddot{x}=0=T-kx$, donc $kx(t_3)=f_s mg$. Donc
-            \begin{equation*}
+            \begin{equation}
                 kV(t_3-t_2)-k\frac{f_s g}{\omega_0^{2}}=f_s mg.
-            \end{equation*}
+            \end{equation}
             Donc 
-            \begin{equation*}
+            \begin{equation}
                 t_3-t_2=2\frac{f_s g}{\omega_0^{2}V}.
-            \end{equation*}
+            \end{equation}
         \end{itemize}
 
 
