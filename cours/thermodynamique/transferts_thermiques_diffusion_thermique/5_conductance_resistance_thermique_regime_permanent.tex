@@ -1,5 +1,5 @@
-\section{Conductance et résistance thermique en régime permanent}
-    \subsection{Analogie conduction thermique et conduction électrique en régime permanent}
+\section[Conductance et résistance thermique]{Conductance et résistance thermique en régime permanent}
+    \subsection{Analogie conduction thermique et électrique en régime permanent}
 
         On donne à la Table~\ref{tab:analogie_conduction_thermique_electrique} une comparaison entre les grandeurs et les lois apparaissant dans les phénomènes de conduction thermique et de conduction électricité.
 
@@ -11,8 +11,8 @@
                 Grandeur transportée & énergie [\si[]{\joule}] & charge [\si[]{\coulomb}]\\ \midrule
                 Vecteur densité de courant & $\vec{j}_{\text{th}}$ [\si[]{\watt\per\metre\square}] & $\vec{j}$ [\si[]{\ampere\per\metre\square}]\\ \midrule
                 Flux & $P_{\text{th}}=\iint_{S}\vec{j}_{\text{th}}\vec{dS}$ [\si[]{\watt}] & $i=\iint_{S}\vec{j}\vec{dS}$ [\si[]{\ampere}]\\ \midrule
-                Équation locale\\de conservation de l'énergie\\en régime permanent & $\mathrm{div}~\vec{j}_{\text{th}}=0$ & $\mathrm{div}~\vec{j}=0$\\ \midrule
-                Loi de transport linéaire & $\vec{j}_{\text{th}}=-\lambda\vec{\mathrm{grad}}~T$[Fourier] & $\vec{j}=\sigma\vec{E}=-\sigma\vec{\mathrm{grad}}~V$ [Ohm]\\ \midrule
+                Équation locale&&\\de conservation de l'énergie&&\\en régime permanent & $\mathrm{div}~\vec{j}_{\text{th}}=0$ & $\mathrm{div}~\vec{j}=0$\\ \midrule
+                Loi de transport linéaire & $\vec{j}_{\text{th}}=-\lambda\vec{\mathrm{grad}}~T$ & $\vec{j}=\sigma\vec{E}=-\sigma\vec{\mathrm{grad}}~V$\\ &[Fourier]&[Ohm]\\\midrule
                 Conductivité & $\lambda$ [\si[]{\watt\per\metre\per\kelvin}] & $\sigma$ [\si[]{\per\ohm\per\metre}]\\ \midrule
                 Équation locale\\(en régime permanent) & $\Delta T=0$ & $\Delta V=0$\\ \bottomrule
             \end{tabular}    
@@ -190,7 +190,7 @@
         \begin{figure}
             \centering
             \tikzsetnextfilename{schema_equivalent_association_serie_resistance_thermique}
-            \begin{tikzpicture}[scale=1]  
+            \begin{tikzpicture}[scale=0.9]  
                 % \helpgrid{3}{3}
                 
                 \coordinate (Ti) at (-0.5,0);
@@ -274,7 +274,7 @@
                 \node [text=red] at (0.75,1.45) {>};
                 \node [text=red] at (0.75,-1.45) {>};
             \end{tikzpicture}
-            \caption{Schéma équivalent pour l'association en parallèle de résistances thermiques.}    
+            \caption{Exemple d'association en parallèle de résistances thermiques.}    
             \label{fig:exemple_association_parallele_resistance_thermique}
         \end{figure}
 
@@ -322,7 +322,7 @@
                 \node at (2.75,0) [below,shift={(0,-0.2)}] {$P$};
             
             \end{tikzpicture}
-            \caption{Schéma équivalent pour l'association en parallèle de résistances thermiques.}    
+            \caption{Schéma équivalent pour l'exemple d'association en parallèle de résistances thermiques.}    
             \label{fig:schema_equivalent_association_parallele_resistance_thermique}
         \end{figure}
 

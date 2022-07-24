@@ -1,4 +1,4 @@
-\section{Flux du champ électrostatique. Théorème de Gauss}
+\section[Flux du champ électrostatique]{Flux du champ électrostatique.\\Théorème de Gauss}
 
     \subsection{Charge ponctuelle : flux à travers une sphère}
 
@@ -65,12 +65,12 @@
 
             Ici, $Q^{\text{int}}$ est la somme de toutes les charges qui sont à l'intérieur de la surface $S$.
 
-    \subsection{Quand et comment appliquer le théorème de Gauss}
+    \subsection{Comment appliquer le théorème de Gauss}
 
         Le but est de calculer des champs électrostatiques $\vec{E}$ dans des cas de hautes symétries. La méthode est la suivante:
         \begin{itemize}
             \item [($\alpha$)] Invariance et symétries : donne la géométrie de $\vec{E}$;
-            \item [($\beta$)] Choisir une surface de Gauss adaptée (ou bien $\vec{E}\parallel\vec{n}^{\text{ext}}$ avec $E=$constante sur la surface ou bien $\vec{E}\perp\vec{n}^{\text{ext}}$) avec un dessin;
+            \item [($\beta$)] Choisir une surface de Gauss adaptée (ou bien $\vec{E}\parallel\vec{n}^{\text{ext}}$ avec $E$ qui est constant sur la surface ou bien $\vec{E}\perp\vec{n}^{\text{ext}}$) avec un dessin;
             \item [($\gamma$)] Conclure.
         \end{itemize}
 
@@ -267,7 +267,8 @@
                     \oiint_{S=S_1\cup S_2\cup \Sigma}\vec{E}\cdot\vec{n}^{\text{ext}}\d S
                     &=\frac{Q_{\text{int}}}{\varepsilon_0},\\
                     &=\frac{\sigma S}{\varepsilon_0},\\
-                    &=0+\iint_{S_1}E(z)\vec{u}_z\cdot\vec{u}_z\d S+\iint_{S_2}E(-z)\vec{u}_z\cdot\left(-\vec{u}_z\right)\d S,\\
+                    &=0+\iint_{S_1}E(z)\vec{u}_z\cdot\vec{u}_z\d S\\
+                    &\quad+\iint_{S_2}E(-z)\vec{u}_z\cdot\left(-\vec{u}_z\right)\d S,\\
                     &=
                     E(z)S+E(z)S.
                 \end{align}
@@ -370,7 +371,7 @@
                 \begin{figure}
                     \centering
                     \tikzsetnextfilename{theoreme_superposition_armature_condensateur_plan}
-                    \begin{tikzpicture}[scale=1]  
+                    \begin{tikzpicture}[scale=0.9]  
                         \draw (0,0) --++ (1,1) --++ (3,0) --++ (-1,-1) -- cycle;
                         \draw (0,3) --++ (1,1) --++ (3,0) --++ (-1,-1) -- cycle;
                         \node[text=red] at (2, -0.5) {$\vec{0}$};

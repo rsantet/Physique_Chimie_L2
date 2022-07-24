@@ -5,12 +5,11 @@
 \usepackage[T1]{fontenc}
 \usepackage[french]{babel}
 
-\usepackage{amsmath}
+
+\usepackage{mathtools}
 \usepackage{amsfonts}
 \usepackage{amssymb}
 
-
-\usepackage{mathtools}
 \usepackage{esint}
 \usepackage{siunitx}
 \usepackage[version=4]{mhchem}
@@ -29,12 +28,16 @@
 \usepackage{booktabs}
 \usepackage{multirow}
 
-\usepackage{silence}
+\usepackage{showframe}
+\overfullrule=1mm
 
+\usepackage{silence}
 \WarningFilter{minitoc(hints)}{W0023}
 \WarningFilter{minitoc(hints)}{W0024}
 \WarningFilter{minitoc(hints)}{W0028}
 \WarningFilter{minitoc(hints)}{W0030}
+%\WarningFilter{sectsty}{W0023}
+%\WarningFilter{sectsty}{W0023}
 
 
 \usepackage{enumitem}
@@ -56,10 +59,6 @@
 \def\centerarc[#1](#2)(#3:#4:#5){\draw[#1] ($(#2)+({#5*cos(#3)},{#5*sin(#3)})$) arc (#3:#4:#5);}
 % Syntax: [draw options] (center) (initial angle:final angle:radius)      
 
-\usepackage[french]{minitoc}
-% To remove etex warning when loading autonum, see https://tex.stackexchange.com/questions/285950/package-autonum-needs-the-obsolete-etex-package
-\expandafter\def\csname ver@etex.sty\endcsname{3000/12/31}
-\let\globcount\newcount
 \usepackage{hyperref}
 \hypersetup{
     colorlinks=true,
@@ -68,8 +67,12 @@
     urlcolor=cyan,
     pdfpagemode=FullScreen,
 }
+% To remove e tex warning when loading auto num, see https://tex.stackexchange.com/questions/285950/package-autonum-needs-the-obsolete-etex-package
+\expandafter\def\csname ver@etex.sty\endcsname{3000/12/31}
+\let\globcount\newcount
+\usepackage[french]{minitoc}
 \usepackage{autonum}
-\dominitoc % Initialisation du minitoc
+\dominitoc % Initialisation du mini toc
 
 \renewcommand{\d}{\mathrm{d}}
 \renewcommand{\j}{\mathrm{j}}

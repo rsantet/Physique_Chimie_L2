@@ -1,4 +1,4 @@
-\section{Équations locales de l'électrostatique (Maxwell)}
+\section{Équations locales de l'électrostatique}
 
     \subsection{Équation de Maxwell-Gauss, théorème de Gauss}
 
@@ -54,7 +54,8 @@
             \oint_{C}\vec{E}\cdot\vec{\d l}
             &=0,\\
             &=
-            E_x(x,y,z)\d x+E_y(x+\d x,y,z)\d y -E_x(x,y+\d y,z)\d x-E_y(x,y,z)\d y,\\
+            E_x(x,y,z)\d x+E_y(x+\d x,y,z)\d y\\
+            &\quad-E_x(x,y+\d y,z)\d x-E_y(x,y,z)\d y,\\
             &=
             -\d y\frac{\partial E_x}{\partial y}(x,y,z)\d x+\d x\frac{\partial E_y}{\partial x}(x,y,z)\d y=0,
         \end{align}
@@ -67,10 +68,10 @@
         \begin{equation}
             \begin{aligned}
                 &\left(\frac{\partial E_x}{\partial z}-\frac{\partial E_z}{\partial x}\right)\d x\d z=0,\\
-                \left(\frac{\partial E_z}{\partial y}-\frac{\partial E_y}{\partial z}\right)\d y\d z=0.
+                &\left(\frac{\partial E_z}{\partial y}-\frac{\partial E_y}{\partial z}\right)\d y\d z=0.
             \end{aligned}
         \end{equation}
-        La circulation est donc proportionnelle à l'aire sur laquelle s'appuie le contour. L'idée est donc de passer d'une circulation $\oint\vec{E}\cdot\vec{\d l}$ à un flux à travers une surface.
+        La circulation du champ est donc proportionnelle à l'aire sur laquelle s'appuie le contour. L'idée est donc de passer d'une circulation $\oint\vec{E}\cdot\vec{\d l}$ à un flux à travers une surface.
 
     \subsection{Opérateur rotationnel}
 
@@ -126,7 +127,7 @@
                 }.
             \end{equation}
 
-    \subsection{Équation de Maxwell-Faraday de l'électrostatique}
+    \subsection{Équation de Maxwell--Faraday}
 
         Sur un contour fermé $C$ avec une surface $\Sigma$ supportée par ce contour, on a 
         \begin{equation}

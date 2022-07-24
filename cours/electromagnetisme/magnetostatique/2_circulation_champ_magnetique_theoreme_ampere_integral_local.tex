@@ -1,0 +1,202 @@
+\section[Circulation du champ magnétique]{Circulation du champ magnétique : théorème d'Ampère intégral et local}
+
+    \subsection{Théorème d'Ampère intégral}
+
+        En L1, on voit que les lignes de champ de $\vec{B}$ s'enroulent autour des courants, et que $\vec{B}\times l\propto I$ si $I$ est l'intensité d'un courant le long d'un fil de longueur $l$ (par linéarité).
+
+        On a le postulat suivant :
+        \begin{equation}
+            \boxed{
+                \oint_{C}\vec{B}\cdot\vec{\d l}=\mu_0 I_{\text{enl}},
+            }
+        \end{equation}
+        où $I_{\text{enl}}$ est l'intensité des fils \og enlacés\fg, voir la Figure~\ref{fig:intensite_fil_enlances_circulation_champ_magnetique}. Dans ce cas, on a 
+        \begin{equation}
+            I_{\text{enl}}=I_1-I_2-I_3.
+        \end{equation}
+
+        \begin{figure}
+            \centering
+            \tikzsetnextfilename{intensite_fil_enlances_circulation_champ_magnetique}
+            \begin{tikzpicture}[scale=1]  
+                \draw[pattern=north east lines,->-=black] (0,0) ellipse (2 and 0.5) node[below,shift={(0,-1)}] {C};
+                \draw[text=blue,draw=blue,-latex] (0,0)--++(0,1) node [above] {$\vec{N}$};
+                \draw[->-=red,draw=red] (2,0) ellipse (0.2 and 0.5);
+                \draw[->-=red,draw=red] (-2,-1) to[bend right=40] (-2,1);
+                \draw[->-=red,draw=red] (1.5,1) to[bend right=40] (2,-1);
+                \node[text=red] at (2.5,0) {$I_3$};
+                \node[text=red] at (-2,1.2,0) {$I_1$};
+                \node[text=red] at (2,-1.2) {$I_2$};
+            \end{tikzpicture}
+            \caption{Circulation du champ magnétique : enlacement des fils et intensité du courant.}
+            \label{fig:intensite_fil_enlances_circulation_champ_magnetique}
+        \end{figure}
+
+        Le postulat s'écrit aussi
+        \begin{equation}
+            \boxed{
+                \oint_{C}\vec{B}\cdot\vec{\d l}=\mu_{0}\iint_{\Sigma}\vec{j}\cdot\vec{N}\d\Sigma.
+            }
+        \end{equation}
+
+    \subsection{Quand et comment mettre en œuvre le théorème d'Ampère ?}
+
+        On l'utilise en cas de haute symétrie : cylindrique ou plane. La méthode est la suivante :
+        \begin{enumerate}
+            \item [($\alpha$)] Choisir le bon système de coordonnées;
+            \item [($\beta$)] Donner les invariances et les symétries pour obtenir la géométrie de $\vec{B}$;
+            \item [($\gamma$)] Choisir le bon contour et l'orienter arbitrairement. Ou bien $\vec{B}$ est parallèle à $C$ et constant, ou bien $\vec{B}$ est perpendiculaire à $C$.
+            \item [($\delta$)] Faire un dessin et l'application.
+        \end{enumerate}
+
+    \subsection{Exemples fondamentaux}
+        \subsubsection{Câble rectiligne infini épais}
+
+            La longueur du fil $l$ est supposée très grande devant son épaisseur $a$ : $l\gg a$, voir la Figure~\ref{fig:cable_rectiligne_infini_epais}.
+
+            \begin{figure}
+                \centering
+                \tikzsetnextfilename{cable_rectiligne_infini_epais}
+                \begin{tikzpicture}[scale=1]  
+                    \draw (-2,2)--(-2,-2);
+                    \draw (2,2)--(2,-2);
+                    \draw[dashed] (-2,2.5)--(-2,2);
+                    \draw[dashed] (2,2.5)--(2,2);
+                    \draw[dashed] (-2,-2.5)--(-2,-2);
+                    \draw[dashed] (2,-2.5)--(2,-2);
+                    \draw[draw=red,text=red] (-2,0) to[bend right] (2,0) node [right]{$\vec{j}=\dfrac{I}{\pi a^{2}}\vec{u}_z$};
+                    \draw[draw=red,dashed] (-2,0) to[bend left] (2,0);
+                    \draw[draw=red,-latex] (-1.75,0)--++(0,0.5);
+                    \draw[draw=red,-latex] (-1.25,0)--++(0,0.5);
+                    \draw[draw=red,-latex] (0,0)--++(0,0.5);
+                    \draw[draw=red,-latex] (1.75,0)--++(0,0.5);
+                    \draw[draw=red,-latex] (1.25,0)--++(0,0.5);
+                    \draw[text=blue,draw=blue,-latex] (0,-1)--(2,-1) node [below,midway] {a};
+
+                    \draw[blue] (-3,2) to[bend right=20] (3,2);
+                    \draw[blue,dashed] (-3,2) to[bend left=20] (3,2);
+                    \node at (3,2) [above right] {M};
+                    \draw[-latex] (3,2)--++(1,0) node [below right] {$\vec{u}_r$};
+                    \draw[-latex] (3,2)--++(0,1) node [above left] {$\vec{u}_z$};
+                    \draw (3,2) circle (0.15) node [below,shift={(0,-0.2)}] {$\vec{u}_{\theta}$};
+                    \node at (3,2) {$\times$};
+                \end{tikzpicture}
+                \caption{Champ magnétique pour un câble rectiligne infini épais.}
+                \label{fig:cable_rectiligne_infini_epais}
+            \end{figure}
+
+            Pour les invariances et symétries :
+            \begin{itemize}
+                \item symétrie de révolution par rapport à $(Oz)$ : pas de dépendance en $\theta$;
+                \item invariance par translation par rapport à $(Oz)$ : pas de dépendant en $z$;
+                \item tout plan inclus dans $(Oz)$ est un PS : $B_r=B_z=0$.
+            \end{itemize}
+            Finalement, on a $\vec{B}(M)=B(r)\vec{u}_{\theta}$. Le théorème d'Ampère donne alors
+            \begin{equation}
+                \oint_{C}\vec{B}\cdot\vec{\d l}=B(r)\times 2\pi r=\mu_0 I_{\text{enl}}(r).
+            \end{equation}
+
+            Pour $r\geqslant a$, on a $I_{\text{enl}}(r\geqslant a)=I$, d'où 
+            \begin{equation}
+                \boxed{
+                    \vec{B}(r\geqslant a)=\frac{\mu_0 I}{2\pi r}\vec{u}_{\theta}.
+                }
+            \end{equation}
+
+            Si $r\leqslant a$, on a 
+            \begin{equation}
+                I_{\text{enl}}(r\leqslant a)=\iint_{\Sigma}\vec{j}\cdot\vec{N}\d\Sigma=\frac{I}{\pi a^{2}}\times\pi r^{2}=I\left(\frac{r}{a}\right)^{2},
+            \end{equation}
+            d'où
+            \begin{equation}
+                \boxed{
+                \vec{B}(r\leqslant a)=\frac{\mu_0 I}{2\pi a}\times\frac{r}{a}\vec{u}_{\theta}.}
+            \end{equation}
+
+            En variante, on peut supposer que $I$ ne circule qu'à la surface du cylindre sur une épaisseur nulle. Alors $\vec{j}(r<a)=\vec{0}=\vec{j}(r>a)$, donc $\vec{B}(r<a)=\vec{0}$ et $\vec{B}(r>a)=\frac{\mu_0 I}{2\pi r}\vec{u}_{\theta}$.
+
+        \subsubsection{Solénoïde "infini"}
+
+            On considère que le rayon du solénoïde $a$ est négligeable devant sa longueur $l$ : $l\gg a$. On se réfère à la Figure~\ref{fig:solenoide_infini_champ_B}.
+
+            \begin{figure}
+                \centering
+                \tikzsetnextfilename{solenoide_infini_champ_B}
+                \begin{tikzpicture}[scale=1]  
+                    \draw (0,0)rectangle++(4,2);
+                    \draw[->] (0.5,2)--++(0,-2);
+                    \draw[->] (1,2)--++(0,-2);
+                    \draw[->] (1.5,2)--++(0,-2);
+                    \node at (1, 2.25) {$i(t)$};
+                    \draw[dashed,-latex] (-1,1)--++(6,0) node[right] {$z$};
+                    
+                    \node at (3,-1) [above right] {M};
+                    \node at (3,-1) {$\times$};
+                    \draw[-latex] (3,-1)--++(1,0) node [below right] {$\vec{u}_z$};
+                    \draw[-latex] (3,-1)--++(0,-1) node [above left] {$\vec{u}_r$};
+                    \draw (3,-1) circle (0.15) node [left, shift={(-0.2,0)}] {$\vec{u}_{\theta}$};
+                \end{tikzpicture}
+                \caption{Champ magnétique dans un solénoïde infini.}    
+                \label{fig:solenoide_infini_champ_B}
+            \end{figure}
+
+            Il y a invariance de révolution selon l'ae $(Oz)$ et invariance par translation parallèlement à l'axe $(Oz)$, donc le champ ne dépend que de la variable $r$. Tout plan perpendiculaire à $(Oz)$ est un PS, donc 
+            \begin{equation}
+                \boxed{
+                    \vec{B}=B(r)\vec{u}_z.
+                }
+            \end{equation}
+            Notons que si la longueur est finie, tout plan inclue dans $(Oz)$ est un PAS, donc $B_{\theta}=0$. Pour contour d'Ampère, on choisit un contour rectangulaire contenu dans un plan contenant l'axe $(Oz)$ dont un des côtés est sur l'axe. Alors
+            \begin{equation}
+                \int_{\mathcal{C}}\vec{B}\cdot\vec{\d l}=\mu_{0}I_{\mathrm{enl}}(r)=B(0)\times h - B(r)\times h,
+            \end{equation}
+            donc si $r<a$, $B(r<a)=B(0)=\mathrm{constante}$. Si $r>a$, $B(r>a)=0$ par hypothèse, donc $B(0)=\mu_0 n i$.
+
+    \subsection{Ordres de grandeur}
+
+        Pour un fil infini (ou une spire, à très faible distance), alors 
+        \begin{equation}
+            B\sim\frac{\mu_0 i}{2\pi a}.
+        \end{equation}
+        Si $i=1\si{\ampere},a=2\si{\milli\metre},\mu_0=4\pi.10^{-7}\si{\henry\per\metre}$, alors $B\sim 10^{-4}\si{\tesla}=1\mathrm{gauss}$.
+        S'il y a 10000 spires sur 20\si{\centi\metre}, alors 
+        \begin{equation}
+            B_{\mathrm{int}}=\mu_0 n i\sim 60\si{\milli\tesla}.
+        \end{equation}
+
+        Pour augmenter la valeur du champ magnétique:
+        \begin{itemize}
+            \item pour augmenter $i$, l'effet Joule est limitant (sauf supraconducteur);
+            \item on peut augmenter $n$;
+            \item on peut augmenter $\mu_0$ en utilisant des matériaux ferromagnétiques, $B$ peut alors atteindre quelques Tesla.
+        \end{itemize}
+
+    \subsection[Équation de Maxwell--Ampère]{Théorème d'Ampère local :\\équation de Maxwell--Ampère}
+
+        Si $\mathcal{C}$ est un contour orienté et $\Sigma$ est une surface supportée par $\mathcal{C}$ avec $\vec{N}$ un vecteur normal extérieur normalisé, alors d'après le théorème de Stokes, on a 
+        \begin{equation}
+            \int_{\mathcal{C}}\vec{B}\cdot\vec{\d l}=\mu_{0}I_{\mathrm{enl}}=\mu_{0}\iint_{\Sigma}\vec{j}\cdot\vec{N}\d\Sigma=\iint_{\Sigma}\left(\vec{\mathrm{rot}}\vec{B}\right)\cdot\vec{N}\d\Sigma.
+        \end{equation}
+        Ainsi, on a 
+        \begin{equation}
+            \boxed{
+                \vec{\mathrm{rot}}\vec{B}(\vec{r})=\mu_{0}\vec{j}(\vec{r}).
+            }
+        \end{equation}
+
+    \subsection{Vue d'ensemble des lois de la magnétostatique}
+
+        Pour le flux, on a l'équivalence intégrale/locale suivante :
+        \begin{equation}
+            \boxed{
+                \oiint_{S}\vec{B}\cdot\vec{n}^{\mathrm{ext}}\d S=0\Longleftrightarrow\mathrm{div}\vec{B}=0.
+            }
+        \end{equation}
+        Pour la circulation, on a l'équivalence suivante :
+        \begin{equation}
+            \boxed{
+                \oint_{\mathcal{C}}\vec{B}\cdot\vec{\d l}=\mu_{0}I_{\mathrm{enl}}\Longleftrightarrow\vec{\mathrm{rot}}\vec{B}=\mu_{0}\vec{j}.
+            }
+        \end{equation}
+
+        

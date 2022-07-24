@@ -1,4 +1,4 @@
-\section[Diagramme d'état et machines réelles]{Diagramme d'état \texorpdfstring{$(\log P,h)$}{(log P,h)} d'un fluide pur et fonctionnement de machines thermiques réelles}
+\section[Diagramme d'état et machines réelles]{Diagramme d'état \texorpdfstring{$(\log P,h)$}{(log P,h)} d'un fluide et fonctionnement de machines thermiques réelles}
 
     \subsection{Lecture du diagramme \texorpdfstring{$(\log P,h)$}{(log P,h)} d'un fluide pur}
 
@@ -166,7 +166,7 @@
         \begin{figure}
             \centering
             \tikzsetnextfilename{cycle_rankine_moteur_vapeur_centrale_electrique}
-            \begin{tikzpicture}[scale=1,decoration={
+            \begin{tikzpicture}[scale=0.75,decoration={
                 markings,
                 mark=at position 0.5 with {\arrow{>}}}
                 ] ]  
@@ -180,7 +180,7 @@
                 \draw[postaction={decorate}] (A)--(A1);
                 \draw[postaction={decorate}] (A2)--(B);
                 \coordinate (B1) at (1,4);
-                \draw (1,3.75) rectangle (3,4.25) node[midway] {chaudière};
+                \draw (1,3.75) rectangle (3,4.25) node[midway] {\small chaudière};
                 \coordinate (B2) at (3,4);
                 \coordinate (C) at (4,4);
                 \draw[postaction={decorate}] (B)--(B1);
@@ -195,7 +195,7 @@
                 \draw[smooth] (2,0) circle (1);
                 \coordinate (D2) at (1,0);
                 \draw (D1) -- (D2);
-                \node at (2,-1.75) {condenseur};
+                \node at (2,-1.75) {\small condenseur};
                 \draw[postaction={decorate}] (D)--(D1);
                 \draw[postaction={decorate}] (D2)--(A);
 
@@ -282,7 +282,7 @@
         \begin{figure}
             \centering
             \tikzsetnextfilename{cycle_refrigerateur_a_compresseur}
-            \begin{tikzpicture}[scale=1,decoration={
+            \begin{tikzpicture}[scale=0.75,decoration={
                 markings,
                 mark=at position 0.5 with {\arrow{>}}}
                 ] ]  
@@ -296,21 +296,21 @@
                 \draw[postaction={decorate}] (A)--(A1);
                 \draw[postaction={decorate}] (A2)--(B);
                 \coordinate (B1) at (1,4);
-                \draw (1,3.75) rectangle (3,4.25) node[midway] {condenseur};
+                \draw (1,3.75) rectangle (3,4.25) node[midway] {\small condenseur};
                 \coordinate (B2) at (3,4);
                 \coordinate (C) at (4,4);
                 \draw[postaction={decorate}] (B)--(B1);
                 \draw[postaction={decorate}] (B2)--(C);
                 \coordinate (C1) at (4,3);
                 \draw (4.5,3)--(3.5,1)--(4.5,1)--(3.5,3)--(4.5,3);
-                \node at (5,2) {détendeur};
+                \node at (5.2,2) {détendeur};
                 \coordinate (C2) at (4,1);
                 \coordinate (D) at (4,0);
                 \draw[postaction={decorate}] (C)--(C1);
                 \draw[postaction={decorate}] (C2)--(D);
                 \coordinate (D1) at (3,0);
                 \coordinate (D2) at (1,0);
-                \draw (1,-0.25) rectangle (3,0.25) node[midway] {\small évaporateur};
+                \draw (1,-0.25) rectangle (3,0.25) node[midway] {\footnotesize évaporateur};
                 \draw[postaction={decorate}] (D)--(D1);
                 \draw[postaction={decorate}] (D2)--(A);
 
