@@ -1,4 +1,79 @@
 \section{Actions mécaniques subies par un dipôle électrostatique plongé dans \texorpdfstring{$\vec{E}^{\text{ext}}$}{E}}
 
 \subsection{Champ extérieur uniforme}
-\subsubsection{Résultatnte nulle}
+\subsubsection{Résultante nulle}
+
+Comme un dipôle est composé de deux charges de signe opposées séparées par une distance constante, si l'on soumet un dipôle à un champ extérieur uniforme $\vec{E}^{\mathrm{ext}}$, le dipôle subit une force 
+\begin{equation}
+    \vec{F}=-q\vec{E}^{\mathrm{ext}}+q\vec{E}^{\mathrm{ext}}=\vec{0},
+\end{equation}
+il n'y a donc pas de mouvement de translation provoqué par le champ uniforme.
+
+\subsubsection{Couple de rappel}
+
+Cependant, selon l'orientation de ce champ uniforme, un couple de rappel apparaît et vaut
+\begin{equation}
+    \boxed{
+        \vec{M}_{0}=\vec{p}\vec{E}^{\mathrm{ext}}.
+    }
+\end{equation}
+
+Il a tendance à provoquer un alignement du moment dipolaire $\vec{p}$ sur $\vec{E}^{\mathrm{ext}}$.
+
+\subsection{Champ extérieur non uniforme}
+\subsubsection{Résultante}
+
+En supposant $\vec{E}^{\mathrm{ext}}=E(x)\vec{u}_x$ avec $\frac{\d E_x}{\d x}>0$ et $\vec{p}=p\vec{u}_x\parallel\vec{E}^{\mathrm{ext}}$, on a 
+\begin{align}
+    \vec{F}
+    &=
+    q\vec{E}^{\mathrm{ext}}(x+d)-q\vec{E}^{\mathrm{ext}}(x)\\
+    &=
+    qd\frac{\partial \vec{E}^{\mathrm{ext}}}{\partial x}
+    = \left(
+        p\vec{u}_x\cdot\frac{\partial \vec{u}_x}{\partial x}
+    \right)\vec{E}^{\mathrm{ext}}.
+\end{align}
+
+De manière générale, on a donc
+\begin{equation}
+    \boxed{
+        \vec{F}=\left(\vec{p}\cdot\vec{\mathrm{grad}}\right)\vec{E}^{\mathrm{ext}}.
+    }
+\end{equation}
+Ainsi, il y a une translation vers les zones de plus fort champ.
+
+\subsubsection{Moment résultat}
+
+On admet que l'on a toujours
+\begin{equation}
+    \boxed{
+        \vec{M}_O=\vec{p}\wedge\vec{E}^{\mathrm{ext}}.
+    }
+\end{equation}
+Il y a donc une tendance à l'alignement de $\vec{p}$ sur $\vec{E}^{\mathrm{ext}}$.
+
+\subsection{Énergie potentielle d'interaction avec un champ extérieur}
+\subsubsection{Expression}
+Si les charges sont en $A$ ($-q$) et $B$ ($+q$), on a 
+\begin{align}
+    E_{p}^{\mathrm{ext}}
+    &=
+    qV^{\mathrm{ext}}(B)-qV^{\mathrm{ext}}(A)\\
+    &=
+    q\int_{B}^{A}\vec{E}^{\mathrm{ext}}\cdot\vec{\d l}\\
+    &
+    \approx q\vec{E}^{\mathrm{ext}}\cdot\int_{B}^{A}\vec{\d l}\\
+    &=
+    q\vec{E}^{\mathrm{ext}}\cdot\vec{BA}=-\vec{p}\cdot\vec{E}^{\mathrm{ext}}.
+\end{align}
+
+\subsubsection{Interprétation}
+
+Si $\vec{p}$ fait un angle $\theta$ avec le champ extérieur, alors $E_p^{\mathrm{ext}}=-p\left\lVert\vec{E}^{\mathrm{ext}}\right\rVert\cos(\theta)$, donc
+\begin{itemize}
+    \item si $\vec{p}$ et $\vec{E}^{\mathrm{ext}}$ sont alignés, $E_p^{\mathrm{ext}}$ est minimal, il y a un équilibre stable;
+    \item s'ils sont anti-parallèles, $E_p^{\mathrm{ext}}$ est maximal, et l'équilibre est instable.
+\end{itemize}
+
+Une fois que $\vec{p}$ est aligné avec $\vec{E}^{\mathrm{ext}}$, on a $\theta=0$ et donc $E_p^{\mathrm{ext}}$ est minimal si $\left\lVert\vec{E}^{\mathrm{ext}}(M)\right\rVert$ est maximal : il y a une translation de $\vec{p}$ vers la zone où $\left\lVert \vec{E}^{\mathrm{ext}}\right\rVert$ est maximal.
