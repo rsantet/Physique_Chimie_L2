@@ -1,0 +1,59 @@
+\section{Densité de courant de déplacement. ARQS magnétique}
+\subsection{Densité de courant de déplacement et conservation de la charge}
+
+L'idée est de rajouter un terme supplémentaire $\vec{?}$ à l'équation de Maxwell-Ampère pour la rendre compatible avec l'équation de la conservation de la charge $\div\vec{j}+\frac{\partial\rho}{\partial t}=0$.
+On écrit 
+\begin{equation}
+    \vec{\rot}\vec{B}=\mu_0\left[\vec{j}+\vec{?}\right],
+\end{equation}
+puis on prend la divergence:
+\begin{equation}
+    0=\mu_0\left[\div\vec{j}+\div\vec{?}\right],
+\end{equation}
+et en utilisant $\rho=\varepsilon_0\div\vec{E}$, on a 
+\begin{equation}
+    \div\left(\vec{?}-\varepsilon_0\frac{\partial\vec{E}}{\partial t}\right)=0.
+\end{equation}
+Il se trouve que la bonne solution est $\vec{?}=\varepsilon_0\frac{\partial\vec{E}}{\partial t}$, d'où
+\begin{equation}
+    \boxed{
+        \vec{\rot}\vec{B}=\mu_0\left(\vec{j}+\varepsilon_0\frac{\partial\vec{E}}{\partial t}\right)=\mu_0\vec{j}+\frac{1}{c^{2}}\frac{\partial\vec{E}}{\partial t}.
+    }
+\end{equation}
+Ainsi, Maxwell-Ampère et Maxwell-Gauss contiennent la conservation de la charge.
+
+\subsection{ARQS magnétique}
+\subsubsection{Définition}
+C'est de dire que c'est \og lentement variable\fg. Le temps caractéristique est très grand devant le temps de propagation: $\tau\gg\frac{L}{c}$. Ainsi la propagation est négligeable. Dans le cas du magnétisme, c'est de dure que les effets des courants sont très très grands devant les effets des charges (neutralité des conducteurs), et donc 
+\begin{equation}
+    \boxed{
+        j\gg\rho c.
+    }
+\end{equation}
+
+Dans l'ARQS magnétique, l'équation de Maxwell-Ampère se simplifie car
+\begin{equation}
+    \frac{\left\lVert\vec{j}\right\rVert}{\left\lVert\varepsilon_0\frac{\partial\vec{E}}{\partial t}\right\rVert}\sim\frac{\tau\tilde{j}}{\varepsilon_0\tilde{E}}\sim\frac{\tilde{j}}{\tilde{\rho}c}\times\frac{\tau}{L/c}\gg 1.
+\end{equation}
+Ainsi, dans l'ARQS magnétique, on a 
+\begin{equation}
+    \boxed{
+        \vec{\rot}\vec{B}(\vec{r},t)=\mu_0\vec{j}(\vec{r},t).
+    }
+\end{equation}
+
+Pour une fréquence de 50$\si{\hertz}$, on a l'ARQS si $L\ll c\tau=c/f=6000\si{\kilo\metre}$. Pour une fréquence de $10^{15}\si{\hertz}$ (optique), c'est le cas seulement si $L\ll0.3\si{\micro\metre}$, donc la propagation est dominante.
+
+\subsubsection{Champ magnétique dans l'ARQS magnétique et induction}
+
+On a les mêmes lois qu'en magnétostatique stationnaire, mais à chaque temps. Ainsi, dans l'ARQS magnétique, $\vec{B}$ est le même qu'en stationnaire (mais dépend quand même du temps). Par exemple, pour un solénoïde infini parcouru par $i(t)$, on a $\vec{B}_{\mathrm{int}}(t)=\mu_0 ni(t)\vec{u}_z$ et $\vec{B}_{\mathrm{ext}}(t)=\vec{0}$.
+
+Dans le cas de l'ARQS magnétique, le plus souvent, on a $\rho\approx0$ donc $\div\vec{E}(\vec{r},t)=0$ et $\vec{\rot}\vec{E}=-\frac{\partial\vec{B}}{\partial t}$: c'est la loi de Faraday (induction).
+
+\subsubsection{Loi des n\oe uds dans l'ARQS magnétique}
+
+On a 
+\begin{equation}
+    \div\left[\vec{j}(\vec{r},t)\right]=\frac{1}{\mu_0}\div\,\vec{\rot}\vec{B}(\vec{r},t)=0.
+\end{equation}
+Dans l'ARQS magnétique, $\vec{j}$ est à flux conservatif. Ainsi $i(t)$ est le même en tout point d'un fil, et la loi des n\oe uds est vraie à chaque instant.

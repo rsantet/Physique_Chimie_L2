@@ -1,0 +1,41 @@
+\section{Équation de propagation du champ électromagnétique dans le vide}
+
+On a $\rho(\vec{r},t)=0$ et $\vec{j}(\vec{r},t)=\vec{0}$.
+
+\subsection{Équations dans le vide}
+
+Pour un régime quelconque, on a 
+\begin{equation}
+    \left\lbrace
+        \begin{aligned}
+            \div\vec{E}(\vec{r},t)&=0,\\
+            \vec{\rot}\vec{E}(\vec{r},t)&=-\frac{\partial\vec{B}}{\partial t}(\vec{r},t),\\
+            \div\vec{B}(\vec{r},t)&=0,\\
+            \vec{\rot}\vec{B}(\vec{r},t)&=\frac{1}{c^{2}}\frac{\partial\vec{E}}{\partial t}(\vec{r},t).
+        \end{aligned}
+    \right.
+\end{equation}
+
+\subsection{Équations de propagation: équation de d'Alembert}
+
+On se donne la formule: $\vec{\rot}(\vec{\rot}(\vec{W}))=\vec{\grad}(\div\vec{W})-\vec{\Delta W}$. Alors
+\begin{equation}
+    \vec{\rot}(\vec{\rot}\vec{E})=\vec{\grad}(\div\vec{E})-\vec{\Delta E},
+\end{equation}
+d'où
+\begin{equation}
+    \boxed{
+        \vec{\Delta E}(\vec{r},t)-\frac{1}{c^{2}}\frac{\partial^{2}\vec{E}}{\partial t^{2}}(\vec{r},t)=\vec{0}.
+    }
+\end{equation}
+
+On fait la même chose pour le champ magnétique et on trouve
+\begin{equation}
+    \boxed{
+        \vec{\Delta B}(\vec{r},t)-\frac{1}{c^{2}}\frac{\partial^{2}\vec{B}}{\partial t^{2}}(\vec{r},t)=\vec{0}.
+    }
+\end{equation}
+
+\subsubsection{Nécessité du couplage spatio-temporel du champ électromagnétique}
+
+Dans l'ARQS magnétique, on a $\vec{\rot}\vec{B}\approx\vec{0}$, donc $\vec{\Delta E}=\vec{0}$ et $\vec{\Delta B}=\vec{0}$: il n'y a aucune propagation.
