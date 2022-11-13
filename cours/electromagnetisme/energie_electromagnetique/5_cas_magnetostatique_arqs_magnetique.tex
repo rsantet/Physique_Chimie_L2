@@ -1,0 +1,35 @@
+\section{Cas de la magnétostatique et de l'ARQS magnétique}
+\subsection{Énergie magnétique}
+
+On se place dans le cas de la magnétostatique, c'est-à-dire $\vec{E}=\vec{0}$, ou bien dans l'ARQS magnétique où $\vec{E}\neq\vec{0}$ régi par $\vec{\rot}\vec{E}=-\frac{\partial\vec{B}}{\partial t}$ mais $\frac{B^{2}}{2\mu_0}\gg\frac{\varepsilon_0 E^{2}}{2}$. Dans les deux cas,
+\begin{equation}
+    \boxed{
+        u_{\mathrm{em}}(\vec{r},t)=\frac{B^{2}(\vec{r},t)}{2\mu_0}.
+    }
+\end{equation}
+
+L'énergie magnétique créée par la distribution de courants stationnaires (ou quasi-stationnaires) est
+\begin{equation}
+    \boxed{
+        U_{\mathrm{mag}}=\iiint_{\text{tout l'espace}}\frac{B^{2}}{2\mu_0}\d\tau.
+    }
+\end{equation}
+
+\subsection{Définition énergétique de l'inductance d'un circuit}
+
+On se place dans l'exemple d'un solénoïde de longueur $l$ parcouru par un courant $i$ stationnaire avec $n$ spires par mètre, comme dans la Figure~\ref{fig:solenoide_infini_champ_B}. Alors $\vec{B}_{\mathrm{int}}=\mu_0 ni\vec{u}_z$, et le champ est nul à l'extérieur du solénoïde. Alors
+\begin{equation}
+    U_{\mathrm{mag}}=\frac{\mu_0 n^{2}i^{2}}{2}\times\pi a^{2}l,
+\end{equation}
+et en notant $N=nl$, on a 
+\begin{equation}
+    \boxed{
+        U_{\mathrm{mag}}=\frac{1}{2}\frac{\mu_0 N^{2}\pi a^{2}}{l}i^{2}\coloneqq\frac{1}{2}Li^{2}.
+    }
+\end{equation}
+Ainsi, on peut définir l'inductance $L$ d'un circuit par 
+\begin{equation}
+    \boxed{
+        \frac{1}{2}Li^{2}=\iiint_{\text{espace entier}}\frac{B^{2}}{2\mu_0}\d\tau.
+    }
+\end{equation}

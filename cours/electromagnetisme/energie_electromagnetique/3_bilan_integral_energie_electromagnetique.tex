@@ -1,0 +1,86 @@
+\section{Bilan intégral d'énergie électromagnétique}
+\subsection{Bilan intégral sur un volume de contrôle}
+
+On note le volume de contrôle $V$. On intègre l'équation de Poynting sur $V$, on note 
+\begin{equation}
+    U_{\mathrm{em}}(t)=\iiint_{V}u_{\mathrm{em}}(\vec{r},t)\d\tau
+\end{equation}
+l'énergie totale du champ régnant dans $V$,
+\begin{equation}
+    P_{S,\mathrm{rayon}}^{\mathrm{ext}}(t)=\iiint_{V}\div\vec{\Pi}\d\tau,
+\end{equation}
+et
+\begin{equation}
+    P_{\mathrm{champ}\to\mathrm{matiere}}(t)=\iiint_{V}P_{\mathrm{vol}}(\vec{r},t)\d\tau=\iiint_{V}\vec{j}\cdot\vec{E}\d\tau.
+\end{equation}
+Alors le bilan intégral d'énergie électromagnétique est
+\begin{equation}
+    \boxed{
+        \frac{\d U_{\mathrm{em}}}{\d t}=-P_{S,\mathrm{rayon}}^{\mathrm{ext}}-P_{\mathrm{chp}\to\mathrm{mat}}.
+    }
+\end{equation}
+En particulier, si $V$ est vide, on a $P_{\mathrm{chp}\to\mathrm{mat}}=0$ d'où 
+\begin{equation}
+    \boxed{
+        \frac{\d U_{\mathrm{em}}}{\d t}=-P_{S,\mathrm{ray}}^{\mathrm{ext}}.
+    }
+\end{equation}
+Si $\vec{\Pi}\cdot\vec{n}^{\mathrm{ext}}>0$, on a $P_{S,\mathrm{ray}}^{\mathrm{ext}}>0$ et donc $U_{\mathrm{em}}$ décroît avec le temps.
+
+Dans un autre cas, si $P_{S,\mathrm{ray}}^{\mathrm{ext}}=0$ (comme dans une cavité électromagnétique, ou un four micro-ondes), alors 
+\begin{equation}
+    \boxed{
+        \frac{\d U_{\mathrm{em}}}{\d t}=-P_{\mathrm{chp}\to\mathrm{mat}}.
+    }
+\end{equation}
+Usuellement, on va avoir $P_{\mathrm{chp}\to\mathrm{mat}}>0$ et donc $U_{\mathrm{em}}$ décroît avec le temps. Cependant, dans un LASER, c'est l'inverse.
+
+\subsection{Exemple: conducteur ohmique en régime stationnaire}
+
+On se place dans le cas d'un conducteur ohmique cylindrique comme à la Figure~\ref{fig:puissance_dissipee_conducteur_ohmique}. L'expression du champ magnétique est
+\begin{equation}
+    \left\lbrace
+        \begin{aligned}
+            \vec{B}(r\geqslant a)&=\frac{\mu_0 i}{2\pi r}\vec{u}_{\theta},\\
+            \vec{B}(r\leqslant a)&=\frac{\mu_0 i}{2\pi a}\left(\frac{r}{a}\right)\vec{u}_{\theta}.
+        \end{aligned}
+    \right.
+\end{equation}
+La loi d'ohm s'écrit
+\begin{equation}
+    \vec{E}=\frac{\vec{j}}{\sigma}=\frac{i}{\sigma\pi a^{2}}\vec{u}_z
+\end{equation}
+dans le conducteur (pour $r\leqslant a$). En régime permanent, on a $\frac{\d U_{\mathrm{em}}}{\d t}=0$ car les champs sont statiques. On a 
+\begin{equation}
+    \vec{\Pi}(r \leqslant a)=\vec{E}(r\leqslant a)\wedge \frac{\vec{B}(r\leqslant a)}{\mu_0}=\frac{\mu_0 i^{2}}{\mu_0\sigma 2\pi^{2}a^{3}}\left(\frac{r}{a}\right)(-\vec{u}_r).
+\end{equation}
+On a aussi
+\begin{equation}
+    \boxed{
+        \vec{\Pi}(r=a)=-\frac{i^{2}}{\sigma 2\pi^{2}a^{3}}\vec{u}_r.
+    }
+\end{equation}
+Le vecteur de Poynting est donc radial rentrant, et l'énergie pénètre latéralement dans le conducteur.
+On a donc
+\begin{equation}
+    \boxed{
+        P_{S,\mathrm{ray}}^{\mathrm{ext}}=\iint_{S}\vec{\Pi}(r=a)\cdot\vec{u}_r\,\d S=-\frac{i^{2}l}{\sigma\pi a^{2}}=-R i^{2}<0.
+    }
+\end{equation}
+Enfin,
+\begin{equation}
+    P_{\mathrm{chp}\to\mathrm{mat}}=\iiint_{V}\vec{j}\cdot\vec{E}\d\tau=\sigma E^{2}\times\pi a^{2}l=\sigma\left(\frac{i}{\sigma\pi a^{2}}\right)^{2}\pi a^{2}l,
+\end{equation}
+donc
+\begin{equation}
+    \boxed{
+        P_{\mathrm{chp}\to\mathrm{mat}}=\frac{l}{\sigma\pi a^{2}}i^{2}=Ri^{2}.
+    }
+\end{equation}
+On a alors l'équilibre suivant:
+\begin{equation}
+    \boxed{
+        P_{S,\mathrm{ray}}^{\mathrm{ext}}+P_{\mathrm{chp}\to\mathrm{mat}}=0.
+    }
+\end{equation}
+Ainsi, toute la puissance apportée par le rayonnement est transférée à la matière.
