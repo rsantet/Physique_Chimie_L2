@@ -1,0 +1,80 @@
+\section{Solutions de l'équation de d'Alembert en OPP}
+
+\subsection{Notion d'one plane. Équation de d'Alembert unidimensionnelle}
+
+Soit $f(\vec{r},t)$ solution de $\Delta f(\vec{r},t)-\frac{1}{c^{2}}\frac{\partial^{2}f(\vec{r},t)}{\partial t^{2}}=0$. $f$ représente une composante de $\vec{E}$ ou de $\vec{B}$.
+
+On dit que $f$ est une onde plane si
+\begin{enumerate}[label=(\roman*)]
+    \item $f$ est solution de $\Delta t-\frac{1}{c^{2}}\frac{\partial^{2}f}{\partial t^{2}}=0$;
+    \item $f$ est invariante par translation parallèlement au plan de direction fixé: $f(\vec{r},t)=f(X,t)=f(\vec{u}\cdot\vec{r},t)$. Voir la Figure~\ref{fig:solution_equation_alembert_invariance_propagation}.
+\end{enumerate}
+
+\begin{figure}
+    \centering
+    \tikzsetnextfilename{solution_equation_alembert_invariance_propagation}
+    \begin{tikzpicture}[scale=1]  
+        % \helpgrid{3}{3}
+        \draw[->] (0,0)--++(4,0) node [right] {$y$};
+        \draw[->] (0,0)--++(0,4) node [above left] {$z$};
+        \draw[->] (0,0)--(-2.75,-2.1) node [below] {$x$};
+
+        \draw[->] (0,0)--(4.5,2.8) node [right] {$X$};
+        \draw[->,solid] (1.6,1)--++(0.2,0.12) node [below right] {$\vec{u}$};
+        \draw[->] (0,0)--(2.1,3.5) node [pos=0.5, right] {$\vec{r}$};
+        \draw[red] (3.8,0.1)--(4.1,1.1)--(1.9,5)--(1.55,3.8)--cycle;
+
+        \node at (3.05,1.9) {$\times$};
+        \node at (3.05,1.9) [below right] {$X$};
+        \draw[red,dashed] (2.1,3.5)--(3.05,1.9);
+    \end{tikzpicture}
+    \caption{Invariance par translation parallèlement à un plan de direction fixé.}    
+    \label{fig:solution_equation_alembert_invariance_propagation}
+\end{figure}
+
+Si $f(\vec{r},t)=f(X,t)$, on a $\Delta f=\frac{\partial^{2}f}{\partial x^{2}}+\frac{\partial^{2}f}{\partial y^{2}}+\frac{\partial^{2}f}{\partial z^{2}}=\frac{\partial^2 f}{\partial X^{2}}$, donc $f(X,t)$ vérifie aussi l'équation de d'Alembert en dimension un.
+
+\subsection{Solution générale de d'Alembert en dimension un en ondes progressives}
+
+Naturellement, il y a une dépendance de $f$ en $X\pm ct$. On remarque rapidement que $F(X-ct)$ et $G(X+ct)$ sont solutions. Donc toute fonction de la forme $f(X,t)=F(X-ct)+G(X+ct)$ est solution de l'équation de d'Alembert en dimension un. On admet que c'est la solution la plus générale.
+
+$F(X-ct)$ représente une onde progressive vers les $X$ croissants à vitesse $c$ sans déformation. De même, $G(X+ct)$ représente une onde progressive vers les $X$ décroissants à la vitesse $c$ sans déformation.
+
+\subsection{Solution générale de l'équation de d'Alembert en trois dimensions en OPP}
+
+En trois dimensions, toute solution de l'équation des ondes est une superposition d'OPP se propageant selon toutes les directions possibles:
+\begin{equation}
+    \boxed{
+        f(\vec{r},t)=\sum_{\neq\,\vec{u}}f_{\vec{u}}(\vec{u}\cdot\vec{r}-ct).
+    }
+\end{equation}
+Notamment, 
+\begin{equation}
+    \boxed{
+        E(\vec{r},t)=\sum_{\neq\,\vec{u}}E_{\vec{u}}(\vec{u}\cdot\vec{r}-ct).
+    }
+\end{equation}
+
+\subsection{La solution élémentaire en OPP Harmonique}
+
+Par linéarité et Fourier, 
+\begin{equation}
+    \boxed{
+        \vec{E}(\vec{r},t)=\sum_{\vec{u}}\sum_{\omega}\vec{E}_{\vec{u},\omega}\e^{\i\omega\left(t-\frac{\vec{u}\cdot\vec{r}}{c}\right)}.
+    }
+\end{equation}
+
+La solution élémentaire est
+\begin{equation}
+    \vec{E}(\vec{r},t)=\vec{E}_{0}\e^{\i(\omega t-\vec{k}\cdot\vec{r})},
+\end{equation}
+avec $\vec{k}=k\vec{u}=\frac{\omega}{c}\vec{u}$ et $\omega=2\pi/T$ donc $k=2\pi/(cT)=2\pi / \lambda$. C'est une OPPH. On a choisit la convention $\e^{\i\omega t}$, mais les solution en $\e^{\i(\vec{k}\cdot\vec{r}-\omega t)}$ sont aussi bonnes (partie réelle égale), c'est une convention $\e^{-\i\omega t}$.
+
+\paragraph{Caractère non physique de l'OPPH.}
+\begin{itemize}
+    \item onde éternelle : $\Delta f\times\tau$ devrait être d'ordre 1 mais $\Delta f=0$ donc $\tau=+\infty$: absurde expérimentalement;
+    \item spatialement : $\cos(kx)=cos(2\pi x/\lambda)=\cos(2\pi\sigma x)$ et alors $\Delta\sigma=0$ et $\Delta\sigma\times L$ devrait être d'ordre 1 donc $L=+\infty$. Le support spatial du signal est infini.
+    \item Onde d'amplitude constante dans tout l'espace. L'énergie du champ électromagnétique de cette onde est donc infini.
+\end{itemize}
+
+Ainsi, l'OPPH n'existe pas mais très utile car cela simplifie les calculs, et elles permettent de reconstituer une solution quelconque par superposition d'OPPH.
