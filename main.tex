@@ -28,8 +28,8 @@
 \usepackage{booktabs}
 \usepackage{multirow}
 
-%\usepackage{showframe}
-%\overfullrule=1mm
+\usepackage{showframe}
+\overfullrule=1mm
 
 \usepackage{silence}
 \WarningFilter{minitoc(hints)}{W0023}
@@ -74,6 +74,7 @@
 
 \renewcommand{\d}{\mathrm{d}}
 \renewcommand{\j}{\mathrm{j}}
+\renewcommand{\i}{\mathrm{i}}
 \renewcommand{\div}{\mathrm{div}}
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Z}{\mathbb{Z}}
@@ -109,12 +110,12 @@
 \listoftables
 
 % Première partie : mécanique
-%\subimport{cours/}{mecanique.tex}
+\subimport{cours/}{mecanique.tex}
 
 % Deuxième partie : Électromagnétisme
 \subimport{cours/}{electromagnetisme.tex}
 
 % Troisième partie : thermodynamique
-%\subimport{cours/}{thermodynamique.tex}
+\subimport{cours/}{thermodynamique.tex}
 
 \end{document}
