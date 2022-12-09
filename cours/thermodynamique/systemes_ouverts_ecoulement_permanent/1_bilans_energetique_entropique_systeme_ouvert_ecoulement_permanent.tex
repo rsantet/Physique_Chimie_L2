@@ -40,13 +40,13 @@
                 \begin{remark}
                     Si on considère une transformation monobare sans autre travail que celui des forces de pression, on a $P^{\text{ext}}=\mathrm{constante}$, d'où $P_f=P_i=P^{\text{ext}}$ et 
                     \begin{equation}
-                        \delta W^{\text{ext}}=-P^{\text{ext}}\d V.
+                        \delta W^{\text{ext}}=-P^{\text{ext}}\rmd V.
                     \end{equation}
                     Ainsi,
                     \begin{align}
                         W^{\text{ext}}
                         &=
-                        W=-\int_{i}^{f}P^{\text{ext}}\d V,\\
+                        W=-\int_{i}^{f}P^{\text{ext}}\rmd V,\\
                         &=
                         -P^{\text{ext}}\Delta V=-(P_f V_f-P_i V_i).
                     \end{align}
@@ -71,10 +71,10 @@
                 On considère deux états infiniment proches:
                 \begin{equation}
                     \boxed{
-                        \d U+\d E_c^{\text{macro}}=\delta W^{\text{ext}}+\delta Q^{\text{ext}}.
+                        \rmd U+\rmd E_c^{\text{macro}}=\delta W^{\text{ext}}+\delta Q^{\text{ext}}.
                     }
                 \end{equation}
-                Le cas fréquent est $\d U=\delta W^{\text{ext}}+\delta Q^{\text{ext}}$.
+                Le cas fréquent est $\rmd U=\delta W^{\text{ext}}+\delta Q^{\text{ext}}$.
 
         \subsubsection{Deuxième principe \og d'évolution\fg}
 
@@ -113,7 +113,7 @@
                 On considère une transformation infinitésimale, d'où
                 \begin{equation}
                     \boxed{
-                        \d S=\delta S_{\text{échangée}}+\delta S_{\text{créée}},\quad\delta S_{\text{créée}}\geqslant0,\quad\delta S_{\text{échangée}}=\frac{\delta Q^{\text{ext}}}{T^{\text{ext}}}.
+                        \rmd S=\delta S_{\text{échangée}}+\delta S_{\text{créée}},\quad\delta S_{\text{créée}}\geqslant0,\quad\delta S_{\text{échangée}}=\frac{\delta Q^{\text{ext}}}{T^{\text{ext}}}.
                     }
                 \end{equation}
                 Une conséquence directe est 
@@ -143,21 +143,21 @@
                     \draw [-stealth, blue] (-1,2.5)--++(2,0);
                     \node at (-1,0) [below] {$x$};
                     \node at (0,0) [below] {$\vec{v}$};
-                    \draw [latex-latex] (-2,3.25)--++(1,0) node [above,midway] {$v \d t$};
+                    \draw [latex-latex] (-2,3.25)--++(1,0) node [above,midway] {$v \rmd t$};
                 
                 \end{tikzpicture}
                 \caption{Débit de masse dans un fluide en écoulement permanent.}    
                 \label{fig:debit_masse_fluide_ecoulement_permanent}
             \end{figure}
 
-            Une quantité de masse $\delta m$ du fluide traverse une section $S$ pendant une période de temps $\d t$. Ainsi,
+            Une quantité de masse $\delta m$ du fluide traverse une section $S$ pendant une période de temps $\rmd t$. Ainsi,
             \begin{equation}
-                \delta m=(S\times v\d t)\times\mu=\mu v S\d t.
+                \delta m=(S\times v\rmd t)\times\mu=\mu v S\rmd t.
             \end{equation}
             On pose alors 
             \begin{equation}
                 \boxed{
-                    D_m=\frac{\delta m}{\d t}=\mu v S.
+                    D_m=\frac{\delta m}{\rmd t}=\mu v S.
                 }
             \end{equation}
             C'est la quantité de masse traversant une section $S$ par unité de temps. Notons que [$\mu$]=\si[]{\kilogram\per\metre\cubed}, [$v$]=\si[]{\metre\per\second} et [$S$]=\si[]{\metre\squared}.
@@ -205,19 +205,19 @@
                         \draw (3,-0.5)--++(0.5,0)--++(0,-0.5)--++(1,0)--++(0,0.5)--++(0.5,0);
                         \draw [draw=red, dashed] (3.55,0.45)--++(0.9,0)--++(0,-0.5)--++(0.5,0)--++(0,-0.4)--++(-0.5,0)--++(0,-0.5)--++(-0.95,0)--++(0,1.4);
                         \draw [dashed, draw=green,pattern=north west lines, pattern color=green] (4.5,-0.5) rectangle (5,0);
-                        \node [text=red] at (4,-0.25) {\tiny$\Sigma (t+\d t)$};
+                        \node [text=red] at (4,-0.25) {\tiny$\Sigma (t+\rmd t)$};
                         \node [text=green] at (5.2,0.25) {$\delta m_s$};
-                        \node at (4,1) {à $t+\d t$};
+                        \node at (4,1) {à $t+\rmd t$};
                     \end{tikzpicture}
                     \caption{Bilan de masse en régime permanent, une entrée et une sortie, système fermé.}    
                     \label{fig:bilan_masse_regime_permanent_une_entree_une_sortie_systeme_ferme}
                 \end{figure}
 
-                $\sigma^{\star}$ est fermé, on a $m^{\star}(t)=m^{\star}(t+\d t)$ d'où
+                $\sigma^{\star}$ est fermé, on a $m^{\star}(t)=m^{\star}(t+\rmd t)$ d'où
                 \begin{equation}
-                    m(t)+\delta m_e=m(t+\d t)+\delta m_s=m(t)+D_m^{e}\d t=m(t+\d t)+D_m^{s}\d t.
+                    m(t)+\delta m_e=m(t+\rmd t)+\delta m_s=m(t)+D_m^{e}\rmd t=m(t+\rmd t)+D_m^{s}\rmd t.
                 \end{equation}
-                En régime permanent, on a $m(t+\d t)=m(t)$, donc 
+                En régime permanent, on a $m(t+\rmd t)=m(t)$, donc 
                 \begin{equation}
                     \boxed{
                         D_m^{e}=D_{m}^{s}.
@@ -260,7 +260,7 @@
     
     \subsection{Bilan énergétique en régime permanent}
 
-        On considère le système présenté à la Figure~\ref{fig:bilan_energetique_regime_permanent_systeme_ouvert}. Les entrées sont $u_e,v_e$ et $P_e$. Les sorties sont $u_s,v_s,P_s$. Comme précédemment, on note $\Sigma^{\star}(t)$ le système fermé considéré au temps $t$, et $\Sigma^{\star}(t+\d t)$ le système fermé considéré au temps $t+\d t$. Les flèches autour du système indique les forces de pression.
+        On considère le système présenté à la Figure~\ref{fig:bilan_energetique_regime_permanent_systeme_ouvert}. Les entrées sont $u_e,v_e$ et $P_e$. Les sorties sont $u_s,v_s,P_s$. Comme précédemment, on note $\Sigma^{\star}(t)$ le système fermé considéré au temps $t$, et $\Sigma^{\star}(t+\rmd t)$ le système fermé considéré au temps $t+\rmd t$. Les flèches autour du système indique les forces de pression.
 
         \begin{figure}
             \centering
@@ -274,7 +274,7 @@
                 \node at (2,2) {\Huge$\star$};
                 \draw [->] (2,2.5) to[bend right=45] (1.5,2);
                 \node [text=red] at (-1.5,2) {$\Sigma^{\star}(t)$};
-                \node [text=green] at (5.5,1) {$\Sigma^{\star}(t+\d t)$};
+                \node [text=green] at (5.5,1) {$\Sigma^{\star}(t+\rmd t)$};
                 \node at (2,5) {$\Sigma(t)$};
                 \draw [-stealth] (-2.5,-1)--(-2.5,5);
                 \node at (-2.5,0.5) {$\bullet$};
@@ -309,13 +309,13 @@
             \begin{align}
                 E^{\star}(t)
                 &=E(t)+\delta E_e=E(t)+\delta m_e\left[u_e+\frac{v_e^{2}}{2}+gz_e\right],\\
-                &=E^{\star}(t+\d t),\\
-                &= E(t+\d t)+\delta E_s=E(t+\d t)+\delta m_s\left[u_s+\frac{v_s^{2}}{2}+g z_s\right].
+                &=E^{\star}(t+\rmd t),\\
+                &= E(t+\rmd t)+\delta E_s=E(t+\rmd t)+\delta m_s\left[u_s+\frac{v_s^{2}}{2}+g z_s\right].
             \end{align}
-            En régime permanent, on a $E(t+\d t)=E(t)$ et $\delta m_e=\delta m_s=D_m\d t$, d'où
+            En régime permanent, on a $E(t+\rmd t)=E(t)$ et $\delta m_e=\delta m_s=D_m\rmd t$, d'où
             \begin{equation}
                 \boxed{
-                    \frac{\d E^{\star}}{\d t}=D_m\left[\left(u_s+\frac{v_s^{2}}{2}+g z_s\right)-\left(u_e+\frac{v_e^{2}}{2}+g z_e\right)\right].
+                    \frac{\rmd E^{\star}}{\rmd t}=D_m\left[\left(u_s+\frac{v_s^{2}}{2}+g z_s\right)-\left(u_e+\frac{v_e^{2}}{2}+g z_e\right)\right].
                 }
             \end{equation}
 
@@ -323,7 +323,7 @@
 
             On a 
             \begin{equation}
-                \frac{\d E^{\star}}{\d t}=\frac{\delta W_{\text{nc}}^{\text{ext}}}{\d t}+\frac{\delta Q^{\text{ext}}}{\d t}=P_{\text{méca,nc}^{\text{ext}}}+P_{\text{th}}^{\text{ext}}.
+                \frac{\rmd E^{\star}}{\rmd t}=\frac{\delta W_{\text{nc}}^{\text{ext}}}{\rmd t}+\frac{\delta Q^{\text{ext}}}{\rmd t}=P_{\text{méca,nc}^{\text{ext}}}+P_{\text{th}}^{\text{ext}}.
             \end{equation}
             Notamment, 
             \begin{equation}
@@ -372,13 +372,13 @@
             \begin{equation}
                 \begin{aligned}
                     S^{\star}(t)&= S(t)+\delta S_e=S(t)+\delta m_e s_e,\\
-                    S^{\star}(t+\d t)&= S(t+\d t)+\delta m_s s_s.
+                    S^{\star}(t+\rmd t)&= S(t+\rmd t)+\delta m_s s_s.
                 \end{aligned}
             \end{equation}
             En régime permanent, on a donc
             \begin{equation}
                 \boxed{
-                    \frac{\d S^{\star}}{\d t}=D_m\left(S_s-S_e\right).
+                    \frac{\rmd S^{\star}}{\rmd t}=D_m\left(S_s-S_e\right).
                 }
             \end{equation}
 
@@ -386,24 +386,24 @@
             
             On a 
             \begin{equation}
-                \frac{\d S^{\star}}{\d t}=\frac{\delta S_{\text{ech}}}{\d t}+\frac{\delta S_{\text{cr}}}{\d t},
+                \frac{\rmd S^{\star}}{\rmd t}=\frac{\delta S_{\text{ech}}}{\rmd t}+\frac{\delta S_{\text{cr}}}{\rmd t},
             \end{equation}
             où le deuxième terme est positif. Ainsi,
             \begin{equation}
                 \boxed{
-                    D_m\left[S_s-S_e\right]=\frac{\delta S_{\text{ech}}}{\d t}+\frac{\delta S_{\text{cr}}}{\d t}.
+                    D_m\left[S_s-S_e\right]=\frac{\delta S_{\text{ech}}}{\rmd t}+\frac{\delta S_{\text{cr}}}{\rmd t}.
                 }
             \end{equation}
             En formulation intensive, on note l'entropie échangée par unité de masse
             \begin{equation}
                 \boxed{
-                    \frac{1}{D_m}\frac{\delta S_{\text{ech}}}{\d t}=s_{\text{ech}}.
+                    \frac{1}{D_m}\frac{\delta S_{\text{ech}}}{\rmd t}=s_{\text{ech}}.
                 }
             \end{equation}
             L'entropie créée par unité de masse est donnée par
             \begin{equation}
                 \boxed{
-                    \frac{1}{D_m}\frac{\delta S_{\text{cr}}}{\d t}=s_{\text{cr}}.
+                    \frac{1}{D_m}\frac{\delta S_{\text{cr}}}{\rmd t}=s_{\text{cr}}.
                 }
             \end{equation}
 
@@ -414,7 +414,7 @@
 
             Dans le cas monotherme, on a
             \begin{equation}
-                \frac{\delta S_{\text{ech}}}{\d t}=\frac{P_{\text{th}}^{\text{ext}}}{T^{\text{ext}}},
+                \frac{\delta S_{\text{ech}}}{\rmd t}=\frac{P_{\text{th}}^{\text{ext}}}{T^{\text{ext}}},
             \end{equation}
             et
             \begin{equation}

@@ -7,7 +7,7 @@
         On a le postulat suivant :
         \begin{equation}
             \boxed{
-                \oint_{C}\vec{B}\cdot\vec{\d l}=\mu_0 I_{\text{enl}},
+                \oint_{C}\vec{B}\cdot\vec{\rmd l}=\mu_0 I_{\text{enl}},
             }
         \end{equation}
         où $I_{\text{enl}}$ est l'intensité des fils \og enlacés\fg, voir la Figure~\ref{fig:intensite_fil_enlances_circulation_champ_magnetique}. Dans ce cas, on a 
@@ -35,7 +35,7 @@
         Le postulat s'écrit aussi
         \begin{equation}
             \boxed{
-                \oint_{C}\vec{B}\cdot\vec{\d l}=\mu_{0}\iint_{\Sigma}\vec{j}\cdot\vec{N}\d\Sigma.
+                \oint_{C}\vec{B}\cdot\vec{\rmd l}=\mu_{0}\iint_{\Sigma}\vec{j}\cdot\vec{N}\rmd\Sigma.
             }
         \end{equation}
 
@@ -93,7 +93,7 @@
             \end{itemize}
             Finalement, on a $\vec{B}(M)=B(r)\vec{u}_{\theta}$. Le théorème d'Ampère donne alors
             \begin{equation}
-                \oint_{C}\vec{B}\cdot\vec{\d l}=B(r)\times 2\pi r=\mu_0 I_{\text{enl}}(r).
+                \oint_{C}\vec{B}\cdot\vec{\rmd l}=B(r)\times 2\pi r=\mu_0 I_{\text{enl}}(r).
             \end{equation}
 
             Pour $r\geqslant a$, on a $I_{\text{enl}}(r\geqslant a)=I$, d'où 
@@ -105,7 +105,7 @@
 
             Si $r\leqslant a$, on a 
             \begin{equation}
-                I_{\text{enl}}(r\leqslant a)=\iint_{\Sigma}\vec{j}\cdot\vec{N}\d\Sigma=\frac{I}{\pi a^{2}}\times\pi r^{2}=I\left(\frac{r}{a}\right)^{2},
+                I_{\text{enl}}(r\leqslant a)=\iint_{\Sigma}\vec{j}\cdot\vec{N}\rmd\Sigma=\frac{I}{\pi a^{2}}\times\pi r^{2}=I\left(\frac{r}{a}\right)^{2},
             \end{equation}
             d'où
             \begin{equation}
@@ -148,7 +148,7 @@
             \end{equation}
             Notons que si la longueur est finie, tout plan inclue dans $(Oz)$ est un PAS, donc $B_{\theta}=0$. Pour contour d'Ampère, on choisit un contour rectangulaire contenu dans un plan contenant l'axe $(Oz)$ dont un des côtés est sur l'axe. Alors
             \begin{equation}
-                \int_{\mathcal{C}}\vec{B}\cdot\vec{\d l}=\mu_{0}I_{\mathrm{enl}}(r)=B(0)\times h - B(r)\times h,
+                \int_{\mathcal{C}}\vec{B}\cdot\vec{\rmd l}=\mu_{0}I_{\mathrm{enl}}(r)=B(0)\times h - B(r)\times h,
             \end{equation}
             donc si $r<a$, $B(r<a)=B(0)=\mathrm{constante}$. Si $r>a$, $B(r>a)=0$ par hypothèse, donc $B(0)=\mu_0 n i$.
 
@@ -175,7 +175,7 @@
 
         Si $\mathcal{C}$ est un contour orienté et $\Sigma$ est une surface supportée par $\mathcal{C}$ avec $\vec{N}$ un vecteur normal extérieur normalisé, alors d'après le théorème de Stokes, on a 
         \begin{equation}
-            \int_{\mathcal{C}}\vec{B}\cdot\vec{\d l}=\mu_{0}I_{\mathrm{enl}}=\mu_{0}\iint_{\Sigma}\vec{j}\cdot\vec{N}\d\Sigma=\iint_{\Sigma}\left(\vec{\mathrm{rot}}\vec{B}\right)\cdot\vec{N}\d\Sigma.
+            \int_{\mathcal{C}}\vec{B}\cdot\vec{\rmd l}=\mu_{0}I_{\mathrm{enl}}=\mu_{0}\iint_{\Sigma}\vec{j}\cdot\vec{N}\rmd\Sigma=\iint_{\Sigma}\left(\vec{\mathrm{rot}}\vec{B}\right)\cdot\vec{N}\rmd\Sigma.
         \end{equation}
         Ainsi, on a 
         \begin{equation}
@@ -189,13 +189,13 @@
         Pour le flux, on a l'équivalence intégrale/locale suivante :
         \begin{equation}
             \boxed{
-                \oiint_{S}\vec{B}\cdot\vec{n}^{\mathrm{ext}}\d S=0\Longleftrightarrow\mathrm{div}\vec{B}=0.
+                \oiint_{S}\vec{B}\cdot\vec{n}^{\mathrm{ext}}\rmd S=0\Longleftrightarrow\mathrm{div}\vec{B}=0.
             }
         \end{equation}
         Pour la circulation, on a l'équivalence suivante :
         \begin{equation}
             \boxed{
-                \oint_{\mathcal{C}}\vec{B}\cdot\vec{\d l}=\mu_{0}I_{\mathrm{enl}}\Longleftrightarrow\vec{\mathrm{rot}}\vec{B}=\mu_{0}\vec{j}.
+                \oint_{\mathcal{C}}\vec{B}\cdot\vec{\rmd l}=\mu_{0}I_{\mathrm{enl}}\Longleftrightarrow\vec{\mathrm{rot}}\vec{B}=\mu_{0}\vec{j}.
             }
         \end{equation}
 

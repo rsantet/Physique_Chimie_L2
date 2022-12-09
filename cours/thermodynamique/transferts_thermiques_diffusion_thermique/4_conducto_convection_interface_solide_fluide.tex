@@ -91,7 +91,7 @@
                 \draw [dashed, blue] (-1,0) ellipse (0.5 and 1);
                 \draw [dashed, blue] (1,0) ellipse (0.5 and 1);
                 \node [text=blue] at (-1,-1.25) {$x$};
-                \node [text=blue] at (1,-1.25) {$x+\d x$};
+                \node [text=blue] at (1,-1.25) {$x+\rmd x$};
 
                 \draw (0,2.5) circle (0.5) node {$T_0$};
                 \draw (-5,-0.5) circle (0.5) node {$T_1$};
@@ -112,7 +112,7 @@
                 \draw (F)--(G);
 
                 \draw[double,-latex,red,text=red] (-1,0)--++(1,0) node [below] {$j_{\text{th}}(x)$};
-                \draw[double,-latex,red,text=red] (1,0)--++(1,0) node [below] {$j_{\text{th}}(x+\d x)$};
+                \draw[double,-latex,red,text=red] (1,0)--++(1,0) node [below] {$j_{\text{th}}(x+\rmd x)$};
                 \draw[-latex,red,text=red] (0,-1)--++(0,-1) node [below] {$\varphi_{\text{cc}}$};
             \end{tikzpicture}
             \caption{Application du flux conducto-convectif : ailette de refroidissement.}    
@@ -121,28 +121,28 @@
 
         \subsubsection{Profil $T(x)$}
 
-            On ne peut pas utiliser l'équation de la chaleur, il faut passer par un bilan d'énergie local sur $[x,x+\d x]$. En régime permanent, on a 
+            On ne peut pas utiliser l'équation de la chaleur, il faut passer par un bilan d'énergie local sur $[x,x+\rmd x]$. En régime permanent, on a 
             \begin{align}
-                \frac{\d\left(\delta U\right)}{\d t}
+                \frac{\rmd\left(\delta U\right)}{\rmd t}
                 &=
                 0,\\
                 &=
                 P_{\text{th}}^{\text{ext}},\\
                 &=
-                j_{\text{th}}(x)\pi a^{2}-j_{\text{th}}(x+\d x)\pi a^{2}-h(T(x)-T_0)2\pi a\d x.
+                j_{\text{th}}(x)\pi a^{2}-j_{\text{th}}(x+\rmd x)\pi a^{2}-h(T(x)-T_0)2\pi a\rmd x.
             \end{align}
             Ainsi, on obtient
             \begin{equation}
-                \pi a^{2}\frac{\partial j_{\text{th}}}{\partial x}\d x+h(T(x)-T_0)=0.
+                \pi a^{2}\frac{\partial j_{\text{th}}}{\partial x}\rmd x+h(T(x)-T_0)=0.
             \end{equation}
             On pose $\theta(x)=T(x)-T_0$, et $\delta\coloneqq\sqrt{\dfrac{a\lambda}{2h}}$, et on obtient 
             \begin{equation}
-                \theta(x)=\alpha\e^{-x/\delta}+\beta\e^{x/\delta}.
+                \theta(x)=\alpha\rme^{-x/\delta}+\beta\rme^{x/\delta}.
             \end{equation}
             On a $\beta =0$ car $\theta$ est fini en $+\infty$, et $\theta(0)=T_1-T_0=\alpha$. Finalement,
             \begin{equation}
                 \boxed{
-                    T(x)=T_0+(T_1-T_0)\e^{-x/\delta}.
+                    T(x)=T_0+(T_1-T_0)\rme^{-x/\delta}.
                 }
             \end{equation}
 
@@ -188,7 +188,7 @@
                 &\approx
                 \frac{h(T(x)-T_0)}{-\lambda\frac{\partial T}{\partial x}},\\
                 &=
-                \frac{h(T_1-T_0)\e^{-x/\delta}}{\frac{\lambda}{\delta}(T_1-T_0)\e^{-x/\delta}},\\
+                \frac{h(T_1-T_0)\rme^{-x/\delta}}{\frac{\lambda}{\delta}(T_1-T_0)\rme^{-x/\delta}},\\
                 &=
                 \frac{h\delta}{\lambda}=\sqrt{\frac{ah}{2\lambda}}\sim10^{-2}\ll1.
             \end{align}

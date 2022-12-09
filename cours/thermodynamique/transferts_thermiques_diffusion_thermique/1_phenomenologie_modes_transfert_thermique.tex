@@ -51,7 +51,7 @@
 
             Tout corps opaque chauffé à une température $T$ rayonne une puissance surfacique
             \begin{equation}
-                \frac{\d P}{\d S}\propto T^{4}.
+                \frac{\rmd P}{\rmd S}\propto T^{4}.
             \end{equation}
             Un exemple est le rayonnement électromagnétique. Le rayonnement se propage dans un milieu transparent (notamment dans le vide).
 
@@ -65,14 +65,14 @@
     
     \subsection{Le flux thermique surfacique}
 
-        On considère une section infinitésimale $\d S$ avec une normale extérieure $\vec{n}$ et une quantité de chaleur $\delta Q$ qui passe à travers cette surface, voir la Figure~\ref{fig:flux_thermique_surfacique_section}.
+        On considère une section infinitésimale $\rmd S$ avec une normale extérieure $\vec{n}$ et une quantité de chaleur $\delta Q$ qui passe à travers cette surface, voir la Figure~\ref{fig:flux_thermique_surfacique_section}.
 
         \begin{figure}
             \centering
             \tikzsetnextfilename{flux_thermique_surfacique_section}
             \begin{tikzpicture}[scale=1]  
                 % \helpgrid{3}{3}
-                \draw [thick] (0,0) ellipse (1cm and 1.5cm) node [below, shift=({0,-0.25})] {$\d S$};
+                \draw [thick] (0,0) ellipse (1cm and 1.5cm) node [below, shift=({0,-0.25})] {$\rmd S$};
                 \draw [color=black,smooth, pattern=north west lines] (0,0) circle (0.25);
                 \draw [thick, ->] (0,0)--++(2,0) node [above] {$\vec{n}$};
                 \draw [-stealth, double, thick, red!50!black, text=red] (-3, 0)--++(1.5,0) node [above,pos=0.5] {$\delta Q$};
@@ -84,12 +84,12 @@
         \begin{definition}[Puissance thermique et flux thermique surfacique]
             On définit \textbf{la puissance thermique} par 
             \begin{equation}
-                P_{\text{th}}=\frac{\delta Q}{\d t},    
+                P_{\text{th}}=\frac{\delta Q}{\rmd t},    
             \end{equation}
             qui est une quantité algébrique : si le transfert se fait selon $\vec{n}$, alors $P_{\text{th}}$, et sinon $P_{\text{th}}<0$. ON a $P_{\text{th}}$ et on définit donc \textbf{le flux thermique surfacique} $\varphi$ par
             \begin{equation}
                 \boxed{
-                    P_{\text{th}}=\iint_{S}\varphi~\d S.
+                    P_{\text{th}}=\iint_{S}\varphi~\rmd S.
                 }
             \end{equation} 
             L'unité de $\varphi$ est \si{\watt\per\metre\squared}.
@@ -105,25 +105,25 @@
             \begin{tikzpicture}[scale=1]  
                 % \helpgrid{3}{3}
                 \draw (0,-2)--(0,2);
-                \draw[thick,line width=2pt] (0,-1)--(0,1) node [below right, pos=0] {$\d S$};
+                \draw[thick,line width=2pt] (0,-1)--(0,1) node [below right, pos=0] {$\rmd S$};
                 \draw[dashed, red!50!black] (-0.25,-1) rectangle++ (0.5,2);
                 \draw [<->,latex-latex, text=red, color=red] (-0.25,1.2)--++(0.5,0) node [above] {$\varepsilon$};
 
                 \draw [color=black,smooth] (-2,2) circle (0.5) node {1};
                 \draw [color=black,smooth] (2,2) circle (0.5) node {2};
 
-                \draw[-stealth, double, thick] (-2,0)--++(1,0) node [above, midway] {$\varphi^{-}\d S$};
-                \draw[-stealth, double, thick] (1,0)--++(1,0) node [above, midway] {$\varphi^{+}\d S$};
+                \draw[-stealth, double, thick] (-2,0)--++(1,0) node [above, midway] {$\varphi^{-}\rmd S$};
+                \draw[-stealth, double, thick] (1,0)--++(1,0) node [above, midway] {$\varphi^{+}\rmd S$};
             \end{tikzpicture}
             \caption{Continuité du flux thermique surfacique.}    
             \label{fig:continuite_flux_surfacique}
         \end{figure}
 
-        Le principe de la thermodynamique sur le tube de volume $\varepsilon\d S$ s'écrit
+        Le principe de la thermodynamique sur le tube de volume $\varepsilon\rmd S$ s'écrit
         \begin{equation}
-            \frac{\d U}{\d t}=\varphi^{-}\d S-\varphi^{+}\d S.
+            \frac{\rmd U}{\rmd t}=\varphi^{-}\rmd S-\varphi^{+}\rmd S.
         \end{equation}
-        Si $\varepsilon\to0$, on a $U\to0$ donc $\frac{\d U}{\d t}\to0$. Ainsi, $\varphi^{-}=\varphi^{+}$ : le flux surfacique est continu.
+        Si $\varepsilon\to0$, on a $U\to0$ donc $\frac{\rmd U}{\rmd t}\to0$. Ainsi, $\varphi^{-}=\varphi^{+}$ : le flux surfacique est continu.
 
     \subsection{Hypothèse de l'équilibre thermodynamique local (ETL)}
 

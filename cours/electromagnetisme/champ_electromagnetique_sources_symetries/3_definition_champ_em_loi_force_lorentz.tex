@@ -28,28 +28,28 @@
 
     \paragraph{Force de Lorentz méso/macroscopique : distribution continue de charges et courants.}
 
-        Il y a des porteurs de charges de type $k$ : charges~$q_k$, nombre par unité de volume $n_k [\si{\metre\per\cubed}]$ et vitesse moyenne $\langle\vec{v_k}\rangle$. Soit $\d V$ un volume mésoscopique contenant ces porteurs. Quelle est la force $\d\vec{F}_{em}$ subie par ce volume ? Un charge $k$ subit en moyenne 
+        Il y a des porteurs de charges de type $k$ : charges~$q_k$, nombre par unité de volume $n_k [\si{\metre\per\cubed}]$ et vitesse moyenne $\langle\vec{v_k}\rangle$. Soit $\rmd V$ un volume mésoscopique contenant ces porteurs. Quelle est la force $\rmd\vec{F}_{em}$ subie par ce volume ? Un charge $k$ subit en moyenne 
         \begin{equation}
             \vec{F}_{L_k}=q_k\left(\vec{E}+\langle\vec{v_k}\rangle\wedge \vec{B}\right).
         \end{equation}
 
-        Dans $\d V$, il y a $n_k\d V$ porteurs $k$. Ainsi, ils subissent
+        Dans $\rmd V$, il y a $n_k\rmd V$ porteurs $k$. Ainsi, ils subissent
         \begin{equation}
-            n_k q_k\left(\vec{E}+\langle \vec{v_k}\rangle\wedge \vec{B}\right)\d V.
+            n_k q_k\left(\vec{E}+\langle \vec{v_k}\rangle\wedge \vec{B}\right)\rmd V.
         \end{equation}
         En sommant sur tout les porteurs $k$, on a 
         \begin{align}
-            \d\vec{F}_{\text{em}}
+            \rmd\vec{F}_{\text{em}}
             &=
             \left[
                 \sum_{\neq~k}n_kq_k\left(\vec{E}+\langle\vec{v_k}\rangle\wedge\vec{B}\right)
-            \right]\d V,\\
+            \right]\rmd V,\\
             &=
             \left(
                 \left(\sum_{\neq~k}n_k q_k\right)\vec{E}+\left(\sum_{\neq~k}n_kq_k\langle\vec{v_k}\rangle\right)\wedge\vec{B}
             \right),\\
             &=
-            \left(\rho\vec{E}+\vec{j}\wedge\vec{B}\right)\d V.
+            \left(\rho\vec{E}+\vec{j}\wedge\vec{B}\right)\rmd V.
         \end{align}
 
         Ainsi, la force volumique est 
@@ -63,14 +63,14 @@
             Dans un métal, c'est le force de Laplace : on a $\rho=0$ d'où 
             \begin{equation}
                 \boxed{
-                    \d\vec{F}_{\text{em}}=(\vec{j}\wedge\vec{B})\d V.
+                    \rmd\vec{F}_{\text{em}}=(\vec{j}\wedge\vec{B})\rmd V.
                 }
             \end{equation}
 
-            Pour une géométrie filiforme, on a $\vec{j}\d V=js\d l=i\vec{\d l}$, où $s$ est la section du fil. Ainsi
+            Pour une géométrie filiforme, on a $\vec{j}\rmd V=js\rmd l=i\vec{\rmd l}$, où $s$ est la section du fil. Ainsi
             \begin{equation}
                 \boxed{
-                    \d\vec{F_{\text{em}}}=i\vec{\d l}\wedge\vec{B}.
+                    \rmd\vec{F_{\text{em}}}=i\vec{\rmd l}\wedge\vec{B}.
                 }
             \end{equation}
         \end{example}

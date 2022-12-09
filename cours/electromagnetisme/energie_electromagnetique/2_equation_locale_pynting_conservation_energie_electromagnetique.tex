@@ -8,16 +8,16 @@ L'idée est d'avoir une équation locale traduisant les échanges d'énergie cha
 On part de
 \begin{equation}
     \vec{j}\cdot\vec{E}=\vec{E}\cdot\left(
-        \vec{\rot}\left(\frac{\vec{B}}{\mu_0}\right)-\varepsilon_0\frac{\partial\vec{E}}{\partial t}
+        \vecrot\left(\frac{\vec{B}}{\mu_0}\right)-\varepsilon_0\frac{\partial\vec{E}}{\partial t}
     \right).
 \end{equation}
 On se donne la formule suivante:
 \begin{equation}
-    \div\left(\vec{C}\wedge\vec{D}\right)=\vec{D}\cdot\vec{\rot}\vec{C}-\vec{C}\cdot\vec{\rot}\vec{D}.
+    \div\left(\vec{C}\wedge\vec{D}\right)=\vec{D}\cdot\vecrot\vec{C}-\vec{C}\cdot\vecrot\vec{D}.
 \end{equation}
 On obtient alors
 \begin{equation}
-    \vec{j}\cdot\vec{E}=\vec{E}\cdot\left(\vec{\rot}\left(\frac{\vec{B}}{\mu_0}\right)-\varepsilon_0\frac{\partial\vec{E}}{\partial t}\right),
+    \vec{j}\cdot\vec{E}=\vec{E}\cdot\left(\vecrot\left(\frac{\vec{B}}{\mu_0}\right)-\varepsilon_0\frac{\partial\vec{E}}{\partial t}\right),
 \end{equation}
 puis
 \begin{equation}
@@ -61,7 +61,7 @@ Du point de vue du champ électromagnétique, si $P_{\mathrm{vol}}>0$ (conducteu
 La puissance électromagnétique sortant d'une surface orientée $S$ est donnée par
 \begin{equation}
     \boxed{
-        P_{S}^{\mathrm{em}}=\iint_{S}\vec{\Pi}\cdot\vec{n}\d S,
+        P_{S}^{\mathrm{em}}=\iint_{S}\vec{\Pi}\cdot\vec{n}\rmd S,
     }
 \end{equation}
 
@@ -88,15 +88,15 @@ avec $\alpha>0$. L'équation de Poynting donne alors
 
 Remarquons alors que pour une fonction $f$ $T$-périodique, on a
 \begin{equation}
-    \left\langle\frac{\partial f^{2}}{\partial t}\right\rangle=\frac{1}{T}\int\frac{\partial f^{2}}{\partial t}\d t=\frac{1}{T}(f^{2}(t_0+T)-f^{2}(t_0))=0.
+    \left\langle\frac{\partial f^{2}}{\partial t}\right\rangle=\frac{1}{T}\int\frac{\partial f^{2}}{\partial t}\rmd t=\frac{1}{T}(f^{2}(t_0+T)-f^{2}(t_0))=0.
 \end{equation}
 Ainsi, on obtient
 \begin{equation}
-    \frac{\d\left\langle\Pi\right\rangle}{\d x}=-\alpha\left\langle\Pi\right\rangle,
+    \frac{\rmd\left\langle\Pi\right\rangle}{\rmd x}=-\alpha\left\langle\Pi\right\rangle,
 \end{equation}
-car $\left\langle\frac{\partial u_{\mathrm{em}}}{\partial t}\right\rangle=0$ ($\vec{E}$ et $\vec{B}$ sont périodiques). Donc $\left\langle \Pi\right\rangle(x)=\left\langle\Pi\right\rangle_{0}\e^{-\alpha x}$. On a alors 
+car $\left\langle\frac{\partial u_{\mathrm{em}}}{\partial t}\right\rangle=0$ ($\vec{E}$ et $\vec{B}$ sont périodiques). Donc $\left\langle \Pi\right\rangle(x)=\left\langle\Pi\right\rangle_{0}\rme^{-\alpha x}$. On a alors 
 \begin{equation}
-    \left\langle\Pi\right\rangle_{\mathrm{out}}=\left\langle\Pi\right\rangle_{\mathrm{in}}\e^{-\alpha l},
+    \left\langle\Pi\right\rangle_{\mathrm{out}}=\left\langle\Pi\right\rangle_{\mathrm{in}}\rme^{-\alpha l},
 \end{equation}
 et donc 
 \begin{equation}
@@ -121,7 +121,7 @@ Le terme de gauche est appelée l'absorbance $A$, et $\alpha$ dépend de la long
         \draw (2,0) --++(0,2);
         \draw[dashed, ->] (0,1) --++(3,0) node [pos=0, left] {lumière};
         \draw[draw=blue,text=blue] (0.75,0) --++ (0,2) node [pos=0,below] {\tiny $x$};
-        \draw[draw=blue,text=blue] (1.25,0) --++ (0,2) node [pos=0,below] {\tiny $x+\d x$};
+        \draw[draw=blue,text=blue] (1.25,0) --++ (0,2) node [pos=0,below] {\tiny $x+\rmd x$};
         \draw[<->] (0,-0.5)--++(2,0) node [midway,below] {$l$};
     \end{tikzpicture}
     \caption{Propagation unidimensionnelle dans un milieu absorbant.}    

@@ -9,18 +9,18 @@ Pour un régime quelconque, on a
     \left\lbrace
         \begin{aligned}
             \div\vec{E}(\vec{r},t)&=0,\\
-            \vec{\rot}\vec{E}(\vec{r},t)&=-\frac{\partial\vec{B}}{\partial t}(\vec{r},t),\\
+            \vecrot\vec{E}(\vec{r},t)&=-\frac{\partial\vec{B}}{\partial t}(\vec{r},t),\\
             \div\vec{B}(\vec{r},t)&=0,\\
-            \vec{\rot}\vec{B}(\vec{r},t)&=\frac{1}{c^{2}}\frac{\partial\vec{E}}{\partial t}(\vec{r},t).
+            \vecrot\vec{B}(\vec{r},t)&=\frac{1}{c^{2}}\frac{\partial\vec{E}}{\partial t}(\vec{r},t).
         \end{aligned}
     \right.
 \end{equation}
 
 \subsection{Équations de propagation: équation de d'Alembert}
 
-On se donne la formule: $\vec{\rot}(\vec{\rot}(\vec{W}))=\vec{\grad}(\div\vec{W})-\vec{\Delta W}$. Alors
+On se donne la formule: $\vecrot(\vecrot(\vec{W}))=\vecgrad(\div\vec{W})-\vec{\Delta W}$. Alors
 \begin{equation}
-    \vec{\rot}(\vec{\rot}\vec{E})=\vec{\grad}(\div\vec{E})-\vec{\Delta E},
+    \vecrot(\vecrot\vec{E})=\vecgrad(\div\vec{E})-\vec{\Delta E},
 \end{equation}
 d'où
 \begin{equation}
@@ -38,4 +38,4 @@ On fait la même chose pour le champ magnétique et on trouve
 
 \subsubsection{Nécessité du couplage spatio-temporel du champ électromagnétique}
 
-Dans l'ARQS magnétique, on a $\vec{\rot}\vec{B}\approx\vec{0}$, donc $\vec{\Delta E}=\vec{0}$ et $\vec{\Delta B}=\vec{0}$: il n'y a aucune propagation.
+Dans l'ARQS magnétique, on a $\vecrot\vec{B}\approx\vec{0}$, donc $\vec{\Delta E}=\vec{0}$ et $\vec{\Delta B}=\vec{0}$: il n'y a aucune propagation.

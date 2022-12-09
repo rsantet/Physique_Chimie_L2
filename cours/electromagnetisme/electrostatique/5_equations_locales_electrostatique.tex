@@ -4,13 +4,13 @@
 
         Le théorème de Gauss couplé ai théorème d'Ostrogradski donne
         \begin{equation}
-            \oiint_{S}\vec{E}\cdot\vec{n}^{\text{ext}}\d S=\iiint_{V}\mathrm{div}~\vec{E}\d V=\frac{Q_{\text{int}}}{\varepsilon_0}=\frac{1}{\varepsilon_0}\iiint_{V}\rho\d V.
+            \oiint_{S}\vec{E}\cdot\vec{n}^{\text{ext}}\rmd S=\iiint_{V}\mathrm{div}~\vec{E}\rmd V=\frac{Q_{\text{int}}}{\varepsilon_0}=\frac{1}{\varepsilon_0}\iiint_{V}\rho\rmd V.
         \end{equation}
         Ainsi, pour tout volume $V$, on a 
         \begin{equation}
             \iiint_{V}\left(
                 \mathrm{div}~\vec{E}-\frac{\rho}{\varepsilon_0}
-            \right)\d V=0,
+            \right)\rmd V=0,
         \end{equation}
         d'où on entire l'équation de Maxwell-Gauss, qui est une version locale du théorème de Gauss:
         \begin{equation}
@@ -41,8 +41,8 @@
                 \draw[draw=green,->-=green] (4,-1.5)--(5.5,-1.5);
                 \draw[draw=green,->-=green] (5.5,-1.5)--(5.5,0);
                 \draw[draw=green,->-=green,text=green] (5.5,0)--(4,0) node [above,midway] {(C)};
-                \draw[latex-latex,red] (4,-1.75)--(5.5,-1.75) node [below,midway] {$\d y$};
-                \draw[latex-latex,red] (5.75,-1.5)--(5.75,0) node [right,midway] {$\d x$};
+                \draw[latex-latex,red] (4,-1.75)--(5.5,-1.75) node [below,midway] {$\rmd y$};
+                \draw[latex-latex,red] (5.75,-1.5)--(5.75,0) node [right,midway] {$\rmd x$};
                 
             \end{tikzpicture}
             \caption{Circulation conservative locale en coordonnées cartésiennes.}
@@ -51,27 +51,27 @@
 
         On se place dans un lan parallèle à $(xOy)$, de côté $z$. On a 
         \begin{align}
-            \oint_{C}\vec{E}\cdot\vec{\d l}
+            \oint_{C}\vec{E}\cdot\vec{\rmd l}
             &=0,\\
             &=
-            E_x(x,y,z)\d x+E_y(x+\d x,y,z)\d y\\
-            &\quad-E_x(x,y+\d y,z)\d x-E_y(x,y,z)\d y,\\
+            E_x(x,y,z)\rmd x+E_y(x+\rmd x,y,z)\rmd y\\
+            &\quad-E_x(x,y+\rmd y,z)\rmd x-E_y(x,y,z)\rmd y,\\
             &=
-            -\d y\frac{\partial E_x}{\partial y}(x,y,z)\d x+\d x\frac{\partial E_y}{\partial x}(x,y,z)\d y=0,
+            -\rmd y\frac{\partial E_x}{\partial y}(x,y,z)\rmd x+\rmd x\frac{\partial E_y}{\partial x}(x,y,z)\rmd y=0,
         \end{align}
         d'où
         \begin{equation}
             \boxed{
-            \left(\frac{\partial E_y}{\partial x}-\frac{\partial E_x}{\partial y}\right)\d x\d y=0,}
+            \left(\frac{\partial E_y}{\partial x}-\frac{\partial E_x}{\partial y}\right)\rmd x\rmd y=0,}
         \end{equation}
         la circulation est donc proportionnelle à l'aire du carré. De même dans les autres plans, on obtient
         \begin{equation}
             \begin{aligned}
-                &\left(\frac{\partial E_x}{\partial z}-\frac{\partial E_z}{\partial x}\right)\d x\d z=0,\\
-                &\left(\frac{\partial E_z}{\partial y}-\frac{\partial E_y}{\partial z}\right)\d y\d z=0.
+                &\left(\frac{\partial E_x}{\partial z}-\frac{\partial E_z}{\partial x}\right)\rmd x\rmd z=0,\\
+                &\left(\frac{\partial E_z}{\partial y}-\frac{\partial E_y}{\partial z}\right)\rmd y\rmd z=0.
             \end{aligned}
         \end{equation}
-        La circulation du champ est donc proportionnelle à l'aire sur laquelle s'appuie le contour. L'idée est donc de passer d'une circulation $\oint\vec{E}\cdot\vec{\d l}$ à un flux à travers une surface.
+        La circulation du champ est donc proportionnelle à l'aire sur laquelle s'appuie le contour. L'idée est donc de passer d'une circulation $\oint\vec{E}\cdot\vec{\rmd l}$ à un flux à travers une surface.
 
     \subsection{Opérateur rotationnel}
 
@@ -80,7 +80,7 @@
             Soit $\vec{A}(x,y,z)$ champ de vecteurs $\mathcal{C}^{1}$. Alors on a 
             \begin{equation}
                 \boxed{
-                    \oint_{C}\vec{A}\cdot\vec{\d l}=\iint_{\Sigma}\left(\vec{\mathrm{rot}}~\vec{A}\right)\cdot\vec{N}\d\Sigma.
+                    \oint_{C}\vec{A}\cdot\vec{\rmd l}=\iint_{\Sigma}\left(\vec{\mathrm{rot}}~\vec{A}\right)\cdot\vec{N}\rmd\Sigma.
                 }
             \end{equation}
             Ici, $(\Sigma)$ est une surface (non fermée) s'appuyant sur (C) et orientée selon la règle du tire-bouchon.
@@ -89,12 +89,12 @@
 
             On a 
             \begin{align}
-                \oint_{C\in(xOy)}\vec{A}\cdot\vec{\d l}
-                &=\left(\frac{\partial A_y}{\partial x}-\frac{\partial A_x}{\partial y}\right)\times\d x\d y,\\
+                \oint_{C\in(xOy)}\vec{A}\cdot\vec{\rmd l}
+                &=\left(\frac{\partial A_y}{\partial x}-\frac{\partial A_x}{\partial y}\right)\times\rmd x\rmd y,\\
                 &=
-                \left(\vec{\mathrm{rot}}\vec{A}\right)_{z}\d y\d y,\\
+                \left(\vec{\mathrm{rot}}\vec{A}\right)_{z}\rmd y\rmd y,\\
                 &=
-                \left(\vec{\mathrm{rot}}\vec{A}\right)\cdot\vec{u}_z\d x\d y,
+                \left(\vec{\mathrm{rot}}\vec{A}\right)\cdot\vec{u}_z\rmd x\rmd y,
             \end{align}
             donc 
             \begin{equation}
@@ -131,7 +131,7 @@
 
         Sur un contour fermé $C$ avec une surface $\Sigma$ supportée par ce contour, on a 
         \begin{equation}
-            \oint_{C}\vec{E}\cdot\vec{\d l}=0=\iint_{\Sigma}\vec{\mathrm{rot}}\vec{E}\d\Sigma,
+            \oint_{C}\vec{E}\cdot\vec{\rmd l}=0=\iint_{\Sigma}\vec{\mathrm{rot}}\vec{E}\rmd\Sigma,
         \end{equation}
         ceci vaut pour tout contour $C$, d'où on en tire l'équation de Maxwell-Faraday, qui ets une équation locale :
         \begin{equation}
@@ -144,7 +144,7 @@
 
             Soit $f(\vec{r})=\vec{\mathrm{rot}}(\vec{\mathrm{grad}}f)=\vec{0}$ car
             \begin{equation}
-                \oint_{C}\vec{\mathrm{grad}}f\cdot\vec{\d l}=0=\iint_{\Sigma}\vec{\mathrm{rot}}(\vec{\mathrm{grad}}f)\cdot\vec{N}\d\Sigma,
+                \oint_{C}\vec{\mathrm{grad}}f\cdot\vec{\rmd l}=0=\iint_{\Sigma}\vec{\mathrm{rot}}(\vec{\mathrm{grad}}f)\cdot\vec{N}\rmd\Sigma,
             \end{equation}
             donc
             \begin{equation}
@@ -164,8 +164,8 @@
             \end{itemize}
             \item [\underline{Formulation intégrale}]\phantom{}
             \begin{itemize}
-                \item Théorème de Gauss : $\oiint_{S}\vec{E}\cdot\vec{n}^{\text{ext}}\d S=\frac{Q^{\text{int}}}{\varepsilon_0}$
-                \item Circulation conservative de $\vec{E}$ : $\oint\vec{E}\cdot\vec{\d l}=0\Leftrightarrow\int_{A}^{B}\vec{E}\cdot\vec{\d l}=V(A)-V(B)$
+                \item Théorème de Gauss : $\oiint_{S}\vec{E}\cdot\vec{n}^{\text{ext}}\rmd S=\frac{Q^{\text{int}}}{\varepsilon_0}$
+                \item Circulation conservative de $\vec{E}$ : $\oint\vec{E}\cdot\vec{\rmd l}=0\Leftrightarrow\int_{A}^{B}\vec{E}\cdot\vec{\rmd l}=V(A)-V(B)$
             \end{itemize}
             \item [\underline{Formulation locale}]\phantom{}
             \begin{itemize}

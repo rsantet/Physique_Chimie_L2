@@ -9,7 +9,7 @@
         Alors en notant $\vec{n}^{\text{ext}}$ le vecteur normal à la surface $S$,
         \begin{equation}
             \boxed{
-                \oiint_{S}\vec{E}\cdot\vec{n}^{\text{ext}}\d S=\frac{Q}{4\pi\varepsilon_{0}r^{2}}\oiint\d S=\frac{Q}{\varepsilon_{0}}.
+                \oiint_{S}\vec{E}\cdot\vec{n}^{\text{ext}}\rmd S=\frac{Q}{4\pi\varepsilon_{0}r^{2}}\oiint\rmd S=\frac{Q}{\varepsilon_{0}}.
             }
         \end{equation}
 
@@ -23,7 +23,7 @@
 
             On a 
             \begin{equation}
-                \oiint_{S\cup S'}\vec{E}\cdot\vec{n}^{\text{ext}}\d S=\iiint_{V}\div\vec{E}\d V,
+                \oiint_{S\cup S'}\vec{E}\cdot\vec{n}^{\text{ext}}\rmd S=\iiint_{V}\div\vec{E}\rmd V,
             \end{equation}
             et pour un problème à symétrie sphérique, on a pour tout $r\neq0$,
             \begin{equation}
@@ -31,17 +31,17 @@
             \end{equation}
             Ainsi, $\div\vec{E}=0$ pour tout $r\neq 0$, d'où 
             \begin{align}
-                \iiint_{V}\div\vec{E}\d V=0=\oiint_{S}\vec{E}\cdot\vec{n}^{\text{ext}}\d S+\oiint_{S'}\vec{E}\cdot\vec{n}^{\text{ext}}\d S',
+                \iiint_{V}\div\vec{E}\rmd V=0=\oiint_{S}\vec{E}\cdot\vec{n}^{\text{ext}}\rmd S+\oiint_{S'}\vec{E}\cdot\vec{n}^{\text{ext}}\rmd S',
             \end{align}
             et les deux normales extérieures sont opposées l'une de l'autre. Finalement,
             \begin{equation}
-                \oiint_{S}\vec{E}\cdot\vec{n}^{\text{ext}}\d S=\oiint_{S}\vec{E}\cdot\vec{u_r}\d S'=\frac{Q}{\varepsilon_{0}}.
+                \oiint_{S}\vec{E}\cdot\vec{n}^{\text{ext}}\rmd S=\oiint_{S}\vec{E}\cdot\vec{u_r}\rmd S'=\frac{Q}{\varepsilon_{0}}.
             \end{equation}
 
             Ainsi, si une surface $S$ contient une charge $Q$, on a toujours
             \begin{equation}
                 \boxed{
-                    \oiint_{S}\vec{E}\cdot\vec{n}^{\text{ext}}\d S=\frac{Q}{\varepsilon_{0}}.
+                    \oiint_{S}\vec{E}\cdot\vec{n}^{\text{ext}}\rmd S=\frac{Q}{\varepsilon_{0}}.
                 }
             \end{equation}
 
@@ -50,7 +50,7 @@
             Dans ce cas, on a directement
             \begin{equation}
                 \boxed{
-                    \oiint_{S}\vec{E}\cdot\vec{n}^{\text{ext}}\d S=\iiint_{V}\div\vec{E}\d V=0.
+                    \oiint_{S}\vec{E}\cdot\vec{n}^{\text{ext}}\rmd S=\iiint_{V}\div\vec{E}\rmd V=0.
                 }
             \end{equation}
 
@@ -59,7 +59,7 @@
             Si $\vec{E}$ est le champ total créé par $N$ charges $Q_i$, alors
             \begin{equation}
                 \boxed{
-                    \oiint_{S}\vec{E}\cdot\vec{n}^{\text{ext}}\d S=\frac{Q^{\text{int}}}{\varepsilon_{0}}.
+                    \oiint_{S}\vec{E}\cdot\vec{n}^{\text{ext}}\rmd S=\frac{Q^{\text{int}}}{\varepsilon_{0}}.
                 }
             \end{equation}
 
@@ -111,7 +111,7 @@
                 \item [($\beta$)] La bonne surface de Gauss est une sphère de centre $O$ et de rayon $r$ variable.
                 \item [($\gamma$)] On a 
                 \begin{equation}
-                    \oiint_{S}\vec{E}\cdot\vec{n}^{\text{ext}}\d R=\oiint_{S}E(r)\d S=E(r)4\pi r^{2}=\frac{Q_{\text{int}}(r)}{\varepsilon_{0}}.
+                    \oiint_{S}\vec{E}\cdot\vec{n}^{\text{ext}}\rmd R=\oiint_{S}E(r)\rmd S=E(r)4\pi r^{2}=\frac{Q_{\text{int}}(r)}{\varepsilon_{0}}.
                 \end{equation}
                 Ainsi,
                 \begin{equation}
@@ -136,7 +136,7 @@
 
                 Si $r\leqslant R$, alors on a 
                 \begin{equation}
-                    Q_{\text{int}}(r\leqslant R)=\iiint \rho\d V=\rho\frac{4}{3}\pi r^{3}=Q\left(\frac{r}{R}\right)^{3}.
+                    Q_{\text{int}}(r\leqslant R)=\iiint \rho\rmd V=\rho\frac{4}{3}\pi r^{3}=Q\left(\frac{r}{R}\right)^{3}.
                 \end{equation}
                 Ainsi, on a 
                 \begin{equation}
@@ -174,11 +174,11 @@
                 
                 \item [$(\gamma)$] Le théorème de Gauss donne
                 \begin{equation}
-                    \oiint_{S}\vec{E}\cdot\vec{n}^{\text{ext}}\d S=\frac{Q_{\text{int}}(r)}{\varepsilon_{0}},
+                    \oiint_{S}\vec{E}\cdot\vec{n}^{\text{ext}}\rmd S=\frac{Q_{\text{int}}(r)}{\varepsilon_{0}},
                 \end{equation}
                 où $S=\Sigma\cup S_1\cup S_2$ où $S_1$ et $S_2$ correspondent aux disques. Ainsi, 
                 \begin{equation}
-                    \oiint_{S}\vec{E}\cdot\vec{n}^{\text{ext}}\d S=0+0+\iint_{\Sigma}E(r)\vec{u_r}\cdot\vec{n}^{\text{ext}}\d \Sigma=E(r)\times 2\pi r h.
+                    \oiint_{S}\vec{E}\cdot\vec{n}^{\text{ext}}\rmd S=0+0+\iint_{\Sigma}E(r)\vec{u_r}\cdot\vec{n}^{\text{ext}}\rmd \Sigma=E(r)\times 2\pi r h.
                 \end{equation}
                 Ainsi,
                 \begin{equation}
@@ -264,11 +264,11 @@
                 
                 \item [($\gamma$)] On a 
                 \begin{align}
-                    \oiint_{S=S_1\cup S_2\cup \Sigma}\vec{E}\cdot\vec{n}^{\text{ext}}\d S
+                    \oiint_{S=S_1\cup S_2\cup \Sigma}\vec{E}\cdot\vec{n}^{\text{ext}}\rmd S
                     &=\frac{Q_{\text{int}}}{\varepsilon_0},\\
                     &=\frac{\sigma S}{\varepsilon_0},\\
-                    &=0+\iint_{S_1}E(z)\vec{u}_z\cdot\vec{u}_z\d S\\
-                    &\quad+\iint_{S_2}E(-z)\vec{u}_z\cdot\left(-\vec{u}_z\right)\d S,\\
+                    &=0+\iint_{S_1}E(z)\vec{u}_z\cdot\vec{u}_z\rmd S\\
+                    &\quad+\iint_{S_2}E(-z)\vec{u}_z\cdot\left(-\vec{u}_z\right)\rmd S,\\
                     &=
                     E(z)S+E(z)S.
                 \end{align}
@@ -314,7 +314,7 @@
                     \item [($\beta$)] La surface de Gauss est la même que précédemment, mais avec la base dans le plan $z=0$.
                     \item [($\gamma$)] On a donc 
                     \begin{equation}
-                        \oiint_{S}\vec{E}\cdot\vec{n}^{\text{ext}}\d S=0+0+E(z)\times S=\frac{Q_{\text{int}}(z)}{\varepsilon_0}.
+                        \oiint_{S}\vec{E}\cdot\vec{n}^{\text{ext}}\rmd S=0+0+E(z)\times S=\frac{Q_{\text{int}}(z)}{\varepsilon_0}.
                     \end{equation}
 
                     Si $z\geqslant e/2$, on a $Q_{\text{int}}(z\geqslant e/2)=\rho\times S\times e/2$, donc 
@@ -361,10 +361,10 @@
                 \begin{equation}
                     \vec{E}(M)=E(z)\vec{u}_z.
                 \end{equation}
-                Ainsi, $\vec{E}$ est perpendiculaire aux armatures. Si $\vec{\d l}$ est un déplacement infinitésimal sur l'armature, on a 
+                Ainsi, $\vec{E}$ est perpendiculaire aux armatures. Si $\vec{\rmd l}$ est un déplacement infinitésimal sur l'armature, on a 
                 \begin{equation}
-                    \vec{E}\cdot\vec{\d l}=0=-\d V=-\left[
-                        \frac{\partial V}{\partial x}\d x+\frac{\partial V}{\partial y}\d y+0
+                    \vec{E}\cdot\vec{\rmd l}=0=-\rmd V=-\left[
+                        \frac{\partial V}{\partial x}\rmd x+\frac{\partial V}{\partial y}\rmd y+0
                     \right].
                 \end{equation}
                 Donc $\frac{\partial V}{\partial x}=\frac{\partial V}{\partial x}=0$ sur une armature, donc $V$ est constant sur une armature. On note $V_1$ le potentiel de l'armature située en $z=d/2$ et $V_2$ celle en $z=-d/2$. On a $U=V_1-V_2$. Or $V$ est défini ) une constante près. On choisit donc $V_1=U/2$ et $V_2=-U/2$. Cela entraîne donc que le plan $z=0$ est un PAS. Donc les charges (surfaciques) valent $+\sigma$ sur l'armature haute, et $-\sigma$ sur l'armature basse. On applique le théorème de superposition comme selon la Figure~\ref{fig:theoreme_superposition_armature_condensateur_plan}.
@@ -393,7 +393,7 @@
                         \node[text=red] at (12, -0.5) {$\dfrac{\sigma}{2\varepsilon_0}\vec{u}_z$};
                                             
                     \end{tikzpicture}
-                    \caption{Théorème de superposition pour établir l'expression du champ électrostatique dans un condensateur plan.}    
+                    \caption[Expression du champ électrostatique dans un condensateur plan.]{Théorème de superposition pour établir l'expression du champ électrostatique dans un condensateur plan.}    
                     \label{fig:theoreme_superposition_armature_condensateur_plan}
                 \end{figure}
 
@@ -417,17 +417,17 @@
             \end{equation}
             qui est strictement positif et qui est en \si{\farad}. On peut exprimer la capacité avec les distances caractéristiques présentées à la Figure~\ref{fig:condensateur_plan_sans_effet_de_bord}. En effet, en notant $M_1$ un point de l'armature haute et $M_2$ un point de l'armature basse, on a 
             \begin{align}
-                \int_{1}^{2}\vec{E}\cdot\vec{\d l}
+                \int_{1}^{2}\vec{E}\cdot\vec{\rmd l}
                 &=
-                \int_{1}^{2}-\frac{\sigma}{\varepsilon_0}\cdot\vec{u}_z\left(\d x\vec{u}_x+\d y\vec{u}_y+\d z\vec{u}_z\right),\\
+                \int_{1}^{2}-\frac{\sigma}{\varepsilon_0}\cdot\vec{u}_z\left(\rmd x\vec{u}_x+\rmd y\vec{u}_y+\rmd z\vec{u}_z\right),\\
                 &=
-                -\frac{\sigma}{\varepsilon_0}\int_{1}^{2}\d z,\\
+                -\frac{\sigma}{\varepsilon_0}\int_{1}^{2}\rmd z,\\
                 &=
                 \frac{\sigma d}{\varepsilon_0}.
             \end{align}
             Or 
             \begin{equation}
-                \int_{1}^{2}\vec{E}\cdot\vec{\d l}=V_1-V_2=U,
+                \int_{1}^{2}\vec{E}\cdot\vec{\rmd l}=V_1-V_2=U,
             \end{equation}
             et finalement
             \begin{equation}

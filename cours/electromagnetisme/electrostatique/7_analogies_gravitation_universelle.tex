@@ -17,7 +17,7 @@
         \label{tab:analogie_gravitation_universelle_lois_de_force}
     \end{table}
 
-    \subsection[Potentiel gravitationnel]{Potentiel gravitationnel. Énergie potentielle\\d'une masse plongée dans un champ extérieur}
+    \subsection[Potentiel gravitationnel]{Potentiel gravitationnel. Énergie potentielle\\rmd'une masse plongée dans un champ extérieur}
 
     Dans la Table~\ref{tab:analogie_gravitation_universelle_potentiel_gravitationnel}, on dérive le potentiel gravitationnel grâce à l'analogie avec l'électrostatique.
     \begin{table}
@@ -25,9 +25,9 @@
         \begin{tabular}{p{0.45\linewidth}|p{0.45\linewidth}}
             \toprule
             Électrostatique & Gravitation \\ \midrule
-            $\oint_{S}\vec{E}\cdot\vec{\d l}=0$ & $\oint_{C}\vec{g}\cdot\vec{\d l}=0$\\[0.25cm]
+            $\oint_{S}\vec{E}\cdot\vec{\rmd l}=0$ & $\oint_{C}\vec{g}\cdot\vec{\rmd l}=0$\\[0.25cm]
             $\quad\Big\Updownarrow$&$\quad\Big\Updownarrow$\\[0.25cm]
-            $\exists V, \int_{A}^{B}\vec{E}\cdot\vec{\d l}=V(B)-V(A)$ & $\exists \varphi(\vec{r}),\int_{A}^{B}\vec{g}\cdot\vec{\d l}=\varphi(A)-\varphi(B)$\\[0.25cm]
+            $\exists V, \int_{A}^{B}\vec{E}\cdot\vec{\rmd l}=V(B)-V(A)$ & $\exists \varphi(\vec{r}),\int_{A}^{B}\vec{g}\cdot\vec{\rmd l}=\varphi(A)-\varphi(B)$\\[0.25cm]
             $\quad\Big\Updownarrow$&$\quad\Big\Updownarrow$\\[0.25cm]
             $\vec{E}=-\vec{\mathrm{grad}V}$ & $\vec{g}=-\vec{\mathrm{grad}}\varphi$\\[0.25cm]
             $\quad\Big\Updownarrow$&$\quad\Big\Updownarrow$\\[0.25cm]
@@ -48,7 +48,7 @@
         \begin{tabular}{p{0.45\linewidth}|p{0.45\linewidth}}
             \toprule
             Électrostatique & Gravitation \\ \midrule
-            $\oiint_{S}\vec{E}\cdot\vec{n}^{\text{ext}}\d S=\dfrac{Q^{\text{int}}}{\varepsilon_0}$ & $\oiint_{S}\vec{g}\cdot\vec{n}^{\text{ext}}\d S=-4\pi\mathcal{G}M^{\text{int}}$\\ \midrule
+            $\oiint_{S}\vec{E}\cdot\vec{n}^{\text{ext}}\rmd S=\dfrac{Q^{\text{int}}}{\varepsilon_0}$ & $\oiint_{S}\vec{g}\cdot\vec{n}^{\text{ext}}\rmd S=-4\pi\mathcal{G}M^{\text{int}}$\\ \midrule
             Distribution sphérique & Distribution sphérique \\ \midrule
             $\vec{E}(r\geqslant R)=\dfrac{Q}{4\pi\varepsilon_0 r^{2}}\vec{u}_r$ & $\vec{g}(r\geqslant R)=-\mathcal{G}\dfrac{M}{r^{2}}\vec{u}_r$\\
             $\vec{E}(r\leqslant R)=\dfrac{Q}{4\pi\varepsilon_0 R^{2}}\dfrac{r}{R}\vec{u}_r$ &
@@ -84,7 +84,7 @@
 
         On fait l'hypothèse que $\mu$=constante=$\frac{M}{\frac{4}{3}\pi R^{3}}$. On se demande quelle a été l'énergie de constitution de l'astre.
 
-        L'astre s'est formé par agrégations successives de couches minces : on apporte depuis l'infini la masse $\d m=\mu\times 4\pi r^{2}\d r$ dans le potentiel 
+        L'astre s'est formé par agrégations successives de couches minces : on apporte depuis l'infini la masse $\rmd m=\mu\times 4\pi r^{2}\rmd r$ dans le potentiel 
         \begin{equation}
             \varphi(r)=-\mathcal{G}\frac{M(r)}{r}=-\mathcal{G}\frac{\mu\times\frac{4}{3}\pi r^{3}}{r}=-\mathcal{G}\frac{4\mu\pi r^{2}}{3}.
         \end{equation}
@@ -92,30 +92,30 @@
         Alors 
         \begin{align}
             \delta W_{\text{gravitationnel}}
-            &=\int_{\infty}^{r}\vec{\d F_{\text{grav}}}\cdot\vec{\d l},\\
-            &=\int_{\infty}^{r}\d m\vec{g}(s)\vec{\d l},\\
+            &=\int_{\infty}^{r}\vec{\rmd F_{\text{grav}}}\cdot\vec{\rmd l},\\
+            &=\int_{\infty}^{r}\rmd m\vec{g}(s)\vec{\rmd l},\\
             &=
-            \d m\left[
+            \rmd m\left[
                 \varphi(\infty)-\varphi(r)
             \right],\\
             &=
-            -\d E_p,
+            -\rmd E_p,
         \end{align}
         avec $\varphi(\infty)=0$. Ainsi, on a 
         \begin{align}
-            \d E_p
+            \rmd E_p
             &=
-            \d m\varphi(r),\\
+            \rmd m\varphi(r),\\
             &=
-            \mu\times 4\pi r^{2}\d r\left(-\mathcal{G}\mu\frac{4}{3}\pi r^{2}\right),\\
+            \mu\times 4\pi r^{2}\rmd r\left(-\mathcal{G}\mu\frac{4}{3}\pi r^{2}\right),\\
             &=
-            -\mathcal{G}\mu^{2}\frac{\left(4\pi\right)^{2}}{3}r^{4}\d r.
+            -\mathcal{G}\mu^{2}\frac{\left(4\pi\right)^{2}}{3}r^{4}\rmd r.
         \end{align}
 
         Ainsi, en intégrant, on a 
         \begin{equation}
             \boxed{
-                E_p=\int_{0}^{R}\d E_p=-\mathcal{G}\mu^{2}\frac{\left(4\pi\right)^{2}}{3}\frac{R^{5}}{5}=-\frac{3\mathcal{G}M^{2}}{5R}.
+                E_p=\int_{0}^{R}\rmd E_p=-\mathcal{G}\mu^{2}\frac{\left(4\pi\right)^{2}}{3}\frac{R^{5}}{5}=-\frac{3\mathcal{G}M^{2}}{5R}.
             }
         \end{equation}
 

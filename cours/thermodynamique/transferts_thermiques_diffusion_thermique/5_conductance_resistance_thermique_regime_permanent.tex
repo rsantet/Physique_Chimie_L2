@@ -8,11 +8,11 @@
             \begin{tabular}{l|c|c}
                 \toprule
                 & thermique & électricité \\ \midrule
-                Grandeur transportée & énergie [\si[]{\joule}] & charge [\si[]{\coulomb}]\\ \midrule
-                Vecteur densité de courant & $\vec{j}_{\text{th}}$ [\si[]{\watt\per\metre\square}] & $\vec{j}$ [\si[]{\ampere\per\metre\square}]\\ \midrule
-                Flux & $P_{\text{th}}=\iint_{S}\vec{j}_{\text{th}}\vec{dS}$ [\si[]{\watt}] & $i=\iint_{S}\vec{j}\vec{dS}$ [\si[]{\ampere}]\\ \midrule
-                Équation locale&&\\de conservation de l'énergie&&\\en régime permanent & $\mathrm{div}~\vec{j}_{\text{th}}=0$ & $\mathrm{div}~\vec{j}=0$\\ \midrule
-                Loi de transport linéaire & $\vec{j}_{\text{th}}=-\lambda\vec{\mathrm{grad}}~T$ & $\vec{j}=\sigma\vec{E}=-\sigma\vec{\mathrm{grad}}~V$\\ &[Fourier]&[Ohm]\\\midrule
+                Grandeur&&\\ transportée & énergie [\si[]{\joule}] & charge [\si[]{\coulomb}]\\ \midrule
+                Vecteur&&\\ densité de courant & $\vec{j_\text{th}}$ [\si[]{\watt\per\metre\square}] & $\vec{j}$ [\si[]{\ampere\per\metre\square}]\\ \midrule
+                Flux & $P_{\text{th}}=\iint_{S}\vec{j_\text{th}}\cdot\vec{dS}$ [\si[]{\watt}] & $i=\iint_{S}\vec{j}\cdot\vec{dS}$ [\si[]{\ampere}]\\ \midrule
+                Équation locale&&\\de conservation&&\\ de l'énergie&&\\en régime permanent & $\div\vec{j_\text{th}}=0$ & $\div\vec{j}=0$\\ \midrule
+                Loi de transport&&\\linéaire & $\vec{j_\text{th}}=-\lambda\vecgrad T$ & $\vec{j}=\sigma\vec{E}=-\sigma\vecgrad V$\\ &[Fourier]&[Ohm]\\\midrule
                 Conductivité & $\lambda$ [\si[]{\watt\per\metre\per\kelvin}] & $\sigma$ [\si[]{\per\ohm\per\metre}]\\ \midrule
                 Équation locale\\(en régime permanent) & $\Delta T=0$ & $\Delta V=0$\\ \bottomrule
             \end{tabular}    
@@ -47,11 +47,11 @@
                 \label{fig:resistance_thermique_conductive_1d}
             \end{figure}
 
-            On a $\Delta T=0=\dfrac{\d^{2}T}{\d x^{2}}$, donc $T(x)=\alpha+\beta x$. Avec les conditions aux limites, on a donc
+            On a $\Delta T=0=\dfrac{\rmd^{2}T}{\rmd x^{2}}$, donc $T(x)=\alpha+\beta x$. Avec les conditions aux limites, on a donc
             \begin{equation}
                 T(x)=T_1+\frac{T_2-T_1}{L}x.
             \end{equation}
-            Notons que l'on a $\vec{\mathrm{grad}}~T=\dfrac{T_2-T_1}{L}\vec{u_x}=\vec{\mathrm{constance}}$.
+            Notons que l'on a $\vecgrad T=\dfrac{T_2-T_1}{L}\vec{u_x}=\vec{\mathrm{constance}}$.
 
         \subsubsection{Résistance thermique}
 
@@ -63,9 +63,9 @@
             On a 
             \begin{align}
                 P_{\text{th}}
-                &=\iint_{S}\vec{j}_{\text{th}}\cdot\vec{dS},\\
+                &=\iint_{S}\vec{j_\text{th}}\cdot\vec{dS},\\
                 &=
-                -\lambda\frac{\d T}{\d x}S,\\
+                -\lambda\frac{\rmd T}{\rmd x}S,\\
                 &=
                 \frac{\lambda(T_1-T_2)S}{L},\\
                 &=\frac{\lambda S}{L}(T_1-T_2).
@@ -365,12 +365,12 @@
             On suppose que l'on a les paramètres suivants : pour le côté extérieur, on a la conductance $G_e$, pour le côté intérieur on a la conductance $G_i$, pour la pièce il y a un chauffage $P_{\text{ch}}>0$ en \si{\watt}, et la capacité thermique de la chambre est $C$ en \si{\joule\per\kelvin}. Alors on a
 
             \begin{equation}
-                \frac{\d U}{\d t}=C\frac{\d T}{\d t}=P_{\text{ch}}-G_e(T(t)-T_e)-G_i(T(t)-T_i).
+                \frac{\rmd U}{\rmd t}=C\frac{\rmd T}{\rmd t}=P_{\text{ch}}-G_e(T(t)-T_e)-G_i(T(t)-T_i).
             \end{equation}
 
             Ainsi,
             \begin{equation}
-                \frac{\d T}{\d t}+\frac{G_e+G_i}{C}T=\frac{P_{\text{ch}}+G_e T_e+G_i T_i}{C},
+                \frac{\rmd T}{\rmd t}+\frac{G_e+G_i}{C}T=\frac{P_{\text{ch}}+G_e T_e+G_i T_i}{C},
             \end{equation}
             ce qui donne le schéma équivalent donné à la Figure~\ref{fig:ARQS_schema_equivalent}.
 
@@ -410,7 +410,7 @@
             \end{equation}
             et on obtient
             \begin{equation}
-                T(t)=A\e^{-t/\tau}+\frac{P_{\text{ch}}}{G_e+G_i}+\frac{G_e T_e+G_i T_i}{G_e+G_i}.
+                T(t)=A\rme^{-t/\tau}+\frac{P_{\text{ch}}}{G_e+G_i}+\frac{G_e T_e+G_i T_i}{G_e+G_i}.
             \end{equation}
             On résout ensuite avec d'éventuelles conditions initiales.
 

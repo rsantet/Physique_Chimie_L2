@@ -6,7 +6,7 @@
             \item Principe d'inertie.
             \item La dérivée de la quantité de mouvement est égal à la somme des forces extérieures s'appliquant sur le système considéré dans un référentiel galiléen, c'est-à-dire
             \begin{equation}
-                \frac{\d\vec{p}}{\d t}=\vec{F^{\text{ext}}},\qquad \vec{p}=\gamma m\vec{v}\text{ dans }\mathcal{R}_{\text{galiléen}}.
+                \frac{\rmd\vec{p}}{\rmd t}=\vec{F^{\text{ext}}},\qquad \vec{p}=\gamma m\vec{v}\text{ dans }\mathcal{R}_{\text{galiléen}}.
             \end{equation}
             \item Principe d'action-réaction.
         \end{enumerate}
@@ -17,16 +17,16 @@
 
             On considère un référentiel $\mathcal{R}'$ en mouvement accéléré par rapport à un référentiel galiléen $\mathcal{R}_{\text{galiléen}}\equiv\mathcal{R}$. Dans $\mathcal{R}$, on a 
             \begin{align}
-                \frac{\d\vec{p}}{\d t}
+                \frac{\rmd\vec{p}}{\rmd t}
                 &=
                 m\vec{a}(M)=\vec{F},\\
-                &=m(\vec{a'}(M)+\vec{a}_e(M)+\vec{a}_c(M))=\vec{F}.
+                &=m(\vec{a'}(M)+\vec{a_e}(M)+\vec{a_c}(M))=\vec{F}.
             \end{align}
             On obtient ainsi
             \begin{equation}
-                m\vec{a'}(M)=\vec{F}+\vec{F}_e+\vec{F}_c,
+                m\vec{a'}(M)=\vec{F}+\vec{F_e}+\vec{F_c},
             \end{equation}
-            où $\vec{F}_e=-m\vec{a}_e$ et $\vec{F}_e=-m\vec{a}_e$. Ce sont des \og pseudo\fg~forces d'inertie.
+            où $\vec{F_e}=-m\vec{a_e}$ et $\vec{F_e}=-m\vec{a_e}$. Ce sont des \og pseudo\fg~forces d'inertie.
 
         \subsubsection{Loi du moment cinétique par rapport à $O'$ fixe dans $\mathcal{R}'$ non galiléen.}
 
@@ -36,10 +36,10 @@
             \end{equation}
             Ainsi,
             \begin{align}
-                \left(\frac{\d \vec{L}_{O'}}{\d t}\right)
+                \left(\frac{\rmd \vec{L}_{O'}}{\rmd t}\right)
                 &=
-                m\underbrace{\left(\frac{\d \vec{O'M}}{\d t}\right)_{\mathcal{R}'}}_{\vec{v'}}\wedge\,\vec{v'}+\vec{O'M}\wedge\left(\frac{\d\vec{p}}{\d t}\right)_{\mathcal{R}'},\\
-                &=\underbrace{\vec{O'M}\wedge \vec{F}}_{\vec{\mathcal{M}}_{O'}}+\underbrace{\vec{O'M}\wedge\vec{F}_e}_{\vec{\mathcal{M}}^{\text{ent}}_{O'}}+\underbrace{\vec{O'M}\wedge\vec{F}_c}_{\vec{\mathcal{M}}^{\text{coriolis}}_{O'}}.
+                m\underbrace{\left(\frac{\rmd \vec{O'M}}{\rmd t}\right)_{\mathcal{R}'}}_{\vec{v'}}\wedge\,\vec{v'}+\vec{O'M}\wedge\left(\frac{\rmd\vec{p}}{\rmd t}\right)_{\mathcal{R}'},\\
+                &=\underbrace{\vec{O'M}\wedge \vec{F}}_{\vec{\mathcal{M}}_{O'}}+\underbrace{\vec{O'M}\wedge\vec{F_e}}_{\vec{\mathcal{M}}^{\text{ent}}_{O'}}+\underbrace{\vec{O'M}\wedge\vec{F_c}}_{\vec{\mathcal{M}}^{\text{coriolis}}_{O'}}.
             \end{align}
 
         \subsubsection{Loi de l'énergie cinétique dans un référentiel non galiléen}
@@ -47,53 +47,53 @@
             \paragraph{Puissance des forces de Coriolis.}
                 On a 
                 \begin{equation}
-                    \vec{P}_{\text{cor}}=\vec{F}_e\cdot\vec{v'}=-m\left(2\vec{\omega}\wedge\vec{v'}\right)\wedge\vec{v'}=0.
+                    \vec{P}_{\text{cor}}=\vec{F_e}\cdot\vec{v'}=-m\left(2\vec{\omega}\wedge\vec{v'}\right)\wedge\vec{v'}=0.
                 \end{equation}
             
             \paragraph{Loi de l'énergie cinétique dans $\mathcal{R}'$.}
                 On a 
                 \begin{align}
-                    \frac{\d E_{c}'}{\d t} 
-                    &= \frac{\d}{\d t}\left(\frac{1}{2}m v'^{2}\right),\\
-                    &= m\vec{v}\cdot\left(\frac{\d\vec{v'}}{\d t}\right)_{\mathcal{R}'},\\
-                    &=\left(\vec{F}+\vec{F}_e+\vec{F}_c\right)\cdot\vec{v'},\\
-                    &=\left(\vec{F}+\vec{F}_e\right)\cdot\vec{v'},\\
+                    \frac{\rmd E_{c}'}{\rmd t} 
+                    &= \frac{\rmd}{\rmd t}\left(\frac{1}{2}m v'^{2}\right),\\
+                    &= m\vec{v}\cdot\left(\frac{\rmd\vec{v'}}{\rmd t}\right)_{\mathcal{R}'},\\
+                    &=\left(\vec{F}+\vec{F_e}+\vec{F_c}\right)\cdot\vec{v'},\\
+                    &=\left(\vec{F}+\vec{F_e}\right)\cdot\vec{v'},\\
                     &=P' + P_e'.
                 \end{align}
                 Ainsi, on a 
                 \begin{equation}
-                    \d E_c'=P'\d t+P_e'\d t=\vec{F}\cdot\underbrace{\vec{v'}\d t}_{\vec{\d l'}}+\vec{F}_e\cdot\underbrace{\vec{v'}_e\d t}_{\vec{\d l'}}=\delta W'+\delta W_e'.
+                    \rmd E_c'=P'\rmd t+P_e'\rmd t=\vec{F}\cdot\underbrace{\vec{v'}\rmd t}_{\vec{\rmd l'}}+\vec{F_e}\cdot\underbrace{\vec{v'}_e\rmd t}_{\vec{\rmd l'}}=\delta W'+\delta W_e'.
                 \end{equation}
                 En intégrant, on obtient donc
                 \begin{equation}
                     \boxed{\Delta E_c'=W'+W_e'.}    
                 \end{equation}
             
-            \paragraph{Formulation en terme d'énergie mécanique.} Dans le cas où il existe des forces conservatives, on a $W_{\text{cons}}=-\Delta E_p$ (ou $\delta W_{\text{cons}}=-\d E_p$). Dans ce cas, on définit l'énergie mécanique par
+            \paragraph{Formulation en terme d'énergie mécanique.} Dans le cas où il existe des forces conservatives, on a $W_{\text{cons}}=-\Delta E_p$ (ou $\delta W_{\text{cons}}=-\rmd E_p$). Dans ce cas, on définit l'énergie mécanique par
             \begin{equation}
                 \boxed{E_m\coloneqq E_c+E_p.}
             \end{equation}
 
-            Ainsi, $\d E_c'=\delta W_{\text{nc}}-\d E_p'+\delta W_e'$ où $W_{\text{nc}}$ représente le travail venant de forces non conservatives. Alors 
+            Ainsi, $\rmd E_c'=\delta W_{\text{nc}}-\rmd E_p'+\delta W_e'$ où $W_{\text{nc}}$ représente le travail venant de forces non conservatives. Alors 
             \begin{equation}
-                \d E_m'=\delta W_{\text{nc}}'+\delta W_{e}',
+                \rmd E_m'=\delta W_{\text{nc}}'+\delta W_{e}',
             \end{equation}
             et on a donc
             \begin{equation}
                 \boxed{\Delta E_m'=W_{\text{nc}}'+W_e'.}
             \end{equation}
         
-    \subsection[Référentiel entraîné en translation accélérée]{Référentiel entraîné en translation accélérée ($\vec{\omega}=\vec{0}$)}
+    \subsection[Référentiel entraîné en translation accélérée]{Référentiel entraîné en translation accélérée}
 
-        On a $\vec{F}_e=-m\vec{a}(O')$, force indépendante du point matériel $M$ considéré, et $\vec{F}_c=\vec{0}$.
+        On a $\vec{F_e}=-m\vec{a}(O')$, force indépendante du point matériel $M$ considéré, et $\vec{F_c}=\vec{0}$.
 
         \subsubsection{Freinage d'une voiture}
 
             On suppose que la voiture roule initialement à 50 km/h et qu'elle s'arrête en 1 seconde. Alors
             \begin{equation}
                 \begin{aligned}
-                    \left\lVert\vec{a}_e\right\rVert&\approx\frac{\Delta v}{\Delta t}=14~m.s^{-2}>g,\\
-                    \left\lVert\vec{F}_e\right\rVert&=m\left\lVert \vec{a}_e\right\rVert=1400~N.
+                    \left\lVert\vec{a_e}\right\rVert&\approx\frac{\Delta v}{\Delta t}=14~m.s^{-2}>g,\\
+                    \left\lVert\vec{F_e}\right\rVert&=m\left\lVert \vec{a_e}\right\rVert=1400~N.
                 \end{aligned}
             \end{equation}
 
@@ -119,7 +119,7 @@
                     \draw (M) -- (0,2); \draw [->] (0,0) to [bend right=45] (0.8,0.4); \node at (0.5,-0.3) {$\theta(t)$}; 
 
                     % Forces
-                    \draw [red, ->, line width=2pt] (M) -- (3,-2) node [above] {$\vec{F}_e$};
+                    \draw [red, ->, line width=2pt] (M) -- (3,-2) node [above] {$\vec{F_e}$};
                     \draw [green, ->, line width=2pt] (M) -- (2,-3) node [right] {$m\vec{g}$};
                     \draw [blue, ->, line width=2pt] (M) -- (1.35,-0.75) node [right] {$\vec{T}$};
                 \end{tikzpicture}
@@ -135,8 +135,8 @@
             \begin{equation}
                 \left\lbrace
                 \begin{aligned}
-                    \vec{a}_e &=\ddot{x_A}(t)\vec{u_x}=-\omega^{2}\alpha\cos(\omega t)\vec{u_x},\\
-                    \vec{F}_e &= m\omega^{2}\alpha\cos(\omega t)\vec{u_x}.
+                    \vec{a_e} &=\ddot{x_A}(t)\vec{u_x}=-\omega^{2}\alpha\cos(\omega t)\vec{u_x},\\
+                    \vec{F_e} &= m\omega^{2}\alpha\cos(\omega t)\vec{u_x}.
                 \end{aligned}
                 \right.
             \end{equation}
@@ -155,9 +155,9 @@
             \begin{equation}
                 \ddot{\theta}+\omega_{0}^{2}\theta=\frac{\omega^{2}\alpha}{l}\cos(\omega t).
             \end{equation}
-            En régime sinusoïdal forcé, $\ubar{\theta}(t)\propto\e^{\j \omega t}$ (où $\j$ est le nombre imaginaire tel que $j^{2}=-1$). Ainsi,
+            En régime sinusoïdal forcé, $\ubar{\theta}(t)\propto\rme^{\rmj \omega t}$ (où $\rmj$ est le nombre imaginaire tel que $\rmj^{2}=-1$). Ainsi,
             \begin{equation}
-                \left(\omega_{0}^{2}-\omega^{2}\right)\ubar{\theta}(t)=\frac{\omega^{2}\alpha}{l}\e^{\j\omega t}.
+                \left(\omega_{0}^{2}-\omega^{2}\right)\ubar{\theta}(t)=\frac{\omega^{2}\alpha}{l}\rme^{\rmj\omega t}.
             \end{equation}
             En prenant la partie réelle, on obtient donc
             \begin{equation}
@@ -174,9 +174,9 @@
 
         \subsubsection{Énergie potentielle d'entraînement par translation uniformément accélérée}
             
-            On a $\vec{a}_e=a\vec{u}_x$ et $\vec{F}_e=-ma\vec{u}_x$. Soit un déplacement élémentaire $\vec{\d l'}=\begin{pmatrix}\d x'\\\d y'\\\d z'\end{pmatrix} $ dans $\mathcal{R}'$. Alors 
+            On a $\vec{a_e}=a\vec{u}_x$ et $\vec{F_e}=-ma\vec{u}_x$. Soit un déplacement élémentaire $\vec{\rmd l'}=\begin{pmatrix}\rmd x'\\\rmd y'\\\rmd z'\end{pmatrix} $ dans $\mathcal{R}'$. Alors 
             \begin{equation}
-                \delta W_e'=\vec{F}_e\cdot\vec{\d l'}=-ma\d x'=-\d(max')=-\d E_p^{\text{ent}}.
+                \delta W_e'=\vec{F_e}\cdot\vec{\rmd l'}=-ma\rmd x'=-\rmd(max')=-\rmd E_p^{\text{ent}}.
             \end{equation}
             Ainsi, l'énergie potentielle d'entraînement vaut $E_{p}^{\text{ent}}=max'$ (à une constante près).
 
@@ -201,7 +201,7 @@
                         \draw (M) -- (O); \draw [->] (1,-1.1) to [bend left=45] (0.6,-1); \node at (0.85,-1.4) {$\theta_{\text{eq}}$};
     
                         % Forces
-                        \draw [red, ->, line width=1pt] (M) -- (-0.5,-1) node [above] {$\vec{F}_e$};
+                        \draw [red, ->, line width=1pt] (M) -- (-0.5,-1) node [above] {$\vec{F_e}$};
                         \draw [green, ->, line width=1pt] (M) -- (0.5,-1.75) node [left] {$m\vec{g}$};
                         \draw [blue, ->, line width=1pt] (M) -- (0.8,-0.4) node [left] {$\vec{T}$};
                     \end{tikzpicture}
@@ -216,7 +216,7 @@
                     \end{equation}
                     \item \underline{Deuxième méthode} : On a $E_p^{\text{ent}}=-mal\sin\theta$ et $E_p^{\text{poids}}=-mgl\cos\theta$ (avec éventuellement des constantes). Alors 
                     \begin{equation}
-                        \frac{\d E_p^{\text{tot}}}{\d\theta}=0=-mal\cos\theta+mgl\sin\theta,
+                        \frac{\rmd E_p^{\text{tot}}}{\rmd\theta}=0=-mal\cos\theta+mgl\sin\theta,
                     \end{equation}
                     d'où le résultat.
                 \end{itemize}
@@ -224,7 +224,7 @@
     
     \subsection[Référentiel entraîné en rotation uniforme]{Référentiel entraîné en rotation uniforme par\\rapport à un axe fixe}
 
-        On suppose que la rotation se fait selon l'axe $(Oz)$ à une vitesse angulaire $\omega$, voir la Figure~\ref{fig:rotation_uniforme}. $H$ est le projeté du point $M$ sur l'axe $(Oz)$. On a $\vec{F}_e=-2m\vec{\omega}\wedge\vec{v}$, qui est donc perpendiculaire au mouvement dans $\mathcal{R}'$.
+        On suppose que la rotation se fait selon l'axe $(Oz)$ à une vitesse angulaire $\omega$, voir la Figure~\ref{fig:rotation_uniforme}. $H$ est le projeté du point $M$ sur l'axe $(Oz)$. On a $\vec{F_e}=-2m\vec{\omega}\wedge\vec{v}$, qui est donc perpendiculaire au mouvement dans $\mathcal{R}'$.
 
         \begin{figure}
             \centering
@@ -241,7 +241,7 @@
             \node at (H) [left] {H};
             \coordinate (O) at (0,0); \node at (O) [above left] {O};                      
             \coordinate (M) at (1,1); \node at (M) {$\bullet$}; \node at (M) [above] {M};
-            \draw [red, ->, line width=2pt] (M) -- (2,1) node [above] {$\vec{F}_e$};
+            \draw [red, ->, line width=2pt] (M) -- (2,1) node [above] {$\vec{F_e}$};
             \draw [dashed] (H) -- (M); 
             \draw [fill=red](H) rectangle ++(0.25,0.25);
 
@@ -281,8 +281,8 @@
             \begin{equation}
                 \left\lbrace
                 \begin{aligned}
-                    \vec{F}_e &= m\omega^{2}x'(t)\vec{u_{x'}},\\
-                    \vec{F}_c &= -2m\omega\vec{u_z}\wedge \dot{x'}(t)\vec{u_{x'}}=-2m\omega\dot{x'}(t)\vec{u_y}.
+                    \vec{F_e} &= m\omega^{2}x'(t)\vec{u_{x'}},\\
+                    \vec{F_c} &= -2m\omega\vec{u_z}\wedge \dot{x'}(t)\vec{u_{x'}}=-2m\omega\dot{x'}(t)\vec{u_y}.
                 \end{aligned}
                 \right.
             \end{equation}
@@ -299,7 +299,7 @@
             
             Soit un déplacement $\vec{dl'}=dx'\vec{u_{x'}}$ dans $\mathcal{R}'$. On a 
             \begin{equation}
-                \delta W_{e}'=\vec{F}_e\cdot\vec{dl'}=m\omega^{2}x'\d x'=\d\left(m\omega^{2}\frac{x'^{2}}{2}\right)\coloneqq -\d E_p^{\text{ent}},
+                \delta W_{e}'=\vec{F_e}\cdot\vec{dl'}=m\omega^{2}x'\rmd x'=\rmd\left(m\omega^{2}\frac{x'^{2}}{2}\right)\coloneqq -\rmd E_p^{\text{ent}},
             \end{equation}
             d'où $E_p^{\text{ent}}=-m\omega^{2}\frac{x'^{2}}{2}$.
 

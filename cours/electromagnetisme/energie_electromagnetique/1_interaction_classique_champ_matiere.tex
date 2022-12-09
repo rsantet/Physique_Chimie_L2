@@ -2,17 +2,17 @@
 
 \subsection{Densité volumique de force électromagnétique}
 
-Au niveau microscopique, on a la force de Lorentz $\vec{F}_{L}=q\left(\vec{E}+\vec{v}\wedge\vec{B}\right)$. Au niveau mésoscopique, la force moyenne $\vec{\d F}$ subie par les charges dans un élément de volume $\d\tau$ est alors
+Au niveau microscopique, on a la force de Lorentz $\vec{F}_{L}=q\left(\vec{E}+\vec{v}\wedge\vec{B}\right)$. Au niveau mésoscopique, la force moyenne $\vec{\rmd F}$ subie par les charges dans un élément de volume $\rmd\tau$ est alors
 \begin{align}
-    \vec{\d F}
+    \vec{\rmd F}
     &=
-    \sum_{\substack{\neq\text{ types}\\\text{de porteurs "k"}}}q_k\left(\vec{E}+\left\langle \vec{v}_k\right\rangle\wedge\vec{B}\right)n_k\d\tau\\
+    \sum_{\substack{\neq\text{ types}\\\text{de porteurs "k"}}}q_k\left(\vec{E}+\left\langle \vec{v}_k\right\rangle\wedge\vec{B}\right)n_k\rmd\tau\\
     &=
-    \left(\left(\sum_{\text{"k"}}n_k q_k\right)\vec{E}+\left(\sum_{\text{"k"}}n_k q_k \left\langle\vec{v}_k\right\rangle\right)\wedge\vec{B}\right)\d\tau\\
+    \left(\left(\sum_{\text{"k"}}n_k q_k\right)\vec{E}+\left(\sum_{\text{"k"}}n_k q_k \left\langle\vec{v}_k\right\rangle\right)\wedge\vec{B}\right)\rmd\tau\\
     &=
-    \left(\rho(\vec{r},t)\vec{E}+\vec{j}(\vec{r},t)\wedge\vec{B}\right)\d\tau\\
+    \left(\rho(\vec{r},t)\vec{E}+\vec{j}(\vec{r},t)\wedge\vec{B}\right)\rmd\tau\\
     &=
-    \vec{f}_{\mathrm{vol}}\d\tau,
+    \vec{f}_{\mathrm{vol}}\rmd\tau,
 \end{align}
 où
 \begin{equation}
@@ -27,18 +27,18 @@ Au niveau microscopique, on a
 \begin{equation}
     P=\vec{F}_L\cdot\vec{v}=q\vec{E}\cdot\vec{v}.
 \end{equation}
-Au niveau microscopique, en notant $\d P_k$ la puissance reçue par les charges "k" dans $\d\tau$:
+Au niveau microscopique, en notant $\rmd P_k$ la puissance reçue par les charges "k" dans $\rmd\tau$:
 \begin{equation}
-    \d P_k=
-    q_k\vec{E}\cdot\left(n_k\d\tau\right)\left\langle \vec{v}_k\right\rangle.
+    \rmd P_k=
+    q_k\vec{E}\cdot\left(n_k\rmd\tau\right)\left\langle \vec{v}_k\right\rangle.
 \end{equation}
-Ainsi, la puissance totale reçue par les charges dans $\d\tau$:
+Ainsi, la puissance totale reçue par les charges dans $\rmd\tau$:
 \begin{equation}
-    \d P
+    \rmd P
     =
-    \sum_{\neq \text{ "k"}}\d P_k
+    \sum_{\neq \text{ "k"}}\rmd P_k
     =
-    \left(\sum_{\neq \text{ "k"}}n_k q_k\left\langle v_k\right\rangle\right)\cdot\vec{E}\d\tau=\left(\vec{j}\cdot\vec{E}\right)\d\tau.
+    \left(\sum_{\neq \text{ "k"}}n_k q_k\left\langle v_k\right\rangle\right)\cdot\vec{E}\rmd\tau=\left(\vec{j}\cdot\vec{E}\right)\rmd\tau.
 \end{equation}
 La puissance volumique reçue par les charges de la part du champ électromagnétique est donc
 \begin{equation}

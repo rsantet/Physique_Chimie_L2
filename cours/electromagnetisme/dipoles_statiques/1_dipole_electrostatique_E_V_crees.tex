@@ -1,4 +1,4 @@
-\section[Dipôle électrostatique: E et V créés]{Dipôle électrostatique : champ électrostatique et potentiel créés}
+\section[Dipôle électrostatique: E et V créés]{Dipôle électrostatique : E et V créés}
 
 \subsection{Le modèle du dipôle électrostatique}
 
@@ -87,18 +87,18 @@ Finalement,
 \end{align}
 Il  y a donc une décroissance en $\frac{1}{r^{2}}$, qui est beaucoup plus rapide que pour une charge qui est en $\frac{1}{r}$.
 
-\subsection{Champ \texorpdfstring{$\vec{E}$}{E} dans l'approximation dipolaire}
+\subsection{Champ E dans l'approximation dipolaire}
 
 En coordonnées sphériques, on a 
 \begin{equation}
-    \overrightarrow{\mathrm{grad}}f(r,\theta,\varphi)=\begin{pmatrix}
+    \vecgrad f(r,\theta,\varphi)=\begin{pmatrix}
         \frac{\partial f}{\partial r}\\\frac{1}{r}\frac{\partial f}{\partial \theta}\\\frac{1}{r\sin\theta}\frac{\partial f}{\partial\varphi}
     \end{pmatrix}.
 \end{equation}
 Ainsi, on trouve
 \begin{equation}
     \boxed{
-        \vec{E}=-\overrightarrow{\mathrm{grad}}V(r,\theta)=\frac{p}{4\pi\varepsilon_0 r^{3}}\begin{pmatrix}
+        \vec{E}=-\vecgrad V(r,\theta)=\frac{p}{4\pi\varepsilon_0 r^{3}}\begin{pmatrix}
             2\cos\theta\\\sin\theta\\0
         \end{pmatrix}
     }\propto\frac{1}{r^{3}}.
@@ -106,12 +106,12 @@ Ainsi, on trouve
 
 \subsection{Allure des lignes de champ et des surfaces équipotentielles dans l'approximation dipolaire}
 
-Soit un déplacement $\vec{\d l}$ le long d'une ligne de champ $\vec{\d l}\parallel\vec{E}$ \emph{i.e.~}$\vec{\d l}\wedge\vec{E}=\vec{0}$. On trouve alors $-0-r\sin\theta E_{\theta}\d\varphi=0$, d'où $\d\varphi=0$ donc $\varphi=$constante le long d'une ligne de champ. De plus, on a 
+Soit un déplacement $\vec{\rmd l}$ le long d'une ligne de champ $\vec{\rmd l}\parallel\vec{E}$ \emph{i.e.~}$\vec{\rmd l}\wedge\vec{E}=\vec{0}$. On trouve alors $-0-r\sin\theta E_{\theta}\rmd\varphi=0$, d'où $\rmd\varphi=0$ donc $\varphi=$constante le long d'une ligne de champ. De plus, on a 
 \begin{equation}
-    -\d rE_{\theta}-r\d\theta E_r=0,
+    -\rmd rE_{\theta}-r\rmd\theta E_r=0,
 \end{equation}
 d'où
 \begin{equation}
-    \d r\sin\theta=2r\cos\theta\d\theta.
+    \rmd r\sin\theta=2r\cos\theta\rmd\theta.
 \end{equation}
-On trouve alors $\frac{\d r}{\d\theta}=2r\frac{\cos\theta}{\sin\theta}$, d'où $r(\theta)=r_0\sin^{2}\theta$. Alors, les équipotentielles dans l'approximation dipolaire ont pour équation $V=\frac{p\cos\theta}{4\pi\varepsilon_0 r^{2}}=V_0$.
+On trouve alors $\frac{\rmd r}{\rmd\theta}=2r\frac{\cos\theta}{\sin\theta}$, d'où $r(\theta)=r_0\sin^{2}\theta$. Alors, les équipotentielles dans l'approximation dipolaire ont pour équation $V=\frac{p\cos\theta}{4\pi\varepsilon_0 r^{2}}=V_0$.

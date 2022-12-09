@@ -28,8 +28,13 @@
 \usepackage{booktabs}
 \usepackage{multirow}
 
-\usepackage{showframe}
-\overfullrule=1mm
+%\usepackage{showframe}
+%\overfullrule=1mm
+
+% For table of figures, more space between numbering and captions when four digits are needed
+\makeatletter
+\def\l@figure{\@dottedtocline{1}{1.5em}{3em}}
+\makeatother
 
 \usepackage{silence}
 \WarningFilter{minitoc(hints)}{W0023}
@@ -57,6 +62,11 @@
 \def\centerarc[#1](#2)(#3:#4:#5){\draw[#1] ($(#2)+({#5*cos(#3)},{#5*sin(#3)})$) arc (#3:#4:#5);}
 % Syntax: [draw options] (center) (initial angle:final angle:radius)      
 
+% To remove e tex warning when loading auto num, see https://tex.stackexchange.com/questions/285950/package-autonum-needs-the-obsolete-etex-package
+\expandafter\def\csname ver@etex.sty\endcsname{3000/12/31}
+\let\globcount\newcount
+\usepackage[french]{minitoc}
+\usepackage{autonum}
 \usepackage{hyperref}
 \hypersetup{
     colorlinks=true,
@@ -65,22 +75,22 @@
     urlcolor=cyan,
     pdfpagemode=FullScreen,
 }
-% To remove e tex warning when loading auto num, see https://tex.stackexchange.com/questions/285950/package-autonum-needs-the-obsolete-etex-package
-\expandafter\def\csname ver@etex.sty\endcsname{3000/12/31}
-\let\globcount\newcount
-\usepackage[french]{minitoc}
-\usepackage{autonum}
 \dominitoc % Initialisation du mini toc
 
-\renewcommand{\d}{\mathrm{d}}
-\renewcommand{\j}{\mathrm{j}}
-\renewcommand{\i}{\mathrm{i}}
-\renewcommand{\div}{\mathrm{div}}
-\newcommand{\N}{\mathbb{N}}
-\newcommand{\Z}{\mathbb{Z}}
-\newcommand{\e}{\mathrm{e}}
-\newcommand{\grad}{\mathrm{grad}}
-\newcommand{\rot}{\mathrm{rot}}
+\let\div\relax
+\DeclareMathOperator{\div}{div}
+\DeclareMathOperator{\vecgrad}{\overrightarrow{\text{grad}}}
+\DeclareMathOperator{\vecnabla}{\overrightarrow{\nabla}}
+\DeclareMathOperator{\vecrot}{\overrightarrow{\text{rot}}}
+\renewcommand{\vec}[1]{\protect\overrightarrow{{#1}}}
+\newcommand{\rmd}{\mathrm{d}}
+\newcommand{\rmj}{\mathrm{j}}
+\newcommand{\rmi}{\mathrm{i}}
+\newcommand{\rme}{\mathrm{e}}
+\newcommand{\bbN}{\mathbb{N}}
+\newcommand{\bbZ}{\mathbb{Z}}
+\newcommand{\calR}{\mathcal{R}}
+\newcommand{\calG}{\mathcal{G}}
 \newcommand{\ubar}[1]{\text{\b{$#1$}}}
 
 \begin{document}

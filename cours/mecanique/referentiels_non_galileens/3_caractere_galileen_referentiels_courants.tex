@@ -4,40 +4,40 @@
 
         On se place dans $\mathcal{R}_{G}$ en translation (environ) circulaire par rapport à $\mathcal{R}_{C}$, voir la Figure~\ref{fig:refentiel_geocentrique_copernic}. On considère le mouvement d'un point matériel $M$ de masse $m$ au voisinage de la surface de la Terre par rapport à $\mathcal{R}_{G}$. Alors 
         \begin{equation}
-            m\vec{a}(M)_{/\mathcal{R}_{G}}=\vec{f}+m\vec{g}_{T}(M)+\sum_{\neq i}m\vec{g}_{i}(M)-m\vec{a}(T)_{/\mathcal{R}_C},
+            m\vec{a}(M)_{/\mathcal{R}_{G}}=\vec{f}+m\vec{g}_{T}(M)+\sum_{\neq i}m\vec{g_i}(M)-m\vec{a}(T)_{/\mathcal{R}_C},
         \end{equation}
-        où $\vec{f}$ représentent les forces de contact (par exemple la pression), $\vec{g}_{T}$ est le champ de pesanteur dû à la Terre, $\vec{g}_{i}$ représente le champ de gravitation dû à un autre astre du système solaire, et $m\vec{a}_{T/\mathcal{R}_{C}}$ est simplement la force d'entraînement $\vec{F}_{e}$.
+        où $\vec{f}$ représentent les forces de contact (par exemple la pression), $\vec{g}_{T}$ est le champ de pesanteur dû à la Terre, $\vec{g_i}$ représente le champ de gravitation dû à un autre astre du système solaire, et $m\vec{a}_{T/\mathcal{R}_{C}}$ est simplement la force d'entraînement $\vec{F}_{e}$.
 
         En appliquant le principe fondamental de la dynamique à la terre par rapport à $\mathcal{R}_{C}$, on obtient 
         \begin{equation}
-            M_{T}\vec{a}(T)_{/\mathcal{R}_{C}}=\vec{R}^{\text{ext}}=\sum_{\neq i}M_T\vec{g}_i(T),
+            M_{T}\vec{a}(T)_{/\mathcal{R}_{C}}=\vec{R}^{\text{ext}}=\sum_{\neq i}M_T\vec{g_i}(T),
         \end{equation}
         où l'on a fait l'hypothèse que la Terre était sphérique pour la dernière égalité. Ainsi, on a 
         \begin{equation}
-            \vec{a}(T)_{/\mathcal{R}_C}=\sum_{\neq i}\vec{g}_i(T).
+            \vec{a}(T)_{/\mathcal{R}_C}=\sum_{\neq i}\vec{g_i}(T).
         \end{equation}
         Alors 
         \begin{equation}
-            \boxed{m\vec{a}(M)=\vec{f}+m\vec{g}_{T}(M)+m\left(\sum_{\neq i}\vec{g}_{i}(M)-\vec{g}_{i}(T)\right).}
+            \boxed{m\vec{a}(M)=\vec{f}+m\vec{g}_{T}(M)+m\left(\sum_{\neq i}\vec{g_i}(M)-\vec{g_i}(T)\right).}
         \end{equation}
 
         \begin{definition}[Champ de marée]
             L'expression
             \begin{equation}
-                \vec{C}(M)\coloneqq\left(\sum_{\neq i}\vec{g}_{i}(M)-\vec{g}_{i}(T)\right),
+                \vec{C}(M)\coloneqq\left(\sum_{\neq i}\vec{g_i}(M)-\vec{g_i}(T)\right),
             \end{equation}
             définit le \textit{champ de marée}. C'est un terme différentiel.
         \end{definition}
 
         Notamment, le champ de marée dû à la Lune uniquement est
         \begin{equation}
-            \vec{C}_L(M)=\vec{g}_L(M)-\vec{g}_L(T).
+            \vec{C}_L(M)=\vec{g_L}(M)-\vec{g_L}(T).
         \end{equation}
 
-        \paragraph{Ordre de grandeur de $\left\lVert\vec{C}_i\right\rVert_{\text{max}}$.} 
+        \paragraph{Ordre de grandeur de $\left\lVert\vec{C_i}\right\rVert_{\text{max}}$.} 
             On a 
             \begin{equation}
-                \left\lVert \vec{C}_i\right\rVert=\mathcal{G}M_i\left\lvert\frac{1}{(D_i-R_T)^{2}}-\frac{1}{D_i^{2}}\right\rvert.
+                \left\lVert \vec{C_i}\right\rVert=\calG M_i\left\lvert\frac{1}{(D_i-R_T)^{2}}-\frac{1}{D_i^{2}}\right\rvert.
             \end{equation}
             Si $D_i\gg R_T$, on a 
             \begin{equation}
@@ -45,7 +45,7 @@
             \end{equation}
             Ainsi,
             \begin{equation}
-                \left\lVert \vec{C}_i\right\rVert_{\text{max}}=\mathcal{G}M_i\frac{2R_T}{D_i^{3}}=\left\lVert\vec{g}_i(T)\right\rVert\underbrace{\frac{2R_T}{D_i}}_{\ll1}\ll\left\lVert \vec{g}_i\right\rVert.
+                \left\lVert \vec{C_i}\right\rVert_{\text{max}}=\calG M_i\frac{2R_T}{D_i^{3}}=\left\lVert\vec{g_i}(T)\right\rVert\underbrace{\frac{2R_T}{D_i}}_{\ll1}\ll\left\lVert \vec{g_i}\right\rVert.
             \end{equation}
             
             On donne dans la Table~\ref{tab:champ_maree_soleil_lune} les ordres de grandeur des champs de marées dus au Soleil et à la Lune. On voit donc que le champ de marée lunaire est environ deux fois supérieur au solaire.
@@ -54,7 +54,7 @@
                 \centering
                 \begin{tabular}{l|c|c|c|c}
                     \toprule
-                    & M (kg) & $D_i$ & $\left\lVert \vec{g}_i\right\rVert$ & $\left\lVert\vec{C}\right\rVert$\\ \midrule
+                    & M (kg) & $D_i$ & $\left\lVert \vec{g_i}\right\rVert$ & $\left\lVert\vec{C}\right\rVert$\\ \midrule
                     Soleil & $2.10^{30}$ & $1.10^{11}$ & $1.10^{-2}$ & $5.10^{-7}$\\ \midrule
                     Lune & $7.10^{22}$ & $4.10^{8}$ & $3.10^{-5}$ & $1.10^{-6}$\\ \bottomrule
                 \end{tabular}    

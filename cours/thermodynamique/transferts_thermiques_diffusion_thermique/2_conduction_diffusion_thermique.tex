@@ -9,7 +9,7 @@
             \tikzsetnextfilename{vecteur_densite_courant_thermique}
             \begin{tikzpicture}[scale=1]  
                 % \helpgrid{3}{3}
-                \draw [thick] (0,0) ellipse (1cm and 1.5cm) node [below, shift=({0,-0.25})] {$\d S$};
+                \draw [thick] (0,0) ellipse (1cm and 1.5cm) node [below, shift=({0,-0.25})] {$\rmd S$};
                 \draw [color=black,smooth, pattern=north west lines] (0,0) circle (0.25);
                 \draw [thick, ->] (0,0)--++(2,0) node [above] {$\vec{n}$};
                 \draw [-stealth, thick, red!50!black, text=red] (0, 0)--++(1.5,1.2) node [above,pos=0.9] {$\vec{j_{\text{th}}}$};
@@ -26,7 +26,7 @@
             Ainsi, la puissance thermique est
             \begin{equation}
                 \boxed{
-                    P_{\text{th}}=\iint_{S}\vec{j_{\text{th}}}\cdot\vec{n}~\d S.
+                    P_{\text{th}}=\iint_{S}\vec{j_{\text{th}}}\cdot\vec{n}~\rmd S.
                 }
             \end{equation}
             L'unité de $\vec{j_{\text{th}}}$ est \si{\watt\per\metre\squared}.
@@ -96,41 +96,41 @@
                     \draw [dashed,->,-stealth] (-3,0)--++(6,0) node [right] {$x$};
 
                     \draw[thick,line width=2pt] (-1,-1)--(-1,1) node [below, pos=-0.1] {$x$};
-                    \draw[thick,line width=2pt] (1,-1)--(1,1) node [below, pos=-0.1] {$x+\d x$};
+                    \draw[thick,line width=2pt] (1,-1)--(1,1) node [below, pos=-0.1] {$x+\rmd x$};
                     
                     \draw[-stealth, double, thick, color=red!50!black, text=red!50!black] (-2,0)--++(1,0) node [above left, midway] {$\vec{j_{\text{th}}}(x,t)$};
-                    \draw[-stealth, double, thick, color=red!50!black, text=red!50!black] (1,0)--++(1,0) node [above right, midway] {$\vec{j_{\text{th}}}(x+\d x,t)$};
+                    \draw[-stealth, double, thick, color=red!50!black, text=red!50!black] (1,0)--++(1,0) node [above right, midway] {$\vec{j_{\text{th}}}(x+\rmd x,t)$};
     
                 \end{tikzpicture}
                 \caption{Équation locale de la conservation de l'énergie, cas unidimensionnel en géométrie cartésienne.}    
                 \label{fig:equation_locale_conservation_energie_1d_cartesien}
             \end{figure}
 
-            \paragraph{Bilan énergétique sur $[x,x+\d x]$.}
+            \paragraph{Bilan énergétique sur $[x,x+\rmd x]$.}
                 On a 
                 \begin{align}
-                    \d\left(\delta U\right)
+                    \rmd\left(\delta U\right)
                     &=
-                    \delta U(t+\d t)-\delta U(t),\\
+                    \delta U(t+\rmd t)-\delta U(t),\\
                     &=
                     \delta Q^{\text{ext}},\\
                     &=
-                    j_{\text{th}}(x,t)S\d t-j_{\text{th}}(x+\d x,t)S\d t.
+                    j_{\text{th}}(x,t)S\rmd t-j_{\text{th}}(x+\rmd x,t)S\rmd t.
                 \end{align}
 
                 Ainsi, on a 
                 \begin{equation}
-                    \frac{\d\left(\delta U\right)}{\d t}=S\left(j_{\text{th}}(x,t)-j_{\text{th}}(x+\d x,t)\right)\approx -S\d x\frac{\partial j_{\text{th}}(x,t)}{\partial x}.
+                    \frac{\rmd\left(\delta U\right)}{\rmd t}=S\left(j_{\text{th}}(x,t)-j_{\text{th}}(x+\rmd x,t)\right)\approx -S\rmd x\frac{\partial j_{\text{th}}(x,t)}{\partial x}.
                 \end{equation}
 
                 Or,
                 \begin{align}
-                    \frac{\d}{\d t}\left(\delta U\right)
+                    \frac{\rmd}{\rmd t}\left(\delta U\right)
                     &=
-                    \frac{\d}{\d t}\left(\delta m cT(x,t)\right),\\
+                    \frac{\rmd}{\rmd t}\left(\delta m cT(x,t)\right),\\
                     &=
                     \delta m c\frac{\partial T}{\partial t}(x,t),\\
-                    &=\mu c\frac{\partial T}{\partial t}(x,t) S\d x,
+                    &=\mu c\frac{\partial T}{\partial t}(x,t) S\rmd x,
                 \end{align}
                 où [c]=\si{\joule\per\kilogram\per\kelvin} et on a utilisé le fait que l'on considérait une phase condensée. Ainsi,
                 \begin{equation}
@@ -163,10 +163,10 @@
                     \draw [color=black,smooth,red,dashed] (O) circle (1.25);
                     \draw [color=black,smooth,red,dashed] (O) circle (1.5);
                     \draw[red,->,-stealth,text=red,thick] (O)--++(1.25,0) node [below, midway] {$r$};
-                    \draw[red,->,-stealth,text=red,thick] (O)--++(0.75,1.3) node [left,midway] {$r+\d r$};
+                    \draw[red,->,-stealth,text=red,thick] (O)--++(0.75,1.3) node [left,midway] {$r+\rmd r$};
 
                     \draw[->,-stealth,thick] (7,-1.25)--++(0,-1) node [below right] {$\vec{j_{\text{th}}}(r,t)$};
-                    \draw[->,-stealth,thick] (5.5,0)--++(-2,0) node [below] {$\vec{j_{\text{th}}}(r+\d r,t)$};
+                    \draw[->,-stealth,thick] (5.5,0)--++(-2,0) node [below] {$\vec{j_{\text{th}}}(r+\rmd r,t)$};
                 \end{tikzpicture}
                 \caption{Équation locale de la conservation de l'énergie en géométrie cylindrique.}    
                 \label{fig:equation_locale_conservation_energie_1d_cylindrique}
@@ -174,12 +174,12 @@
 
             On a, via un développement limité de $rj_{\text{th}}(r,t)$,
             \begin{equation}
-                \delta P_{\text{th}}^{\text{ext}}=j_{\text{th}}(r,t)\times 2\pi rL-j_{\text{th}}(r+\d r,t)\times 2\pi(r+\d r)L=-2\pi L\d r\frac{\partial}{\partial r}\left(rj_{\text{th}}(r,t)\right).
+                \delta P_{\text{th}}^{\text{ext}}=j_{\text{th}}(r,t)\times 2\pi rL-j_{\text{th}}(r+\rmd r,t)\times 2\pi(r+\rmd r)L=-2\pi L\rmd r\frac{\partial}{\partial r}\left(rj_{\text{th}}(r,t)\right).
             \end{equation}
 
             Le premier principe s'écrit
             \begin{equation}
-                \frac{\d}{\d t}(\delta U)=\delta P_{\text{th}}^{\text{ext}}=-2\pi L\d r\frac{\partial}{\partial r}\left(rj_{\text{th}}(r,t)\right)=u_{\text{vol}}(r,t)\times2\pi r\d rL.
+                \frac{\rmd}{\rmd t}(\delta U)=\delta P_{\text{th}}^{\text{ext}}=-2\pi L\rmd r\frac{\partial}{\partial r}\left(rj_{\text{th}}(r,t)\right)=u_{\text{vol}}(r,t)\times2\pi r\rmd rL.
             \end{equation}
             Ainsi, on a 
             \begin{equation}
@@ -191,7 +191,7 @@
 
         \subsubsection{Géométrie sphérique}
 
-            On fait l'hypothèse que la température $T(r,t)$ dépend juste du rayon $r$ et du temps $t$, et que $\vec{j_{\text{th}}}=j_{\text{th}}(r,t)\vec{u_r}$, voir la Figure~\ref{fig:equation_locale_conservation_energie_1d_spherique}. On considère l'espace entre deux sphères de rayon $r$ et $r+\d r$.
+            On fait l'hypothèse que la température $T(r,t)$ dépend juste du rayon $r$ et du temps $t$, et que $\vec{j_{\text{th}}}=j_{\text{th}}(r,t)\vec{u_r}$, voir la Figure~\ref{fig:equation_locale_conservation_energie_1d_spherique}. On considère l'espace entre deux sphères de rayon $r$ et $r+\rmd r$.
         
             \begin{figure}
                 \centering
@@ -215,13 +215,13 @@
             \begin{align}
                 \delta P_{\text{th}}^{\text{ext}}
                 &=
-                j_{\text{th}}(r,t)\times 4\pi r^{2}-j_{\text{th}}(r+\d r,t)\times4\pi(r+\d r)^{2},\\
-                &=-4\pi\d r\frac{\partial}{\partial r}\left(r^{2}j_{\text{th}}(r,t)\right).
+                j_{\text{th}}(r,t)\times 4\pi r^{2}-j_{\text{th}}(r+\rmd r,t)\times4\pi(r+\rmd r)^{2},\\
+                &=-4\pi\rmd r\frac{\partial}{\partial r}\left(r^{2}j_{\text{th}}(r,t)\right).
             \end{align}
 
             Le premier principe s'écrit
             \begin{equation}
-                \frac{\d(\delta U)}{\d t}=\delta P_{\text{th}}^{\text{ext}}=4\pi r^{2}\d r\frac{\partial u_{\text{vol}}}{\partial t},
+                \frac{\rmd(\delta U)}{\rmd t}=\delta P_{\text{th}}^{\text{ext}}=4\pi r^{2}\rmd r\frac{\partial u_{\text{vol}}}{\partial t},
             \end{equation}
             d'où
             \begin{equation}
@@ -235,25 +235,25 @@
             Dans un volume $\mathcal{V}$ quelconque, on écrit
             \begin{equation}
                 \begin{aligned}
-                    U(t)&=\iiint_{\mathcal{V}}u_{\text{vol}}(\vec{r},t)\d\tau,\\
-                    U(t+\d t)&=\iiint_{\mathcal{V}}u_{\text{vol}}(\vec{r},t+\d t)\d\tau,\\
+                    U(t)&=\iiint_{\mathcal{V}}u_{\text{vol}}(\vec{r},t)\rmd\tau,\\
+                    U(t+\rmd t)&=\iiint_{\mathcal{V}}u_{\text{vol}}(\vec{r},t+\rmd t)\rmd\tau,\\
                 \end{aligned}
             \end{equation}
-            où $\d\tau$ est un volume infinitésimal. Alors
+            où $\rmd\tau$ est un volume infinitésimal. Alors
             \begin{equation}
-                \d U=U(t+\d t)-U(t)=\iiint_{\mathcal{V}}\frac{\partial u_{\text{vol}}}{\partial t}(\vec{r},t)\d t\d\tau.
+                \rmd U=U(t+\rmd t)-U(t)=\iiint_{\mathcal{V}}\frac{\partial u_{\text{vol}}}{\partial t}(\vec{r},t)\rmd t\rmd\tau.
             \end{equation}
-            On fait l'hypothèse que l'on peut \og sortir\fg~le terme $\d t$ de l'intégrale. On écrit
+            On fait l'hypothèse que l'on peut \og sortir\fg~le terme $\rmd t$ de l'intégrale. On écrit
             \begin{equation}
-                P_{\text{th}}^{\text{ext}}=-\oiint_{S}\vec{j}_{\text{th}}\cdot\vec{n}^{\text{ext}}\d S,
+                P_{\text{th}}^{\text{ext}}=-\oiint_{S}\vec{j}_{\text{th}}\cdot\vec{n}^{\text{ext}}\rmd S,
             \end{equation}
             car il y a une perte si $\vec{j}_{\text{th}}\cdot\vec{n}^{\text{ext}}>0$. Le premier principe s'écrit 
             \begin{equation}
-                \frac{\d U}{\d t}=P_{\text{th}}^{\text{ext}},
+                \frac{\rmd U}{\rmd t}=P_{\text{th}}^{\text{ext}},
             \end{equation}
             et en utilisant le théorème d'Ostrogradski,
             \begin{equation}
-                \iiint_{\mathcal{V}}\frac{\partial u_{\text{vol}}(\vec{r},t)}{\partial t}\d\tau=-\oiint_{S}\vec{j}_{\text{th}}\cdot\vec{n}^{\text{ext}}\d S=-\iiint_{\mathcal{V}}\mathrm{div}~\vec{j}_{\text{th}}(\vec{r},t)\d\tau.
+                \iiint_{\mathcal{V}}\frac{\partial u_{\text{vol}}(\vec{r},t)}{\partial t}\rmd\tau=-\oiint_{S}\vec{j}_{\text{th}}\cdot\vec{n}^{\text{ext}}\rmd S=-\iiint_{\mathcal{V}}\mathrm{div}~\vec{j}_{\text{th}}(\vec{r},t)\rmd\tau.
             \end{equation}
             Ainsi, on a 
             \begin{equation}
@@ -281,7 +281,7 @@
 
             On adapte donc le bilan précédent en écrivant
             \begin{equation}
-                \frac{\d U}{\d t}=P_{\text{th}}^{\text{ext}}+\iiint_{\mathcal{V}}P_{\text{vol}}(\vec{r},t)\d\tau,
+                \frac{\rmd U}{\rmd t}=P_{\text{th}}^{\text{ext}}+\iiint_{\mathcal{V}}P_{\text{vol}}(\vec{r},t)\rmd\tau,
             \end{equation}
             d'où
             \begin{equation}
@@ -393,13 +393,13 @@
 
     \subsection{Création d'entropie par diffusion}
             
-        On se place dans le cas unidimensionnel et que l'on est en régime stationnaire. On a donc $T(x)$ et $\vec{j}_{\text{th}}=-\lambda\frac{\partial T}{\partial x}\vec{u_x}$. On fait l'hypothèse que l'on a $\frac{\d T}{\d x}<0$. On reprend la Figure~\ref{fig:equation_locale_conservation_energie_1d_cartesien} et on applique le second principe à $[x,x+\d x]$, on a 
+        On se place dans le cas unidimensionnel et que l'on est en régime stationnaire. On a donc $T(x)$ et $\vec{j}_{\text{th}}=-\lambda\frac{\partial T}{\partial x}\vec{u_x}$. On fait l'hypothèse que l'on a $\frac{\rmd T}{\rmd x}<0$. On reprend la Figure~\ref{fig:equation_locale_conservation_energie_1d_cartesien} et on applique le second principe à $[x,x+\rmd x]$, on a 
         \begin{equation}
-            \d(\delta S)=\delta S_e+\delta S_c,
+            \rmd(\delta S)=\delta S_e+\delta S_c,
         \end{equation}
-        pendant $\d t$. Comme on est en régime stationnaire, on a $\d(\delta S)=0$. Ainsi, $\delta S_c=-\delta S_c$. Or, en notant $A$ la section verticale, on a
+        pendant $\rmd t$. Comme on est en régime stationnaire, on a $\rmd(\delta S)=0$. Ainsi, $\delta S_c=-\delta S_c$. Or, en notant $A$ la section verticale, on a
         \begin{equation}
-            \delta S_e=\frac{j_{\text{th}}(x) A\d t}{T(x)}+\frac{-j_{\text{th}}(x+\d x)A\d t}{T(x+\d x)}.
+            \delta S_e=\frac{j_{\text{th}}(x) A\rmd t}{T(x)}+\frac{-j_{\text{th}}(x+\rmd x)A\rmd t}{T(x+\rmd x)}.
         \end{equation}
         On est en régime permanent, on a donc
         \begin{equation}
@@ -407,13 +407,13 @@
         \end{equation}
         Donc 
         \begin{equation}
-            j_{\text{th}}(x)=\mathrm{constante}=-\lambda\frac{\d T}{\d x}=-\lambda\frac{T_2-T_1}{L}.
+            j_{\text{th}}(x)=\mathrm{constante}=-\lambda\frac{\rmd T}{\rmd x}=-\lambda\frac{T_2-T_1}{L}.
         \end{equation}
         On a alors
         \begin{equation}
             \delta S_e
-            =j_{\text{th}}A\d t\left[
-                \frac{1}{T(x)}-\frac{1}{T(x+\d x)}
-            \right]=A\d t\left(-\lambda\frac{\d T}{\d x}\right)\d x\frac{\frac{\d T}{\d x}}{T(x)^{2}},
+            =j_{\text{th}}A\rmd t\left[
+                \frac{1}{T(x)}-\frac{1}{T(x+\rmd x)}
+            \right]=A\rmd t\left(-\lambda\frac{\rmd T}{\rmd x}\right)\rmd x\frac{\frac{\rmd T}{\rmd x}}{T(x)^{2}},
         \end{equation}
-        donc $\delta S_e=-\delta S_c<0$, et ce peu importe le signe de $\frac{\d T}{\d x}$. Ainsi, $\delta S_c>0$ : \textbf{c'est le caractère fondamentalement irréversible des phénomènes de diffusion}.
+        donc $\delta S_e=-\delta S_c<0$, et ce peu importe le signe de $\frac{\rmd T}{\rmd x}$. Ainsi, $\delta S_c>0$ : \textbf{c'est le caractère fondamentalement irréversible des phénomènes de diffusion}.
