@@ -31,52 +31,52 @@
         \end{figure}
         
         On cherche la circulation de $\vec{E}$ entre A et B, c'est-à-dire 
-        \begin{equation}
+        \begin{equation*}
             \int_{A}^{B}\vec{E}\cdot\vec{\rmd l}.
-        \end{equation}
+        \end{equation*}
 
         En coordonnées sphériques, on a
-        \begin{equation}
+        \begin{equation*}
             \vec{\rmd l}=\rmd r\vec{u_r}+r\rmd\theta\vec{u_{\theta}}+r\sin\theta\rmd\varphi\vec{u_{\varphi}}.
-        \end{equation}
+        \end{equation*}
 
         Ainsi,
-        \begin{equation}
+        \begin{equation*}
             \int_{A}^{B}\vec{E}\cdot\vec{\rmd l}=\frac{Q}{4\pi\varepsilon_{0}}\left(\frac{1}{r_{A}}-\frac{1}{r_{B}}\right),
-        \end{equation}
+        \end{equation*}
         qui ne dépend que de $A$ et $B$ et pas du chemin choisi. Par définition, le potentiel électrostatique $V(M)=V(x,y,z)=V(r,\theta,\varphi)$ est défini par 
-        \begin{equation}
+        \begin{equation*}
             \int_{A}^{B}\vec{E}\cdot\vec{\rmd l}=V(A)-V(B),
-        \end{equation}
+        \end{equation*}
         et on a $[V]=\si{\volt}$.
 
     \subsection{Potentiel créé par une charge ponctuelle}
 
         On a 
-        \begin{equation}
+        \begin{equation*}
             \boxed{
                 V(M)=V(r)=\frac{Q}{4\pi\varepsilon_{0}r},
             }
-        \end{equation}
+        \end{equation*}
         où l'on prend la constante nulle à l'infini. Pour une collection de charges ponctuelles, on utilise le principe de superposition :
-        \begin{equation}
+        \begin{equation*}
             \boxed{
                 V(M)=\frac{1}{4\pi\varepsilon_{0}}\sum_{i=1}^{N}\frac{Q_i}{r_i}.
             }
-        \end{equation}
+        \end{equation*}
 
     \subsection{Circulation du champ le long d'un contour fermé orienté}
 
         Pour deux points $A$ et $B$ du contour $\mathcal{C}$, si $\vec{\rmd l_{1}}$ connecte $A$ à $B$ et $\vec{\rmd l_{2}}$ connecte $B$ à $A$, alors 
-        \begin{equation}
+        \begin{equation*}
             \oint_{\mathcal{C}}\vec{E}\cdot\vec{\rmd l}=\int_{A}^{B}\vec{E}\cdot\vec{\rmd l_{1}}+\int_{B}^{A}\vec{E}\cdot\vec{\rmd l_{2}}=V(A)-V(B)+V(B)-V(A)=0,
-        \end{equation}
+        \end{equation*}
         donc $\vec{E}$ est à circulation conservative. C'est une équation intégrale.
 
     \subsection{Lien local entre le champ électrostatique et le potentiel électrostatique. Opérateur gradient}
 
         Pour deux points $M(x,y,z)$ et $M'(x+\rmd x,y+\rmd y,z+\rmd z)$ connectés par $\vec{\rmd l}=(\rmd x,\rmd y, \rmd z)$, on a
-        \begin{align}
+        \begin{align*}
             \vec{E}\cdot\vec{\rmd l}
             &=
             \vec{E}\cdot\vec{MM'},\\
@@ -87,13 +87,13 @@
             &=
             V(x,y,z)-V(x+\rmd x,y+\rmd y,z+\rmd z),\\
             &=\rmd x\frac{\partial V}{\partial x}(x,y,z)+\rmd y\frac{\partial V}{\partial y}(x,y,z)+\rmd z\frac{\partial V}{\partial z}(x,y,z),
-        \end{align}
+        \end{align*}
         ceci étant valide pour tout déplacement $\vec{\rmd l}$, donc 
-        \begin{equation}
+        \begin{equation*}
             E_x\rmd x+E_y\rmd y+E_z\rmd z=-\rmd V=-\frac{\partial V}{\partial x}\rmd x-\frac{\partial V}{\partial y}\rmd y-\frac{\partial V}{\partial z}\rmd z.
-        \end{equation}
+        \end{equation*}
         Ainsi, 
-        \begin{equation}
+        \begin{equation*}
             \boxed{
                 \vec{E}=-\begin{pmatrix}
                     \frac{\partial V}{\partial x}\\
@@ -102,13 +102,13 @@
                 \end{pmatrix}
                 =-\vecgrad V.
             }
-        \end{equation}
+        \end{equation*}
         En coordonnées cartésiennes, on a simplement $\vec{E}=-\vecnabla V$. C'est une équation locale.
 
     \subsection{Énergie potentielle d'une charge ponctuelle dans un champ extérieur : sens physique du potentiel électrostatique}
 
         On reprend le système décrit par la Figure~\ref{fig:circulation_deux_points_champ_cree_charge_ponctuelle}. On souhaite calculer cette fois-ci le travail développé par la force électrostatique. On a 
-        \begin{align}
+        \begin{align*}
             W_{A\to B}^{\text{el}}
             &=
             \int_{A}^{B} \vec{F}_{\text{el}}\cdot\vec{\rmd l},\\
@@ -120,17 +120,17 @@
             -q\left[
                 V^{\text{ext}}(B)-V^{\text{ext}}(A)
             \right].
-        \end{align}
+        \end{align*}
 
         Ainsi, il existe une énergie potentielle $E_{p}^{\text{ext}}$ telle que 
-        \begin{equation}
+        \begin{equation*}
             W_{A\to B}^{\text{el}}=-\Delta E_{p}^{\text{ext}},
-        \end{equation}
+        \end{equation*}
         d'où $E_{p}^{\text{ext}}=qV^{\text{ext}}$. Par convention, on prend $E_p^{\text{ext}}(\infty)=0$.
 
         On définit aussi l'électron-volt. Il s'agit de l'énergie à fournir pour amener un électron du potentiel 0\si{\volt} au potentiel 1\si{\volt}. Ainsi, 
-        \begin{equation}
+        \begin{equation*}
             \boxed{
                 1\si{\electronvolt}=e\times1\si{\volt}=1,6.10^{-19}\si{\joule}.
             }
-        \end{equation}        
+        \end{equation*}        

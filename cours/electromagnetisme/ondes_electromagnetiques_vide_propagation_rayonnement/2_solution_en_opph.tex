@@ -1,0 +1,122 @@
+\section{La solution en OPPH}
+
+On suppose que 
+\begin{equation*}
+    \left\lbrace
+        \begin{aligned}
+            \ubar{\vec{E}}(\vec{r},t)&=\ubar{\vec{E}}\rme^{\rmi\left(\omega t-\vec{k}\cdot\vec{r}\right)},\\
+            \ubar{\vec{B}}(\vec{r},t)&=\ubar{\vec{B}}\rme^{\rmi\left(\omega t-\vec{k}\cdot\vec{r}\right)}.
+        \end{aligned}
+    \right.
+\end{equation*}
+On choisit donc la convention $\rme^{\rmi\omega t}$.
+
+\subsection{Opérateurs de dérivation en notation complexe}
+
+\begin{equation*}
+    \boxed{
+        \begin{aligned}
+            \frac{\partial}{\partial t}&=\rmi\omega,\\
+            \frac{\partial}{\partial x}&=-\rmi k_x,\\
+            \frac{\partial}{\partial y}&=-\rmi k_y,\\
+            \frac{\partial}{\partial z}&=-\rmi k_z,\\
+            \vecnabla&=-\rmi\vec{k},\\
+            \div\vec{E}&=-\rmi\vec{k}\cdot\vec{E},\\
+            \vecrot\vec{E}&=-\rmi\vec{k}\wedge\vec{E}.
+        \end{aligned}
+    }
+\end{equation*}
+
+\subsection{Structure d'une OPP(H) dans le vide}
+
+\paragraph{Caractère Transverse Électrique et Magnétique (TEM).}
+\begin{itemize}
+    \item dans le vide, on a $\div\ubar{\vec{E}}=0=-\rmi\vec{k}\cdot\vec{E}=-\rmi k\vec{u}\cdot\vec{E}$, donc en prenant la partie réelle, on obtient $\vec{u}\cdot\vec{E}=0$ : $\vec{E}$ est perpendiculaire à $\vec{u}$ (TE);
+    \item $\div\ubar{\vec{B}}=0$ implique de même que $\vec{B}\perp\vec{u}$ (TM);
+    \item ceci est vrai pour tout $\omega$ : toute OPP(H) est TEM dans le vide.
+\end{itemize}
+
+\paragraph{relation de struture d'une OPP(H) dans le vide.}
+On a $\vecrot\ubar{\vec{E}}=-\frac{\partial\ubar{\vec{B}}}{\partial t}$, donc $-\rmi\vec{k}\wedge\ubar{\vec{E}}=-(\rmi\omega\ubar{\vec{B}})$. Cela implique $\ubar{\vec{B}}=\frac{\vec{k}\wedge\ubar{\vec{E}}}{\omega}$, d'où
+\begin{equation*}
+    \boxed{
+        \vec{B}=\frac{\vec{k}\wedge\vec{E}}{\omega}=\frac{\vec{u}\wedge\vec{E}}{c},
+    }
+\end{equation*}
+car $k=\frac{2\pi}{\lambda}$, $\omega=\frac{2\pi}{T}$ donc $\frac{k}{\omega}=\frac{T}{\lambda}=\frac{1}{c}$. Cette relation est vraie pour tout $\omega$, c'est la relation de structure d'une OPP(H) dans le vide.
+
+\begin{remark}
+    En utilisant le relation de Maxwell--Ampère $\vecrot\vec{B}=\frac{1}{c^{2}}\frac{\partial\vec{E}}{\partial t}$, on obtient $-\rmi\vec{k}\wedge\ubar{\vec{B}}=\frac{1}{c^{2}}(\rmi\omega\ubar{\vec{E}})$, d'où $\ubar{\vec{E}}=-\frac{c^{2}}{\omega}\vec{k}\wedge\ubar{\vec{B}}=c\ubar{\vec{B}}\wedge\vec{u}$ : c'est équivalent (dans le vide). On note aussi que $(\vec{u},\vec{E},\vec{B})$ forme un trièdre perpendiculaire direct.
+\end{remark}
+
+\subsection{Polarisation de la lumière. OPPH polarisée rectilignement (PR)}
+
+On cherche à connaître l'évolution de la direction de $\vec{E}$ à $z$ fixé ($\vec{k}=k\vec{u_z}$) au cours du temps. C'est la notion de polarisation.
+
+On prend une OPPH ($\vec{u_z},\omega$): $\ubar{\vec{E}}(z,t)=\ubar{\vec{E_0}}\rme^{\rmi\left(\omega t-kz\right)}$ où $\ubar{\vec{E_0}}=\begin{pmatrix}
+    E_{0,x}\rme^{\rmi\varphi_x}\\E_{0,y}\rme^{\rmi\varphi_y}\\0
+\end{pmatrix}$ avec $E_{0,x},E_{0,y}>0$. On a donc
+\begin{equation*}
+    \ubar{\vec{E}}(z,t)=\begin{pmatrix}
+        E_{0,x}\rme^{\rmi\left(\omega t-kz+\varphi_x\right)}\\
+        E_{0,y}\rme^{\rmi\left(\omega t-kz+\varphi_y\right)}\\
+        0
+    \end{pmatrix}
+\end{equation*}
+d'où
+\begin{equation*}
+    \ubar{\vec{E}}(z,t)=\begin{pmatrix}
+        E_{0,x}\cos\left(\omega t-kz+\varphi_x\right)\\
+        E_{0,y}\cos\left(\omega t-kz+\varphi_y\right)\\
+        0
+    \end{pmatrix}
+\end{equation*}
+Ainsi, à $z$ fixé, $\vec{E}(z,t)$ décrit une ellipse dans le cas général (OPPH polarisée électriquement).
+
+\subsubsection{OPPHPR}
+Une OPPHPR est une OPPH dont le champ $\vec{E}$ garde une direction constante (et donc $\vec{B}$ aussi). Par exemple, si une OPPHPR ($\vec{u_z},\omega$) selon $\vec{u_x}$ est par exemple
+\begin{equation*}
+    \boxed{
+        \vec{E}(z,t)=E_0\cos(\omega t-kz)(\vec{u_x}),
+    }
+\end{equation*}
+propagation selon $\vec{u_z}$ et polarisée rectilignement parallèlement à $\vec{u_x}$.
+À $t=0$, on a $\vec{E}(z,0)=E_0\cos\left(\frac{2\pi}{\lambda}\right)\vec{u_x}$ et $\vec{B}(z,0)=\frac{\vec{u_z}\wedge\vec{E}(z,0)}{c}=\frac{E_0}{c}\cos\left(\frac{2\pi}{\lambda}z\right)\vec{u_y}$.
+
+\subsubsection{L'OPPHPR est la solution la plus élémentaire de d'Alembert en 3D}
+
+Pour toute solution de d'Alembert 3D, $\vec{E}(\vec{r},t)=\sum\limits_{\vec{u}}\sum\limits_{\omega}E_{\vec{u},\omega}\vec{E}_{\vec{u},\omega}(\vec{r},t)$, où $\vec{E}_{\vec{u},\omega}$ est une OPPH. Or une OPPH ($\vec{u_z},\omega$) quelconque est donnée par la somme de 2 OPPHPR à $\frac{\pi}{2}$ l'une de l'autre: l'OPPHPR est la solution la plus élémentaire.
+
+\subsubsection{Une autre base de solutions élémentaires: les OPPHPC}
+On prend une OPPHPR ($\vec{u_z},\omega$) polarisée selon $\vec{u_x}$: $\vec{E}(z,t)=E_0\cos(\omega t-kz)\vec{u_x}$. On l'écrit sous la forme
+\begin{equation*}
+    \vec{E}(z,t)=\begin{pmatrix}
+        \frac{E_0}{2}\cos(\omega t-kz)\\
+        \frac{E_0}{2}\sin(\omega t-kz)\\0
+    \end{pmatrix}+\begin{pmatrix}
+        \frac{E_0}{2}\cos(\omega t-kz)\\
+        -\frac{E_0}{2}\sin(\omega t-kz)\\0
+    \end{pmatrix},
+\end{equation*}
+où le premier terme est une OPPHPC Gauche (tourne dans le sens trigonométrique) et l'autre une OPPHPC Droite (tourne dans le sens anti-trigonométrique). Il y a donc, au choix, deux familles de solutions élémentaires: les OPPHPR (à $\frac{\pi}{2}$ l'une de l'autre) ou les OPPHPC (G et D), utiles pour les milieux chiraux ou les milieux sièges d'un champ $\vec{B_0}$ stationnaire.
+
+\subsection{Obtention d'une onde PR: polarisation par dichroïsme}
+\subsubsection{La lumière \og naturelle\fg~n'est pas polarisée}
+
+Par \og naturelle\fg, on entend qu'elle est issue d'une source primaire (comme le soleil) et non artificielle (LASER, lampe blanche, LED, lampe spectrale, etc.). L'évolution du champ $\vec{E}(z_0,t)$ est aléatoire au cours du temps dans un plan d'onde $z=z_0$. La direction de $\vec{E}(t)$ dans un plan perpendiculaire à la propagation ne suit pas une courbe identifiée. Tous les directions de polarisation sont équiprobables : c'est l'isotropie.
+
+\subsubsection{Polarisation rectiligne obtenue par dichroïsme}
+\paragraph{Polaroïd (ou polariseur rectiligne).} C'est une mince feuille constituée de longueurs macromoléculaires étirées selon une direction donnée : c'est l'anisotropie. Si elles sont étirées selon $\vec{u_x}$, et que le champ $\vec{E}$ incident se propage selon $\vec{u_z}$,
+\begin{itemize}
+    \item les électrons délocalisés sont mis en mouvement par $E_x(t)$ qui est absorbée;
+    \item par d'interaction avec $E_y(t)$ : $E_y(t)$ est transmise, et donc le champ $\vec{E}$ transmis est une OPPHPR parallèlement à $\vec{u_y}$.
+\end{itemize}
+
+Par définition, la direction de transmission du polaroïd est l'azimut $\vec{u_p}$. Ainsi, 
+\begin{equation*}
+    \boxed{
+        \vec{E}_{\mathrm{trans}}=\left(\vec{E}_{\mathrm{inc}}\cdot\vec{u_p}\right)\vec{u_p}.
+    }
+\end{equation*}
+
+En application, on peut penser aux lunettes 3D dont chaque polaroïd a un azimut a 45 degrés par rapport à la verticale.

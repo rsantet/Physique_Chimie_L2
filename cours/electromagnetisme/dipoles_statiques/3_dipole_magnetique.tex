@@ -2,11 +2,11 @@
 \subsection{Définition et ordre de grandeur}
 
 On considère une spire de courant plane présentée à la Figure~\ref{fig:moment_dipolaire_magnetique_spire_plane}. On définit le moment dipolaire magnétique, d'unité $\si{\ampere\metre\squared}$ par
-\begin{equation}
+\begin{equation*}
     \boxed{
         \vec{m}\coloneqq iS\vec{N}.
     }
-\end{equation}
+\end{equation*}
 Pour une bobine plate avec 10000 spires, on a $m=niS\approx1\si{\ampere\metre\squared}$.
 
 \begin{figure}
@@ -24,19 +24,19 @@ Pour une bobine plate avec 10000 spires, on a $m=niS\approx1\si{\ampere\metre\sq
 \end{figure}
 
 On considère maintenant un électron autour dans un atome à la Figure~\ref{fig:moment_magnetique_orbital}. Par un raisonnement équivalent, on a $i=-e/T$ avec $T$ la période de révolution de l'électron autour du noyau. Alors 
-\begin{equation}
+\begin{equation*}
     \vec{m}=iS\vec{u}_z=-\frac{e}{T}\pi r^{2}\vec{u}_z.
-\end{equation}
+\end{equation*}
 Le moment cinétique de l'électron est 
-\begin{equation}
+\begin{equation*}
     \vec{L}_O=r\vec{u}_r\wedge m\vec{v}=mrv\vec{u}_z,
-\end{equation}
+\end{equation*}
 d'où
-\begin{equation}
+\begin{equation*}
     \boxed{
         \vec{m}=\gamma\vec{L}_O,
     }
-\end{equation}
+\end{equation*}
 avec $\gamma=-e/(2m)$ le rapport gyromagnétique. À l'échelle atomique, on a $\left\lVert\vec{L}_O\right\rVert\approx\hbar\approx10^{-34}\si{\joule\second}$. Alors $\left\lVert\vec{m}\right\rVert\sim10^{-23}\si{\ampere\metre\squared}$.
 
 \begin{figure}
@@ -67,26 +67,26 @@ Au niveau de la terre, le moment magnétique est de l'ordre de $6.10^{2}\si{\amp
 \subsubsection{Analyse des symétries}
 
 On fait l'hypothèse que l'on a une spire circulaire de rayon $a$, et on se place en coordonnées cylindriques, l'axe $\vec{u}_z$ passant au centre de la spire, perpendiculairement à celle-ci. On note $\alpha$ l'angle entre l'altitude $z$ du point projeté de $M$ sur l'axe $(Oz)$ et la spire. Alors il y a une symétrie de révolution par rapport à l'axe $(Oz)$, et tout plan contenant $(Oz)$ est un plan d'antisymétrie, on en déduit donc que
-\begin{equation}
+\begin{equation*}
     \vec{B}(M)=\begin{pmatrix}
         B_{r}(r,\theta)\\ B_{\theta}(r,\theta)\\0
     \end{pmatrix}.
-\end{equation}
+\end{equation*}
 
 \subsubsection{Champ dans l'approximation dipolaire}
 
 Donnée: sur l'axe $(Oz)$, on a $\vec{B}_{\mathrm{axe}}(M)=\frac{\mu_0i}{2a}\sin^{3}(\alpha)\vec{u}_z$. On note que $\sin(\alpha)=a/(a^{2}+z^{2})^{-1/2}$, et dans l'hypothèse de l'approche dipolaire, c'est-à-dire $\left\lvert z\right\rvert\gg a$, alors
-\begin{equation}
+\begin{equation*}
     \vec{B}_{\mathrm{axe}}(z)\approx\frac{\mu_0i}{2a}\frac{a^{3}}{z^{3}}\vec{u}_z=\frac{\mu_0ia^{2}}{2z^{3}}\vec{u}_z=\frac{\mu_0 m}{2\pi z^{3}}\vec{u}_z.
-\end{equation}
+\end{equation*}
 On admet que cette forme s'adapte autre part que sur l'axe: dans l'approximation dipolaire, on a 
-\begin{equation}
+\begin{equation*}
     \boxed{
     \vec{B}(M)=\frac{\mu_0 m}{4\pi r^{3}}\begin{pmatrix}
         2\cos\theta\\\sin\theta\\0
     \end{pmatrix}
     .}
-\end{equation}
+\end{equation*}
 Ainsi, par rapport à la formulation pour le champ électrostatique, il suffit de remplacer $\vec{p}$ par $\vec{m}$, $1/\varepsilon_0$ par $\mu_0$ et $\vec{E}$ par $\vec{B}$.
 
 \subsubsection{Allure des lignes de champ}
@@ -95,22 +95,22 @@ Dans l'approximation dipolaire, il y a les mêmes lignes de champ que $\vec{E}$.
 \subsection[Actions mécaniques subies]{Actions mécaniques subies par un dipôle magnétique plongé dans B}
 \subsubsection{Champ extérieur uniforme}
 On a
-\begin{equation}
+\begin{equation*}
     \vec{F_{\mathrm{lor}}}=\oint i\vec{\rmd l}\wedge\vec{B}^{\mathrm{ext}}=i\left[\oint\vec{\rmd l}\right]\wedge\vec{B}^{\mathrm{ext}},
-\end{equation}
+\end{equation*}
 donc pour un champ magnétique uniforme, on a $\vec{F_{\mathrm{lor}}}=\vec{0}$.
 
 On peut aussi montrer que le couple de rappel est
-\begin{equation}
+\begin{equation*}
     \boxed{
         \vec{M}_O=\vec{m}\wedge\vec{B}^{\mathrm{ext}},
     }
-\end{equation}
+\end{equation*}
 il y a donc un alignement de $\vec{m}$ sur $\vec{B}^{\mathrm{ext}}$.
 
 \subsubsection{Champ non uniforme}
 On admet que l'on a 
-\begin{equation}
+\begin{equation*}
     \boxed{
         \left\lbrace
     \begin{aligned}
@@ -118,16 +118,16 @@ On admet que l'on a
         \vec{M}_O&=\vec{m}\wedge\vec{B}^{\mathrm{ext}}.
     \end{aligned}
     \right.}
-\end{equation}
+\end{equation*}
 
 Il y a donc un alignement avec le champ magnétique extérieur, et il y a una attraction vers les zones de plus fort champ.
 
 \subsubsection{Énergie potentielle d'interaction}
 
 On retrouve le même résultat formel
-\begin{equation}
+\begin{equation*}
     \boxed{
         E_p^{\mathrm{ext}}=-\vec{m}\cdot\vec{B}^{\mathrm{ext}},
     }
-\end{equation}
+\end{equation*}
 et les mêmes discontinuités sur les équilibres stables et instables.

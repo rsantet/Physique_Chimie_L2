@@ -2,69 +2,69 @@
 \subsection{Théorème de Gauss et Maxwell-Gauss}
 
 On a $\div\vec{E}(\vec{r},t)=\rho(\vec{r},t)/\varepsilon_0$, équivalent à 
-\begin{equation}
+\begin{equation*}
     \boxed{
         \oiint_{S}\vec{E}(\vec{r},t)\cdot\vec{n}^{\mathrm{ext}}\,\rmd S=\frac{Q^{\mathrm{int}}(t)}{\varepsilon_0}.
     }
-\end{equation}
+\end{equation*}
 
 \subsection{Flux de \texorpdfstring{$\vec{B}$}{B} conservatif et Maxwell-Thompson}
 
 On a $\div\vec{B}(\vec{r},t)=0$, équivalent à
-\begin{equation}
+\begin{equation*}
     \boxed{
         \oiint_{S}\vec{B}(\vec{r},t)\cdot\vec{n}^{\mathrm{ext}}\,\rmd S=0.
     }
-\end{equation}
+\end{equation*}
 
 \subsection{Théorème d'Ampère généralisé\texorpdfstring{\\}{ }et Maxwell-Ampère}
 
 On a $\vecrot\vec{B}(\vec{r},t)=\mu_0\vec{j}(\vec{r},t)+\frac{1}{c^{2}}\frac{\partial\vec{E}(\vec{r},t)}{\partial t}$, et en utilisant le théorème de Stokes,
-\begin{equation}
+\begin{equation*}
     \oint_{\mathcal{C}}\vec{B}(\vec{r},t)\cdot\vec{\rmd l}=\mu_0\iint_{\Sigma}\vec{j}(\vec{r},t)\cdot\vec{N}\rmd\Sigma+\frac{1}{c^{2}}\iint_{\Sigma}\frac{\partial\vec{E}(\vec{r},t)}{\partial t}\cdot\vec{N}\rmd\Sigma,
-\end{equation}
+\end{equation*}
 et finalement
-\begin{equation}
+\begin{equation*}
     \boxed{
         \oint_{\mathcal{C}}\vec{B}(\vec{r},t)\cdot\vec{\rmd l}=\mu_{0}I_{\Sigma}^{\mathrm{int}}(t)+\frac{1}{c^{2}}\frac{\rmd}{\rmd t}\left(\iint_{\Sigma}\vec{E}(\vec{r},t)\cdot\vec{N}\rmd\Sigma\right).
     }
-\end{equation}
+\end{equation*}
 
 \subsection{Loi de Faraday et Maxwell-Faraday}
 
 À nouveau, en utilisant le théorème de Stokes sur
-\begin{equation}
+\begin{equation*}
     \vecrot\vec{E}(\vec{r},t)=-\frac{\partial\vec{B}}{\partial t}(\vec{r},t),    
-\end{equation}
+\end{equation*}
 on obtient
-\begin{align}
+\begin{align*}
     \oint_{\mathcal{C}}\vec{E}(\vec{r},t)\cdot\vec{\rmd l}
     &=-\iint_{\Sigma}\frac{\partial\vec{B}(\vec{r},t)}{\partial t}(\vec{r},t)\cdot\vec{N}\rmd\Sigma\\
     &=-\frac{\rmd}{\rmd t}\left(\iint_{\Sigma}\vec{B}(\vec{r},t)\cdot\vec{N}\rmd\Sigma\right),
-\end{align}
+\end{align*}
 puis la loi de Faraday (1831):
-\begin{equation}
+\begin{equation*}
     \boxed{
         \oint_{\mathcal{C}}\vec{E}(\vec{r},t)\cdot\vec{\rmd l}=-\frac{\rmd\varphi_m}{\rmd t}(t).
     }
-\end{equation}
+\end{equation*}
 On voit donc qu'a priori, on n'a pas $\oint_{\mathcal{C}}\vec{E}\cdot\vec{\rmd l}=0$, et donc $\vec{E}\neq-\vecgrad V$.
 
 \subsubsection{Lien avec la loi de Faraday d'électrocinétique}
 
 Soit un circuit fermé $\mathcal{C}$, de résistance totale $R$, avec un générateur de tension $e(t)=-\frac{\rmd\varphi_m}{\rmd t}(t)=Ri(t)$. On se donne la loi d'Ohm locale qui s'écrit $\vec{j}(\vec{r},t)=\sigma\vec{E}(\vec{r},t)$ où $\sigma$ est la conductivité du milieu en $\si{\per\ohm\per\metre}$. Alors sous l'hypothèse de l'ARQS magnétique, on a 
-\begin{equation}
+\begin{equation*}
     \oint\vec{E}\cdot\vec{\rmd l}=\oint\frac{\vec{j}}{\sigma}\cdot\vec{\rmd l}=i(t)\frac{l}{\sigma S}=Ri(t).
-\end{equation}
+\end{equation*}
 C'est l'expression de la force électromagnétique induite dans le circuit, et on a
-\begin{equation}
+\begin{equation*}
     \boxed{
         e(t)=\oint_{\mathcal{C}}\vec{E}(\vec{r},t)\cdot\vec{\rmd l}=-\frac{\rmd\varphi_m}{\rmd t}(t).
     }
-\end{equation}
+\end{equation*}
 Cette expression ne vaut que pour le cas de Neumann (circuit fixe dans un champ magnétique $\vec{B}$ variable). S'il y a une auto-inductance et une induction mutuelle, c'est par exemple le cas de Lorentz (circuit mobile dans un champ $\vec{B}$ stationnaire), alors $\oint\vec{E}\cdot\vec{\rmd l}=0$ mais $e(t)=-\frac{\rmd\varphi_m}{\rmd t}(t)\neq0$ due au mouvement du circuit.
 Par exemple, si l'on prend deux bobines en influence mutuelle comme à la Figure~\ref{fig:deux_bobines_influence_mutuelle}, alors on a 
-\begin{equation}
+\begin{equation*}
     \left\lbrace
         \begin{aligned}
             e_1(t)&=-\frac{\rmd\varphi_1}{\rmd t}(t),\\
@@ -73,30 +73,30 @@ Par exemple, si l'on prend deux bobines en influence mutuelle comme à la Figure
             \varphi_2(t)&=L_2 i_2(t)+Mi_1(t).
         \end{aligned}
     \right.
-\end{equation}
+\end{equation*}
 D'après la loi des mailles, on obtient
-\begin{equation}
+\begin{equation*}
     \left\lbrace
         \begin{aligned}
             v_1(t)&=r_1 u_1(t)-e_1(t)=r_1 i_1(t)+L_1\frac{\rmd i_1}{\rmd t}(t)+M\frac{\rmd _2}{\rmd t}(t),\\
             v_2(t)&=r_2 u_2(t)-e_2(t)=r_2 i_2(t)+L_2\frac{\rmd i_2}{\rmd t}(t)+M\frac{\rmd _1}{\rmd t}(t).
         \end{aligned}
     \right.
-\end{equation}
+\end{equation*}
 \begin{itemize}
     \item Application 1: on a un transformateur de tension. On néglige la résistance des fils, la secondaire est à vide ($i_2=0$) et on se place en régime sinusoïdal forcé. Alors
-    \begin{equation}
+    \begin{equation*}
         \ubar{v_1}=\rmj L_1\omega i_1,\qquad \ubar{v_2}=j M\omega i_1,
-    \end{equation}
+    \end{equation*}
     d'où
-    \begin{equation}
+    \begin{equation*}
         \frac{\ubar{v_2}}{\ubar{v_1}}=\frac{M}{L_1}\sim\frac{N_2}{N_1},
-    \end{equation}
+    \end{equation*}
     où $N_i$ est le nombre de spires de la bobine $i$, car $L_1\propto N_1^{2}$ et $M\propto N_1 N_2$. Ainsi, si $N_1>N_2$, on a un transformateur abaisseur de tension, et sinon un transformateur élévateur de tension.
     \item Application 2: on a un transformateur de courant (secondaire en courant continu). Alors $\ubar{v_2}=0=\rmj L_2\omega\ubar{i_2}+\rmj M\omega\ubar{i_1}$ d'où
-    \begin{equation}
+    \begin{equation*}
         \frac{\ubar{i_2}}{\ubar{i_1}}=-\frac{M}{L_2}\sim-\frac{N_1}{N_2}.
-    \end{equation}
+    \end{equation*}
 \end{itemize}
 
 \begin{figure}

@@ -3,21 +3,21 @@
     \subsection{Équation de Maxwell-Gauss, théorème de Gauss}
 
         Le théorème de Gauss couplé ai théorème d'Ostrogradski donne
-        \begin{equation}
+        \begin{equation*}
             \oiint_{S}\vec{E}\cdot\vec{n}^{\text{ext}}\rmd S=\iiint_{V}\mathrm{div}~\vec{E}\rmd V=\frac{Q_{\text{int}}}{\varepsilon_0}=\frac{1}{\varepsilon_0}\iiint_{V}\rho\rmd V.
-        \end{equation}
+        \end{equation*}
         Ainsi, pour tout volume $V$, on a 
-        \begin{equation}
+        \begin{equation*}
             \iiint_{V}\left(
                 \mathrm{div}~\vec{E}-\frac{\rho}{\varepsilon_0}
             \right)\rmd V=0,
-        \end{equation}
+        \end{equation*}
         d'où on entire l'équation de Maxwell-Gauss, qui est une version locale du théorème de Gauss:
-        \begin{equation}
+        \begin{equation*}
             \boxed{
                 \mathrm{div}~\vec{E}(\vec{r})=\frac{\rho(\vec{r})}{\varepsilon_0}.
             }
-        \end{equation}
+        \end{equation*}
 
     \subsection{Circulation conservative locale}
 
@@ -50,7 +50,7 @@
         \end{figure}
 
         On se place dans un lan parallèle à $(xOy)$, de côté $z$. On a 
-        \begin{align}
+        \begin{align*}
             \oint_{C}\vec{E}\cdot\vec{\rmd l}
             &=0,\\
             &=
@@ -58,19 +58,19 @@
             &\quad-E_x(x,y+\rmd y,z)\rmd x-E_y(x,y,z)\rmd y,\\
             &=
             -\rmd y\frac{\partial E_x}{\partial y}(x,y,z)\rmd x+\rmd x\frac{\partial E_y}{\partial x}(x,y,z)\rmd y=0,
-        \end{align}
+        \end{align*}
         d'où
-        \begin{equation}
+        \begin{equation*}
             \boxed{
             \left(\frac{\partial E_y}{\partial x}-\frac{\partial E_x}{\partial y}\right)\rmd x\rmd y=0,}
-        \end{equation}
+        \end{equation*}
         la circulation est donc proportionnelle à l'aire du carré. De même dans les autres plans, on obtient
-        \begin{equation}
+        \begin{equation*}
             \begin{aligned}
                 &\left(\frac{\partial E_x}{\partial z}-\frac{\partial E_z}{\partial x}\right)\rmd x\rmd z=0,\\
                 &\left(\frac{\partial E_z}{\partial y}-\frac{\partial E_y}{\partial z}\right)\rmd y\rmd z=0.
             \end{aligned}
-        \end{equation}
+        \end{equation*}
         La circulation du champ est donc proportionnelle à l'aire sur laquelle s'appuie le contour. L'idée est donc de passer d'une circulation $\oint\vec{E}\cdot\vec{\rmd l}$ à un flux à travers une surface.
 
     \subsection{Opérateur rotationnel}
@@ -78,32 +78,32 @@
         \paragraph{Théorème-définition de Stokes.}
 
             Soit $\vec{A}(x,y,z)$ champ de vecteurs $\mathcal{C}^{1}$. Alors on a 
-            \begin{equation}
+            \begin{equation*}
                 \boxed{
                     \oint_{C}\vec{A}\cdot\vec{\rmd l}=\iint_{\Sigma}\left(\vec{\mathrm{rot}}~\vec{A}\right)\cdot\vec{N}\rmd\Sigma.
                 }
-            \end{equation}
+            \end{equation*}
             Ici, $(\Sigma)$ est une surface (non fermée) s'appuyant sur (C) et orientée selon la règle du tire-bouchon.
 
         \paragraph{Expression de $\vec{\mathrm{rot}}~\vec{A}$ en cartésienne.}
 
             On a 
-            \begin{align}
+            \begin{align*}
                 \oint_{C\in(xOy)}\vec{A}\cdot\vec{\rmd l}
                 &=\left(\frac{\partial A_y}{\partial x}-\frac{\partial A_x}{\partial y}\right)\times\rmd x\rmd y,\\
                 &=
                 \left(\vec{\mathrm{rot}}\vec{A}\right)_{z}\rmd y\rmd y,\\
                 &=
                 \left(\vec{\mathrm{rot}}\vec{A}\right)\cdot\vec{u}_z\rmd x\rmd y,
-            \end{align}
+            \end{align*}
             donc 
-            \begin{equation}
+            \begin{equation*}
                 \boxed{
                     \left(\vec{\mathrm{rot}}\vec{A}\right)_{z}=\frac{\partial A_y}{\partial x}-\frac{\partial A_x}{\partial y}.
                 }
-            \end{equation}
+            \end{equation*}
             De même pour les deux autres coordonnées, donc 
-            \begin{equation}
+            \begin{equation*}
                 \boxed{
                     \vec{\mathrm{rot}}(\vec{A})=
                     \begin{pmatrix}
@@ -112,9 +112,9 @@
                         \frac{\partial A_y}{\partial x}-\frac{\partial A_x}{\partial y}
                     \end{pmatrix}.
                 }
-            \end{equation}
+            \end{equation*}
             Avec l'opérateur nabla (en cartésienne), on a 
-            \begin{equation}
+            \begin{equation*}
                 \boxed{
                     \vec{\nabla}\wedge\vec{A}=\begin{pmatrix}
                         \frac{\partial}{\partial x}\\
@@ -125,33 +125,33 @@
                         A_x\\A_y\\A_z
                     \end{pmatrix}=\vec{\mathrm{rot}}\vec{A}
                 }.
-            \end{equation}
+            \end{equation*}
 
     \subsection{Équation de Maxwell--Faraday}
 
         Sur un contour fermé $C$ avec une surface $\Sigma$ supportée par ce contour, on a 
-        \begin{equation}
+        \begin{equation*}
             \oint_{C}\vec{E}\cdot\vec{\rmd l}=0=\iint_{\Sigma}\vec{\mathrm{rot}}\vec{E}\rmd\Sigma,
-        \end{equation}
+        \end{equation*}
         ceci vaut pour tout contour $C$, d'où on en tire l'équation de Maxwell-Faraday, qui ets une équation locale :
-        \begin{equation}
+        \begin{equation*}
             \boxed{
                 \vec{\mathrm{rot}}\vec{E}(\vec{r})=\vec{0}.
             }
-        \end{equation}
+        \end{equation*}
 
         \paragraph{Lien avec le potentiel.}
 
             Soit $f(\vec{r})=\vec{\mathrm{rot}}(\vec{\mathrm{grad}}f)=\vec{0}$ car
-            \begin{equation}
+            \begin{equation*}
                 \oint_{C}\vec{\mathrm{grad}}f\cdot\vec{\rmd l}=0=\iint_{\Sigma}\vec{\mathrm{rot}}(\vec{\mathrm{grad}}f)\cdot\vec{N}\rmd\Sigma,
-            \end{equation}
+            \end{equation*}
             donc
-            \begin{equation}
+            \begin{equation*}
                 \boxed{
                     \vec{\mathrm{rot}}\vec{E}=\vec{0}\Longleftrightarrow\vec{E}=-\vec{\mathrm{grad}}V.
                 }
-            \end{equation}
+            \end{equation*}
 
     \subsection{Vue d'ensemble des différentes formulations des lois de l'électrostatique}
 

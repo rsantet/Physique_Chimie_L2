@@ -43,31 +43,31 @@ $F(X-ct)$ représente une onde progressive vers les $X$ croissants à vitesse $c
 \subsection{Solution générale de l'équation de d'Alembert en trois dimensions en OPP}
 
 En trois dimensions, toute solution de l'équation des ondes est une superposition d'OPP se propageant selon toutes les directions possibles:
-\begin{equation}
+\begin{equation*}
     \boxed{
         f(\vec{r},t)=\sum_{\neq\,\vec{u}}f_{\vec{u}}(\vec{u}\cdot\vec{r}-ct).
     }
-\end{equation}
+\end{equation*}
 Notamment, 
-\begin{equation}
+\begin{equation*}
     \boxed{
         E(\vec{r},t)=\sum_{\neq\,\vec{u}}E_{\vec{u}}(\vec{u}\cdot\vec{r}-ct).
     }
-\end{equation}
+\end{equation*}
 
 \subsection{La solution élémentaire en OPP Harmonique}
 
 Par linéarité et Fourier, 
-\begin{equation}
+\begin{equation*}
     \boxed{
         \vec{E}(\vec{r},t)=\sum_{\vec{u}}\sum_{\omega}\vec{E}_{\vec{u},\omega}\rme^{\rmi\omega\left(t-\frac{\vec{u}\cdot\vec{r}}{c}\right)}.
     }
-\end{equation}
+\end{equation*}
 
 La solution élémentaire est
-\begin{equation}
+\begin{equation*}
     \vec{E}(\vec{r},t)=\vec{E}_{0}\rme^{\rmi(\omega t-\vec{k}\cdot\vec{r})},
-\end{equation}
+\end{equation*}
 avec $\vec{k}=k\vec{u}=\frac{\omega}{c}\vec{u}$ et $\omega=2\pi/T$ donc $k=2\pi/(cT)=2\pi / \lambda$. C'est une OPPH. On a choisit la convention $\rme^{\rmi\omega t}$, mais les solution en $\rme^{\rmi(\vec{k}\cdot\vec{r}-\omega t)}$ sont aussi bonnes (partie réelle égale), c'est une convention $\rme^{-\rmi\omega t}$.
 
 \paragraph{Caractère non physique de l'OPPH.}
@@ -77,4 +77,4 @@ avec $\vec{k}=k\vec{u}=\frac{\omega}{c}\vec{u}$ et $\omega=2\pi/T$ donc $k=2\pi/
     \item Onde d'amplitude constante dans tout l'espace. L'énergie du champ électromagnétique de cette onde est donc infini.
 \end{itemize}
 
-Ainsi, l'OPPH n'existe pas mais très utile car cela simplifie les calculs, et elles permettent de reconstituer une solution quelconque par superposition d'OPPH.
+Ainsi, l'OPPH n'existe pas mais reste très utile car elle simplifie les calculs, et elle permet de reconstituer une solution quelconque par superposition.

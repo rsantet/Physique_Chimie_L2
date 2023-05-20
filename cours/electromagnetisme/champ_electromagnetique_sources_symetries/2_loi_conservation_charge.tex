@@ -23,7 +23,7 @@
         \end{figure}
 
         La charge entrant algébriquement dans $S\rmd x$ pendant $\rmd t$ est 
-        \begin{align}
+        \begin{align*}
             \delta Q_e
             &=
             j(x,t)S\rmd t-j(x+\rmd x,t)S\rmd t,\\
@@ -32,10 +32,10 @@
                 j(x,t)-j(x+\rmd x,t)
             \right],\\
             &=-S\rmd t\rmd x\frac{\partial j}{\partial x}(x,t).
-        \end{align}
+        \end{align*}
 
         La variation $\rmd Q$ de la charge dans la tranche $S\rmd x$ est 
-        \begin{align}
+        \begin{align*}
             \rmd Q
             &=
             \rho(x,t+\rmd t)S\rmd x-\rho(x,t)S\rmd x,\\
@@ -43,31 +43,31 @@
             S\rmd x\left(\rho(x,t+\rmd t)-\rho(x,t)\right),\\
             &=
             \frac{\partial\rho}{\partial t}(x,t)S\rmd x\rmd t.
-        \end{align}
+        \end{align*}
 
         \paragraph{Postulat : conservation de la charge.}
 
             On doit avoir 
-            \begin{equation}
+            \begin{equation*}
                 \boxed{
                     \rmd Q=\delta Q_e.
                 }
-            \end{equation}
+            \end{equation*}
 
             Alors l'équation locale de la conservation de la charge s'écrit
-            \begin{equation}
+            \begin{equation*}
                 \boxed{
                     \frac{\partial\rho}{\partial t}(x,t)+\frac{\partial j}{\partial x}(x,t)=0.
                 }
-            \end{equation}
+            \end{equation*}
 
     \subsection{Équation intégrale de conservation de la charge}
 
-        Dans le cas général, on se reporte à la Figure~\ref{fig:equation_integrale_conservation_charge}.
+        Dans le cas général, on se reporte à la Figure~\ref{fig:equation*_integrale_conservation_charge}.
 
         \begin{figure}
             \centering
-            \tikzsetnextfilename{equation_integrale_conservation_charge}
+            \tikzsetnextfilename{equation*_integrale_conservation_charge}
             \begin{tikzpicture}[scale=1]  
                 \draw (0,0) ellipse (1.5 and 1.75);
                 \node at (0,-2) {(S) fermée};
@@ -76,25 +76,25 @@
                 \draw[-latex] (0.7,0.5)--++(0.5,0.4) node [above right] {$\vec{n}^{\text{ext}}$};
             \end{tikzpicture}
             \caption{Équation intégrale de conservation de la charge.}    
-            \label{fig:equation_integrale_conservation_charge}
+            \label{fig:equation*_integrale_conservation_charge}
         \end{figure}
 
         Le flux sortant de $\vec{j}$ est 
-        \begin{equation}
+        \begin{equation*}
             i_S^{\text{ext}}=\oiint_{S}\vec{j}\cdot\vec{n}^{\text{ext}}\rmd S.
-        \end{equation}
+        \end{equation*}
 
         La conservation de la charge s'écrit alors
-        \begin{equation}
+        \begin{equation*}
             \boxed{
                 \frac{\rmd Q}{\rmd t}=-i_{S}^{\text{ext}}(t)=-\oiint_{S}\vec{j}\cdot\vec{n}^{\text{ext}}\rmd S.
             }
-        \end{equation}
+        \end{equation*}
 
     \subsection{Flux et opérateur \og divergence\fg}
 
         Dans le cas unidimensionnel de la Figure~\ref{fig:conservation_charge_1d}, en notant ($\Sigma$) la surface fermée comprise entre $x$ et $x+\rmd x$ et les bords en haut et en bas, on a 
-        \begin{align}
+        \begin{align*}
             i_{\Sigma}^{\text{ext}}(t)
             &=
             \oiint_{\Sigma}\vec{j}\cdot\vec{n}^{\text{ext}}\rmd\Sigma,\\
@@ -102,7 +102,7 @@
             \iint_{\text{bords}}\vec{j}\cdot\vec{n}_{\text{bords}}\rmd\Sigma+(-\vec{j}(x,t)\times S)+(j(x+\rmd x,t)\times S),\\
             &= 0 +\frac{\partial j}{\partial x}(x,t)\times S\rmd x,\\
             &=\frac{\partial j}{\partial x}(x,t) \times V.
-        \end{align}
+        \end{align*}
 
         Ainsi, le flux est proportionnel au volume.
 
@@ -126,9 +126,9 @@
 
         On cherche la quantité $\delta \phi^{\text{ext}}$ sortant du cube à cause du flux de $\vec{A}$ via la surface de $(\Sigma)$.
         On définit donc 
-        \begin{equation}
+        \begin{equation*}
             \delta \phi^{\text{ext}}\coloneqq\oiint_{(\Sigma)}\vec{A}\cdot\vec{n}^{\text{ext}}\rmd\Sigma.
-        \end{equation}
+        \end{equation*}
         On a alors
         \begin{enumerate}[label=(\arabic*)]
             \item $\vec{n}^{\text{ext}}=-\vec{u_y}$ : $\delta \phi_{1}^{\text{ext}}=-A_y(x,y,z,t)\times(\rmd x\rmd z)$;
@@ -140,41 +140,41 @@
         \end{enumerate}
 
         On fait la somme algébrique
-        \begin{equation}
+        \begin{equation*}
             \begin{aligned}
                 1+2 &: \frac{\partial A_y}{\partial y}(x,y,z,t)\times\rmd y\rmd x\rmd z,\\
                 3+4 &: \frac{\partial A_z}{\partial z}(x,y,z,t)\times\rmd z\rmd x\rmd y,\\
                 5+6 &: \frac{\partial A_x}{\partial x}(x,y,z,t)\times\rmd x\rmd y\rmd z.
             \end{aligned}
-        \end{equation}
+        \end{equation*}
 
         Ainsi,
-        \begin{equation}
+        \begin{equation*}
             \boxed{
                 \delta \phi^{\text{ext}}=\left[
                     \frac{\partial A_x}{\partial x}+\frac{\partial A_y}{\partial y}+\frac{\partial A_z}{\partial z}
                 \right]\times \rmd V=(\div\vec{A})\rmd V.
             }
-        \end{equation}
+        \end{equation*}
 
         \paragraph{Théorème-définition d'Ostrogradski.}
 
             Soit $\vec{A}(\vec{r},t)=\vec{A}(x,y,z,t)$ un champ de vecteurs de classe $\mathcal{C}^{1}$. Alors on a 
-            \begin{equation}
+            \begin{equation*}
                 \boxed{
                     \oiint_{S}\vec{A}\cdot\vec{n}^{\text{ext}}\rmd S=\iiint_{V}\div\vec{A}\rmd V.
                 }
-            \end{equation}
+            \end{equation*}
 
             En coordonnées cartésiennes, la divergence de $\vec{A}$ s'écrit 
-            \begin{equation}
+            \begin{equation*}
                 \boxed{
                     \div\vec{A}=\frac{\partial A_x}{\partial x}+\frac{\partial A_y}{\partial y}+\frac{\partial A_z}{\partial z}.
                 }
-            \end{equation}
+            \end{equation*}
 
             L'opérateur symbolique (réservé aux coordonnées cartésiennes) est \og nabla\fg, qui s'écrit
-            \begin{equation}
+            \begin{equation*}
                 \boxed{
                     \vecnabla=\begin{pmatrix}
                         \frac{\partial}{\partial x}\\[0.2cm]
@@ -182,74 +182,74 @@
                         \frac{\partial}{\partial z}
                     \end{pmatrix}.
                 }
-            \end{equation}
+            \end{equation*}
 
             On a alors $\div\vec{A}=\vecnabla\cdot\vec{A}$.
 
     \subsection{Équation locale de conservation de la charge en trois dimensions.}
 
         Pour une géométrie quelconque, la variation de $Q(t)$ contenue dans un volume $V$ est 
-        \begin{equation}
+        \begin{equation*}
             \rmd Q=\iiint_{V}\left[\rho(\vec{r},t)-\rho(\vec{r},t+\rmd t)\right]\rmd V,
-        \end{equation}
+        \end{equation*}
         d'où 
-        \begin{equation}
+        \begin{equation*}
             \boxed{
                 \rmd Q=\left(\iiint_{V}\frac{\partial \rho}{\partial t}(\vec{r},t)\rmd V\right)\rmd t.
             }
-        \end{equation}
+        \end{equation*}
 
         La charge algébrique $\delta Q_{S}^{\text{ext}}$ traversant une surface $S$ orientée vers l'extérieur pendant $\rmd t$ est 
-        \begin{equation}
+        \begin{equation*}
             \delta Q_S^{\text{ext}}=i_{S}^{\text{ext}}(t)\times\rmd t=\left[
                 \oiint_{S}\vec{j}\cdot\vec{n}^{\text{ext}}\rmd S
             \right]\rmd t.
-        \end{equation}
+        \end{equation*}
         Or on a 
-        \begin{equation}
+        \begin{equation*}
             \oiint_{S}\vec{j}\cdot\vec{n}^{\text{ext}}\rmd S=\iiint_{V}\div\vec{j}\cdot\rmd V,
-        \end{equation}
+        \end{equation*}
         donc
-        \begin{equation}
+        \begin{equation*}
             \boxed{
                 \delta Q_S^{\text{ext}}=\left(
                     \iiint_{V}(\div\vec{j}\rmd V)
                 \right)\rmd t.
             }
-        \end{equation}
+        \end{equation*}
 
         La conservation de la charge s'écrit alors $\rmd Q=-\delta Q_S^{\text{ext}}$, qui est une équation globale :
-        \begin{equation}
+        \begin{equation*}
             \iiint\left(\frac{\partial\rho}{\partial t}+\div\vec{j}\right)\rmd V=0.
-        \end{equation}
+        \end{equation*}
         Ceci ayant lieu pour tout volume $V$ de taille au moins mésoscopique, on a l'équation locale de la conservation de la charge :
-        \begin{equation}
+        \begin{equation*}
             \boxed{
                 \frac{\partial\rho}{\partial t}+\div\vec{j}=0.
             }
-        \end{equation}
+        \end{equation*}
 
     \subsection{Cas du régime stationnaire/permanent}
 
         Dans de cas, on a 
-        \begin{equation}
+        \begin{equation*}
             \boxed{
                 \dfrac{\partial\rho}{\partial t}=0,\qquad\div\vec{j}=0.
             }
-        \end{equation}
+        \end{equation*}
 
         En conséquence, 
         \begin{enumerate}[label=(\roman*)]
             \item $\vec{j}$ est à flux conservatif. En effet,
-            \begin{equation}
+            \begin{equation*}
                 i_S^{\text{ext}}=\oiint_{S}\vec{j}\cdot\vec{n}^{\text{ext}}\rmd S=\iiint_{V}\div\vec{j}\rmd V=0.
-            \end{equation}
+            \end{equation*}
             \item $i=$constante le long d'un tube de courant (régime permanent). Un tube de courant est un ensemble de lignes de courant s'appuyant sur un contour fermé. Ces lignes de courant sont des courbes tangentes à $\vec{j}$ en tout point.
             \item Loi des n\oe uds : en un n\oe ud où différents courants arrivent, on a 
-            \begin{equation}
+            \begin{equation*}
                 \boxed{
                     \sum_{k}\varepsilon_{k}i_k=0,
                 }
-            \end{equation}
+            \end{equation*}
             avec $\varepsilon_{k}=\pm1$.
         \end{enumerate}

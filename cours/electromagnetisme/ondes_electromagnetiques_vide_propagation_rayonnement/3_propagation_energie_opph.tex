@@ -1,0 +1,119 @@
+\section{Propagation de l'énergie par une OPP(H)}
+\subsection{Grandeurs énergétiques associées à une OPP(H)}
+
+\subsubsection{Pour une OPP}
+On prend une OPP(H) se propageant selon $\vec{u_z}$. Comme $\vec{B}=\frac{\vec{u_z}\wedge\vec{E}}{c}$ et $\vec{u_z}\cdot\vec{E}=0$ donc 
+\begin{equation*}
+    \boxed{
+        \left\lVert\vec{B}\right\rVert=\frac{\left\lVert\vec{E}\right\rVert}{c}.
+    }
+\end{equation*}
+
+\paragraph{Densité d'énergie associée à l'onde.}
+On a 
+\begin{equation*}
+    u_{\mathrm{em}}(\vec{r},t)=u_{\mathrm{em}}(z,t)=\frac{\varepsilon_0E^{2}(z,t)}{2}+\frac{B^{2}(z,t)}{2\mu_0}.
+\end{equation*}
+Or $\frac{B^{2}}{2\mu_0}=\frac{E^{2}}{2\mu_0 c^{2}}=\frac{\varepsilon_0 E^{2}}{2}$, il y a donc une équirépartition de l'énergie entre $\vec{E}$ et $\vec{B}$. Pour une OPP, on a donc
+\begin{equation*}
+    \boxed{
+        u_{\mathrm{em}}(z,t)=\varepsilon_0E^{2}(z,t)=\frac{B^{2}(z,t)}{\mu_0}.
+    }
+\end{equation*}
+
+\paragraph{Vecteur de Poynting.} On a $\vec{\Pi}=\vec{E}\wedge\frac{\vec{B}}{\mu_0}=\vec{E}\wedge\frac{\vec{u_z}\wedge\vec{E}}{\mu_0c}$. D'abord,
+\begin{equation*}
+    \vec{u_z}\wedge\vec{E}=\begin{pmatrix}
+        0\\0\\1
+    \end{pmatrix}\wedge\begin{pmatrix}
+        E_x\\E_y\\0
+    \end{pmatrix}=\begin{pmatrix}
+        -E_y\\E_x\\0
+    \end{pmatrix}
+\end{equation*}
+puis
+\begin{equation*}
+    \vec{E}\wedge(\vec{u_z}\wedge\vec{E})=\begin{pmatrix}
+        E_x\\E_y\\0
+    \end{pmatrix}\wedge\begin{pmatrix}
+        -E_y\\E_x\\0
+    \end{pmatrix}=\begin{pmatrix}
+        0\\0\\E_x^{2}+E_y^{2}
+    \end{pmatrix}.
+\end{equation*}
+Finalement,
+\begin{equation*}
+    \boxed{
+        \vec{\Pi}(z,t)=\frac{E^{2}(z,t)}{\mu_0c}\vec{u_z}=\varepsilon_0cE^{2}(z,t)\vec{u_z}.
+    }
+\end{equation*}
+
+\begin{remark}
+    \begin{itemize}
+        \item $\vec{\Pi}$ est selon $+\vec{u_z}$ donc l'énergie se propage selon $+\vec{u_z}$;
+        \item OPP ($+\vec{u_z}$) : $\vec{E}(z,t)=\vec{E}(z-ct)$ donc $u_{\mathrm{em}}(z,t)=u_{\mathrm{em}}(z-ct)$ et $\vec{\Pi}(z,t)=\vec{\Pi}(z-ct)$. La propagation de l'énergie est selon $+\vec{u_z}$ à la vitesse $c$.
+    \end{itemize}
+\end{remark}
+
+\subsubsection{Pour une OPPH}
+
+On suppose
+\begin{equation*}
+    \vec{E}(z,t)=\begin{pmatrix}
+        E_{0,x}\cos\left(\omega t-kz+\varphi_x\right)\\
+        E_{0,y}\cos\left(\omega t-kz+\varphi_y\right)\\
+        0
+    \end{pmatrix}.
+\end{equation*}
+Alors $E^{2}(z,t)=E_{0,x}^{2}\cos^{2}(\omega t-kz+\varphi_x)+E_{0,y}^{2}\cos^{2}(\omega t-kz+\varphi_y)$. Ainsi,
+\begin{equation*}
+    \boxed{
+        \left\langle u_{\mathrm{em}}(t)\right\rangle=\varepsilon_0\left\langle E^{2}(z,t)\right\rangle=\varepsilon_0\left(\frac{E_{0,x}^{2}}{2}+\frac{E_{0,y}^{2}}{2}\right)=\mathrm{constante},
+    }
+\end{equation*}
+ce qui confirme le caractère non physique de l'OPPH. De plus,
+\begin{equation*}
+    \boxed{
+        \left\langle\vec{\Pi}\right\rangle=\varepsilon_0c\left\langle E^{2}(z,t)\right\rangle\vec{u_z}=\frac{\varepsilon_0c}{2}\left(E_{0,x}^{2}+E_{0,y}^{2}\right)\vec{u_z}.
+    }
+\end{equation*}
+
+Notons qu'en notation complexe, on a $\left\langle E^{2}\right\rangle=\frac{1}{2}\ubar{\vec{E}}\cdot\ubar{\vec{E}}^{\star}$ où $\star$ est l'application conjuguée. On peut donc ré-écrire:
+\begin{equation*}
+    \boxed{
+        \begin{aligned}
+            \left\langle u_{\mathrm{em}}(t)\right\rangle &= \frac{\varepsilon_0}{2}\ubar{\vec{E}}\cdot\ubar{\vec{E}}^{\star},\\
+            \left\langle \vec{\Pi}\right\rangle &= \frac{\varepsilon_0c}{2}\ubar{\vec{E}}\cdot\ubar{\vec{E}}^{\star}\vec{u_z}.
+        \end{aligned}
+    }
+\end{equation*}
+
+\paragraph{Intensité lumineuse (ou éclairement).} Par définition, $I\coloneqq\varepsilon_0c\left\langle E^{2}\right\rangle$. Or pour une OPP, $\left\lVert\left\langle\vec{\Pi}\right\rangle\right\rVert=\varepsilon_0c\left\langle E^{2}\right\rangle$. Donc, pour une OPP, on a 
+\begin{equation*}
+    \boxed{
+        I=\left\lVert\left\langle\vec{\Pi}\right\rangle\right\rVert.
+    }
+\end{equation*}
+
+\subsection{Analyse d'une vibration rectiligne : loi de Malus}
+
+On suppose que l'on a le montage suivant : un LASER envoie une onde non polarisée (NP) d'intensité lumineuse $I_0$ suivant la direction $\vec{u_z}$, qui passe par un polariseur $P$ d'azimut $\vec{u_p}=\vec{u_x}$ (et devient donc PR parallèlement à $\vec{u_p}$ d'intensité $I_P$) puis par un analyseur $A$ dont l'azimut $\vec{u_A}$ fait un angle $\alpha$ avec $\vec{u_x}$ (et devient donc PR parallèlement à $\vec{u_A}$ d'intensité $I_A$), et arrive enfin à une photodiode.
+
+On se demande comment varie $I_A$ avec l'angle $\alpha$. Avant $P$, $\vec{E}=\begin{pmatrix}
+    E_x(t)\\E_y(t)\\0
+\end{pmatrix}$ est aléatoire. On a donc $I_0=\varepsilon_0c\left\langle E^{2}\right\rangle=\varepsilon_0c\left(\left\langle E_x^{2}+E_{y}^{2}\right\rangle\right)=2\varepsilon_0c\left\langle E_x^{2}\right\rangle$ d'après l'isotropie du champ. Entre $P$ et $A$, on a une OPPHPR selon $\vec{u_p}$ avec $\vec{u_p}=\vec{u_x}$, donc $I_p=\varepsilon_0c\left\langle E_p^{2}\right\rangle=\varepsilon_0c\left\langle E_x^{2}\right\rangle=\frac{I_0}{2}$. Après $A$, on a une OPPHPR selon $\vec{u_A}$, d'où $\vec{E}(t)=\left(\vec{E_p}(t)\cdot\vec{u_A}\right)\vec{u_A}=E_x(t)\cos(\alpha)\vec{u_A}$. Donc $I_A=\varepsilon_0c\left\langle E_A^2\right\rangle=\varepsilon_0c\cos^2(\alpha)\left\langle E_x^2\right\rangle=\cos^2(\alpha)I_p$. Finalement, on obtient la loi de Malus
+\begin{equation*}
+    I_A(\alpha)=I_P\cos^{2}(\alpha).
+\end{equation*}
+Sur un tour, il y a donc deux maxima entrecoupés par deux extinctions.
+
+\subsection{Vitesse de propagation de l'énergie}
+
+Pour une OPP de vecteur d'onde $\vec{k}=\frac{\omega}{c}\vec{u_z}$, on se demande quelle est la quantité d'énergie moyenne $\delta\left\langle \calE\right\rangle$ traversant une section $S$ pendant $\rmd t$. On suppose que $T\ll\rmd t\ll\Delta t_{\mathrm{macro}}$.
+
+D'abord, $\delta\left\langle\calE\right\rangle=\left\langle P_s\right\rangle\rmd t=\left\langle\vec{\Pi}\right\rangle\cdot\vec{n}S\rmd t=\left\lVert\left\langle\vec{\Pi}\right\rangle\right\rVert S\rmd t$. Par ailleurs, on a $\delta\left\langle\calE\right\rangle=\left\langle u_{\mathrm{em}}\right\rangle Sv_{\calE}\rmd t$ où $v_{\calE}$ est la vitesse de propagation de l'énergie. Ainsi,
+\begin{equation*}
+    \boxed{
+        v_\calE=\frac{\left\lVert\left\langle\vec{\Pi}\right\rangle\right\rVert}{\left\langle u_{\mathrm{em}}\right\rangle}=\frac{\varepsilon_0c\left\langle E^{2}\right\rangle}{\varepsilon_0\left\langle E^{2}\right\rangle}=c.
+    }
+\end{equation*}

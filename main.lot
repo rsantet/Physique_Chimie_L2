@@ -1,35 +1,20 @@
 \babel@toc {french}{}
-\contentsline {xpart}{Mécanique}{19}{part.5}%
+\contentsline {xpart}{Électromagnétisme}{15}{part.1}%
 \addvspace {10\p@ }
-\contentsline {xchapter}{Référentiels non galiléens}{19}{chapter.6}%
-\contentsline {table}{\numberline {1.1}{\ignorespaces Champs de marées dus au Soleil et à la Lune.}}{34}{table.112}%
+\contentsline {xchapter}{Le champ électromagnétique}{15}{chapter.1}%
 \addvspace {10\p@ }
-\contentsline {xchapter}{Frottement solide}{41}{chapter.156}%
-\contentsline {table}{\numberline {2.1}{\ignorespaces Ordre de grandeur du coefficient de frottement pour quelques matériaux.}}{46}{table.187}%
-\contentsline {table}{\numberline {2.2}{\ignorespaces Puissance des forces de frottements de glissement selon certains référentiels.}}{50}{table.214}%
-\contentsline {xpart}{Électromagnétisme}{53}{part.215}%
+\contentsline {xchapter}{Électrostatique}{33}{chapter.2}%
+\contentsline {table}{\numberline {2.1}{\ignorespaces Analogies entre électrostatique et gravitation universelle : les deux lois de force.}}{57}{table.2.1}%
+\contentsline {table}{\numberline {2.2}{\ignorespaces Analogies entre électrostatique et gravitation universelle : potentiel gravitationnel et énergie potentielle d'une masse plongée dans un champ extérieur.}}{58}{table.2.2}%
+\contentsline {table}{\numberline {2.3}{\ignorespaces Théorème de Gauss gravitationnel}}{58}{table.2.3}%
+\contentsline {table}{\numberline {2.4}{\ignorespaces Équations locales de la gravitation universelle}}{59}{table.2.4}%
 \addvspace {10\p@ }
-\contentsline {xchapter}{Le champ électromagnétique}{53}{chapter.216}%
+\contentsline {xchapter}{Magnétostatique}{61}{chapter.3}%
 \addvspace {10\p@ }
-\contentsline {xchapter}{Électrostatique}{71}{chapter.334}%
-\contentsline {table}{\numberline {4.1}{\ignorespaces Analogies entre électrostatique et gravitation universelle : les deux lois de force.}}{95}{table.482}%
-\contentsline {table}{\numberline {4.2}{\ignorespaces Analogies entre électrostatique et gravitation universelle : potentiel gravitationnel et énergie potentielle d'une masse plongée dans un champ extérieur.}}{96}{table.484}%
-\contentsline {table}{\numberline {4.3}{\ignorespaces Théorème de Gauss gravitationnel}}{96}{table.486}%
-\contentsline {table}{\numberline {4.4}{\ignorespaces Équations locales de la gravitation universelle}}{97}{table.488}%
+\contentsline {xchapter}{Dipôles statiques}{69}{chapter.4}%
 \addvspace {10\p@ }
-\contentsline {xchapter}{Magnétostatique}{99}{chapter.493}%
+\contentsline {xchapter}{Les équations de Maxwell}{79}{chapter.5}%
 \addvspace {10\p@ }
-\contentsline {xchapter}{Dipôles statiques}{107}{chapter.535}%
+\contentsline {xchapter}{Énergie électromagnétique}{87}{chapter.6}%
 \addvspace {10\p@ }
-\contentsline {xchapter}{Les équations de Maxwell}{117}{chapter.590}%
-\addvspace {10\p@ }
-\contentsline {xchapter}{Énergie électromagnétique}{125}{chapter.642}%
-\addvspace {10\p@ }
-\contentsline {xchapter}{Ondes dans le vide}{137}{chapter.717}%
-\contentsline {xpart}{Thermodynamique}{143}{part.735}%
-\addvspace {10\p@ }
-\contentsline {xchapter}{Systèmes ouverts}{143}{chapter.736}%
-\addvspace {10\p@ }
-\contentsline {xchapter}{Transferts thermiques}{161}{chapter.848}%
-\contentsline {table}{\numberline {11.1}{\ignorespaces Quelques valeurs de référence pour la conductivité thermique.}}{167}{table.879}%
-\contentsline {table}{\numberline {11.2}{\ignorespaces Analogie entre conduction thermique et électrique en régime permanent.}}{183}{table.991}%
+\contentsline {xchapter}{Ondes dans le vide}{99}{chapter.7}%

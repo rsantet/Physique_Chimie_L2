@@ -6,27 +6,27 @@ On se place dans un cas général (pas nécessairement un conducteur ohmique).
 
 L'idée est d'avoir une équation locale traduisant les échanges d'énergie champ/matière.
 On part de
-\begin{equation}
+\begin{equation*}
     \vec{j}\cdot\vec{E}=\vec{E}\cdot\left(
         \vecrot\left(\frac{\vec{B}}{\mu_0}\right)-\varepsilon_0\frac{\partial\vec{E}}{\partial t}
     \right).
-\end{equation}
+\end{equation*}
 On se donne la formule suivante:
-\begin{equation}
+\begin{equation*}
     \div\left(\vec{C}\wedge\vec{D}\right)=\vec{D}\cdot\vecrot\vec{C}-\vec{C}\cdot\vecrot\vec{D}.
-\end{equation}
+\end{equation*}
 On obtient alors
-\begin{equation}
+\begin{equation*}
     \vec{j}\cdot\vec{E}=\vec{E}\cdot\left(\vecrot\left(\frac{\vec{B}}{\mu_0}\right)-\varepsilon_0\frac{\partial\vec{E}}{\partial t}\right),
-\end{equation}
+\end{equation*}
 puis
-\begin{equation}
+\begin{equation*}
     \boxed{
         \frac{\partial}{\partial t}\left(
             \frac{\varepsilon_0 E^{2}}{2}+\frac{B^{2}}{2\mu_0}
         \right)+\div\left(\vec{E}\wedge\frac{\vec{B}}{\mu_0}\right)=-\vec{j}\cdot\vec{E}.
     }
-\end{equation}
+\end{equation*}
 
 \subsection{Densité volumique d'énergie électromagnétique et vecteur de Poynting}
 
@@ -37,33 +37,33 @@ On a le postulat suivant:
 Ainsi, l'énergie électromagnétique est localisée, non dans les sources [$\rho,\vec{j}$] ou dans la matière, mais dans le champ électromagnétique [$\vec{E},\vec{B}$].
 
 On définit la densité volumique d'énergie électromagnétique par 
-\begin{equation}
+\begin{equation*}
     \boxed{
         u_{\mathrm{em}}(\vec{r},t)\coloneqq\frac{\varepsilon_0 E^{2}(\vec{r},t)}{2}+\frac{B^{2}(\vec{r},t)}{2\mu_0}.
     }
-\end{equation}
+\end{equation*}
 Son unité est le $\si{\joule\per\metre\cubed}$.
 
 On définit le vecteur de Poynting, qui correspond au vecteur densité de courant d'énergie électromagnétique, par
-\begin{equation}
+\begin{equation*}
     \boxed{
         \vec{\Pi}(\vec{r},t)\coloneqq\vec{E}(\vec{r},t)\wedge\frac{\vec{B}(\vec{r},t)}{\mu_0}.
     }
-\end{equation}
+\end{equation*}
 Son unité est le $\si{\watt\per\metre\squared}$. Alors on a l'équation locale de conservation de l'énergie électromagnétique suivante:
-\begin{equation}
+\begin{equation*}
     \boxed{
         \frac{\partial u_{\mathrm{em}}}{\partial t}+\div\vec{\Pi}=-\vec{j}\cdot\vec{E}=-P_{\mathrm{vol}}.
     }
-\end{equation}
+\end{equation*}
 Du point de vue du champ électromagnétique, si $P_{\mathrm{vol}}>0$ (conducteur ohmique) alors c'est un terme \og puits\fg, et si $P_{\mathrm{vol}}<0$ (milieu amplificateur comme dans un LASER), alors c'est un terme \og source\fg.
 
 La puissance électromagnétique sortant d'une surface orientée $S$ est donnée par
-\begin{equation}
+\begin{equation*}
     \boxed{
         P_{S}^{\mathrm{em}}=\iint_{S}\vec{\Pi}\cdot\vec{n}\rmd S,
     }
-\end{equation}
+\end{equation*}
 
 \subsection{Ordres de grandeurs}
 \subsubsection{LASER Helium-Néon}
@@ -78,38 +78,38 @@ En mode \og passif\fg, on a $\left\langle\Pi\right\rangle\sim10\,\si{\milli\watt
 \subsection{Propagation unidimensionnelle dans un milieu absorbant. Loi de Beer-Lambert}
 
 On se place dans le cas de la Figure~\ref{fig:propagation_unidimensionnelle_milieu_absorbant}. On fait l'hypothèse que l'on a
-\begin{equation}
+\begin{equation*}
     \left\langle P_{\mathrm{vol}}(x)\right\rangle=\alpha\left\langle\left\lVert\vec{\Pi}\right\rVert\right\rangle(x),
-\end{equation}
+\end{equation*}
 avec $\alpha>0$. L'équation de Poynting donne alors
-\begin{equation}
+\begin{equation*}
     \left\langle\frac{\partial u_{\mathrm{em}}}{\partial t}\right\rangle+\frac{\partial\left\langle\Pi\right\rangle}{\partial x}=-\left\langle P_{\mathrm{vol}}\right\rangle.
-\end{equation}
+\end{equation*}
 
 Remarquons alors que pour une fonction $f$ $T$-périodique, on a
-\begin{equation}
+\begin{equation*}
     \left\langle\frac{\partial f^{2}}{\partial t}\right\rangle=\frac{1}{T}\int\frac{\partial f^{2}}{\partial t}\rmd t=\frac{1}{T}(f^{2}(t_0+T)-f^{2}(t_0))=0.
-\end{equation}
+\end{equation*}
 Ainsi, on obtient
-\begin{equation}
+\begin{equation*}
     \frac{\rmd\left\langle\Pi\right\rangle}{\rmd x}=-\alpha\left\langle\Pi\right\rangle,
-\end{equation}
+\end{equation*}
 car $\left\langle\frac{\partial u_{\mathrm{em}}}{\partial t}\right\rangle=0$ ($\vec{E}$ et $\vec{B}$ sont périodiques). Donc $\left\langle \Pi\right\rangle(x)=\left\langle\Pi\right\rangle_{0}\rme^{-\alpha x}$. On a alors 
-\begin{equation}
+\begin{equation*}
     \left\langle\Pi\right\rangle_{\mathrm{out}}=\left\langle\Pi\right\rangle_{\mathrm{in}}\rme^{-\alpha l},
-\end{equation}
+\end{equation*}
 et donc 
-\begin{equation}
+\begin{equation*}
     \ln\left(
         \frac{\left\langle\Pi\right\rangle_{\mathrm{in}}}{\left\langle\Pi\right\rangle_{\mathrm{out}}}
     \right)=\alpha l.
-\end{equation}
+\end{equation*}
 Le terme de gauche est appelée l'absorbance $A$, et $\alpha$ dépend de la longueur d'onde $\lambda$ de la lumière émise et du type de la solution, et on obtient la loi de Beer-Lambert:
-\begin{equation}
+\begin{equation*}
     \boxed{
         A(\lambda,\mathrm{sol},l)=\alpha(\lambda,\mathrm{sol})l.
     }
-\end{equation}
+\end{equation*}
 
 \begin{figure}
     \centering

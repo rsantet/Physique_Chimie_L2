@@ -62,11 +62,9 @@
 \def\centerarc[#1](#2)(#3:#4:#5){\draw[#1] ($(#2)+({#5*cos(#3)},{#5*sin(#3)})$) arc (#3:#4:#5);}
 % Syntax: [draw options] (center) (initial angle:final angle:radius)      
 
-% To remove e tex warning when loading auto num, see https://tex.stackexchange.com/questions/285950/package-autonum-needs-the-obsolete-etex-package
-\expandafter\def\csname ver@etex.sty\endcsname{3000/12/31}
 \let\globcount\newcount
 \usepackage[french]{minitoc}
-\usepackage{autonum}
+
 \usepackage{hyperref}
 \hypersetup{
     colorlinks=true,
@@ -90,6 +88,7 @@
 \newcommand{\bbN}{\mathbb{N}}
 \newcommand{\bbZ}{\mathbb{Z}}
 \newcommand{\calR}{\mathcal{R}}
+\newcommand{\calE}{\mathcal{E}}
 \newcommand{\calG}{\mathcal{G}}
 \newcommand{\ubar}[1]{\text{\b{$#1$}}}
 
@@ -120,12 +119,12 @@
 \listoftables
 
 % Première partie : mécanique
-\subimport{cours/}{mecanique.tex}
+%\subimport{cours/}{mecanique.tex}
 
 % Deuxième partie : Électromagnétisme
 \subimport{cours/}{electromagnetisme.tex}
 
 % Troisième partie : thermodynamique
-\subimport{cours/}{thermodynamique.tex}
+%\subimport{cours/}{thermodynamique.tex}
 
 \end{document}

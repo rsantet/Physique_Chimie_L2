@@ -5,15 +5,15 @@
         En L1, on voit que les lignes de champ de $\vec{B}$ s'enroulent autour des courants, et que $\vec{B}\times l\propto I$ si $I$ est l'intensité d'un courant le long d'un fil de longueur $l$ (par linéarité).
 
         On a le postulat suivant :
-        \begin{equation}
+        \begin{equation*}
             \boxed{
                 \oint_{C}\vec{B}\cdot\vec{\rmd l}=\mu_0 I_{\text{enl}},
             }
-        \end{equation}
+        \end{equation*}
         où $I_{\text{enl}}$ est l'intensité des fils \og enlacés\fg, voir la Figure~\ref{fig:intensite_fil_enlances_circulation_champ_magnetique}. Dans ce cas, on a 
-        \begin{equation}
+        \begin{equation*}
             I_{\text{enl}}=I_1-I_2-I_3.
-        \end{equation}
+        \end{equation*}
 
         \begin{figure}
             \centering
@@ -33,11 +33,11 @@
         \end{figure}
 
         Le postulat s'écrit aussi
-        \begin{equation}
+        \begin{equation*}
             \boxed{
                 \oint_{C}\vec{B}\cdot\vec{\rmd l}=\mu_{0}\iint_{\Sigma}\vec{j}\cdot\vec{N}\rmd\Sigma.
             }
-        \end{equation}
+        \end{equation*}
 
     \subsection{Quand et comment mettre en œuvre le théorème d'Ampère ?}
 
@@ -92,26 +92,26 @@
                 \item tout plan inclus dans $(Oz)$ est un PS : $B_r=B_z=0$.
             \end{itemize}
             Finalement, on a $\vec{B}(M)=B(r)\vec{u}_{\theta}$. Le théorème d'Ampère donne alors
-            \begin{equation}
+            \begin{equation*}
                 \oint_{C}\vec{B}\cdot\vec{\rmd l}=B(r)\times 2\pi r=\mu_0 I_{\text{enl}}(r).
-            \end{equation}
+            \end{equation*}
 
             Pour $r\geqslant a$, on a $I_{\text{enl}}(r\geqslant a)=I$, d'où 
-            \begin{equation}
+            \begin{equation*}
                 \boxed{
                     \vec{B}(r\geqslant a)=\frac{\mu_0 I}{2\pi r}\vec{u}_{\theta}.
                 }
-            \end{equation}
+            \end{equation*}
 
             Si $r\leqslant a$, on a 
-            \begin{equation}
+            \begin{equation*}
                 I_{\text{enl}}(r\leqslant a)=\iint_{\Sigma}\vec{j}\cdot\vec{N}\rmd\Sigma=\frac{I}{\pi a^{2}}\times\pi r^{2}=I\left(\frac{r}{a}\right)^{2},
-            \end{equation}
+            \end{equation*}
             d'où
-            \begin{equation}
+            \begin{equation*}
                 \boxed{
                 \vec{B}(r\leqslant a)=\frac{\mu_0 I}{2\pi a}\times\frac{r}{a}\vec{u}_{\theta}.}
-            \end{equation}
+            \end{equation*}
 
             En variante, on peut supposer que $I$ ne circule qu'à la surface du cylindre sur une épaisseur nulle. Alors $\vec{j}(r<a)=\vec{0}=\vec{j}(r>a)$, donc $\vec{B}(r<a)=\vec{0}$ et $\vec{B}(r>a)=\frac{\mu_0 I}{2\pi r}\vec{u}_{\theta}$.
 
@@ -141,28 +141,28 @@
             \end{figure}
 
             Il y a invariance de révolution selon l'ae $(Oz)$ et invariance par translation parallèlement à l'axe $(Oz)$, donc le champ ne dépend que de la variable $r$. Tout plan perpendiculaire à $(Oz)$ est un PS, donc 
-            \begin{equation}
+            \begin{equation*}
                 \boxed{
                     \vec{B}=B(r)\vec{u}_z.
                 }
-            \end{equation}
+            \end{equation*}
             Notons que si la longueur est finie, tout plan inclue dans $(Oz)$ est un PAS, donc $B_{\theta}=0$. Pour contour d'Ampère, on choisit un contour rectangulaire contenu dans un plan contenant l'axe $(Oz)$ dont un des côtés est sur l'axe. Alors
-            \begin{equation}
+            \begin{equation*}
                 \int_{\mathcal{C}}\vec{B}\cdot\vec{\rmd l}=\mu_{0}I_{\mathrm{enl}}(r)=B(0)\times h - B(r)\times h,
-            \end{equation}
+            \end{equation*}
             donc si $r<a$, $B(r<a)=B(0)=\mathrm{constante}$. Si $r>a$, $B(r>a)=0$ par hypothèse, donc $B(0)=\mu_0 n i$.
 
     \subsection{Ordres de grandeur}
 
         Pour un fil infini (ou une spire, à très faible distance), alors 
-        \begin{equation}
+        \begin{equation*}
             B\sim\frac{\mu_0 i}{2\pi a}.
-        \end{equation}
+        \end{equation*}
         Si $i=1\si{\ampere},a=2\si{\milli\metre},\mu_0=4\pi.10^{-7}\si{\henry\per\metre}$, alors $B\sim 10^{-4}\si{\tesla}=1\mathrm{gauss}$.
         S'il y a 10000 spires sur 20\si{\centi\metre}, alors 
-        \begin{equation}
+        \begin{equation*}
             B_{\mathrm{int}}=\mu_0 n i\sim 60\si{\milli\tesla}.
-        \end{equation}
+        \end{equation*}
 
         Pour augmenter la valeur du champ magnétique:
         \begin{itemize}
@@ -174,29 +174,29 @@
     \subsection[Équation de Maxwell--Ampère]{Théorème d'Ampère local :\\équation de Maxwell--Ampère}
 
         Si $\mathcal{C}$ est un contour orienté et $\Sigma$ est une surface supportée par $\mathcal{C}$ avec $\vec{N}$ un vecteur normal extérieur normalisé, alors d'après le théorème de Stokes, on a 
-        \begin{equation}
+        \begin{equation*}
             \int_{\mathcal{C}}\vec{B}\cdot\vec{\rmd l}=\mu_{0}I_{\mathrm{enl}}=\mu_{0}\iint_{\Sigma}\vec{j}\cdot\vec{N}\rmd\Sigma=\iint_{\Sigma}\left(\vec{\mathrm{rot}}\vec{B}\right)\cdot\vec{N}\rmd\Sigma.
-        \end{equation}
+        \end{equation*}
         Ainsi, on a 
-        \begin{equation}
+        \begin{equation*}
             \boxed{
                 \vec{\mathrm{rot}}\vec{B}(\vec{r})=\mu_{0}\vec{j}(\vec{r}).
             }
-        \end{equation}
+        \end{equation*}
 
     \subsection{Vue d'ensemble des lois de la magnétostatique}
 
         Pour le flux, on a l'équivalence intégrale/locale suivante :
-        \begin{equation}
+        \begin{equation*}
             \boxed{
                 \oiint_{S}\vec{B}\cdot\vec{n}^{\mathrm{ext}}\rmd S=0\Longleftrightarrow\mathrm{div}\vec{B}=0.
             }
-        \end{equation}
+        \end{equation*}
         Pour la circulation, on a l'équivalence suivante :
-        \begin{equation}
+        \begin{equation*}
             \boxed{
                 \oint_{\mathcal{C}}\vec{B}\cdot\vec{\rmd l}=\mu_{0}I_{\mathrm{enl}}\Longleftrightarrow\vec{\mathrm{rot}}\vec{B}=\mu_{0}\vec{j}.
             }
-        \end{equation}
+        \end{equation*}
 
         
