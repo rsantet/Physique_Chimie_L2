@@ -33,19 +33,19 @@
                     \node[text=blue] at (5.5,4.5) {\small Courbe de rosée};
                     \node[text=green] at (-1.75,4) {\small Courbe d'ébullition};
                     \draw[dashed,draw=red,text=red] (0,1) -- (4.5,1) node [below, midway] {$P_0=P_{\text{sat}}(T_{\text{eq}})$} node [above, midway] {(l)$\leftrightarrows$(g)};
-                    \draw [<-] (4.5,1) to (6,1.5) node [right,text width=3cm] {Première goutte de liquide};
-                    \draw [<-] (0.6,1) to (-1,-0.5) node [left,text width=3cm] {Première goutte bulle de vapeur};
+                    \draw [<-] (4.1,1) to (6,1.5) node [right,text width=3cm] {Première goutte de liquide};
+                    \draw [<-] (0.6,1) to (-1,-0.5) node [left,text width=3cm] {Première bulle de vapeur};
                 \end{tikzpicture}
                 \caption{Partition du plan $(\log P,h)$.}    
                 \label{fig:lecture_diagramme_log_p_h_fluide_pur}
             \end{figure}
 
             On donne la partition du plan $(\log P,h)$ à la Figure~\ref{fig:lecture_diagramme_log_p_h_fluide_pur}. La courbe d'ébullition jointe avec la courbe de rosée s'appelle la \textbf{courbe de saturation}. On note $x$ le titre massique vapeur : pour une masse $m$ de fluide donnée, on a 
-            \begin{equation}
+            \begin{equation*}
                 \boxed{
                     x\coloneqq\frac{m_{\text{gaz}}}{m},\qquad x_{l}=1-x.
                 }
-            \end{equation}
+            \end{equation*}
 
             Pour le calculer, on considère la situation de la Figure~\ref{fig:titre_vapeur_theoreme_moments_titre_massique_vapeur}.
             
@@ -83,22 +83,22 @@
             \end{figure}
 
             L'enthalpie $H$ de la masse $m$ représenté par le point $M$ est 
-            \begin{equation}
+            \begin{equation*}
                 H(T,m,x)= m_g h_g(T_{\text{eq}})+m_l h_l(T_{\text{eq}})=m\left[x h_g+(1-x)h_l\right],
-            \end{equation}
+            \end{equation*}
             en utilisant le fait que l'enthalpie est une fonction extensive. Ainsi,
-            \begin{equation}
+            \begin{equation*}
                 \boxed{
                     h(T_{\text{eq}},x)=h(P_0,x)=xh_g(P_0)+(1-x)h_l(P_0).
                 }
-            \end{equation}
+            \end{equation*}
 
             Ainsi, en $M$, on a 
-            \begin{equation}
+            \begin{equation*}
                 \boxed{
                     x=\frac{h-h_l}{h_g-h_l}=\frac{LM}{LG}.
                 }
-            \end{equation}
+            \end{equation*}
             C'est le \textbf{théorème des moments}. Les courbes isotitres sont représentées à la Figure~\ref{fig:titre_vapeur_theoreme_moments_titre_massique_vapeur_isotitres}.
             \begin{figure}
                 \centering
@@ -133,25 +133,25 @@
                 \begin{itemize}
                     \item horizontales dans la zone ($(l)\leftrightarrows (g)$);
                     \item environ verticales dans la zone (l), car
-                    \begin{equation}
+                    \begin{equation*}
                         \rmd h_l=c\rmd T,
-                    \end{equation}
+                    \end{equation*}
                     donc $h_l(T)$;
                     \item environ verticales à basse pression et pas trop près de la courbe de saturation car, dans ce cas, c'est environ un gaz parfait et la deuxième loi de Joule pour les gaz parfaits implique $h_g(T)$.
                 \end{itemize}
                 \item isochores : courbes croissantes (avec rupture de pente sur la courbe de rosée) \si[]{\metre\cubed\per\kilogram};
                 \item isentropiques : courbes croissantes sans rupture de pente \si[]{\kilo\joule\per\kilogram\per\kelvin}, environ verticales dans la zone (l) car 
-                \begin{equation}
+                \begin{equation*}
                     s_l=C_{p,m}\ln\left(\frac{T}{T_0}\right)+s_0.
-                \end{equation}
+                \end{equation*}
             \end{itemize}
 
         \subsubsection{Intérêt pour les écoulements permanents}
 
             Un fluide en écoulement permanent a une variation d'enthalpie massique égale à 
-            \begin{equation}
+            \begin{equation*}
                 \Delta h=\omega_i+q.
-            \end{equation}
+            \end{equation*}
             \begin{example}
                 Pour un compresseur isentropique, on a $\Delta h=\omega_i$ : la transition suit une courbe isenthalpique croissante car $\omega_i>0$.
             \end{example}
@@ -219,11 +219,11 @@
         \end{figure}
 
         On donne $P_1=P_4=0,2~\si[]{\bar}$, $P_2=P_3=10~\si[]{\bar}$, $T_3=340~\si[]{\celsius}$. L'eau est en écoulement permanent donc 
-        \begin{equation}
+        \begin{equation*}
             \Delta h+\Delta\left(\frac{v^{2}}{2}+gz\right)=\omega_i+q.
-        \end{equation}
+        \end{equation*}
         On a 
-        \begin{equation}
+        \begin{equation*}
             \begin{aligned}
                 \Delta h\sim& 100~\si[]{\kilo\joule\per\kg},\\
                 \Delta e_c=\frac{v^{2}}{2}-0\sim& 1000~\si[]{\kilo\joule\per\kg},\\
@@ -231,13 +231,13 @@
                 \Delta(gz)\sim& 10\Delta z,\\
                 \Delta z\sim&100~\si[]{\kilo\metre}.
             \end{aligned}
-        \end{equation}
+        \end{equation*}
         Ainsi, $\Delta e_c\ll\Delta h$ et $\Delta(gz)\ll\Delta h$. Ainsi,
-        \begin{equation}
+        \begin{equation*}
             \boxed{
                 \Delta h=\omega_i+q.
             }
-        \end{equation}
+        \end{equation*}
 
         \begin{itemize}
             \item Pompe : $\omega_p=h_2-h_1, s_2=s_1$;
@@ -247,33 +247,33 @@
         \end{itemize}
 
         Le rendement est donné par 
-        \begin{align}
+        \begin{align*}
             \eta
             &=
             \left\lvert\frac{\text{grandeur désirée}}{\text{grandeur coûteuse}}\right\rvert,\\
             &=\frac{-\omega_t-\omega_p}{q_c}.
-        \end{align}
+        \end{align*}
 
         On a typiquement
-        \begin{equation}
+        \begin{equation*}
             \begin{aligned}
                 \omega_p\sim&15~\si[]{\kilo\joule\per\kilogram},\\
                 q_c\sim&2800~\si[]{\kilo\joule\per\kilogram},\\
                 \omega_t\sim&-750\si[]{\kilo\joule\per\kilogram},\\
                 q_f\sim-2000~\si[]{\kilo\joule\per\kilogram}.
             \end{aligned}
-        \end{equation}
+        \end{equation*}
         Donc 
-        \begin{equation}
+        \begin{equation*}
             \boxed{
                 \eta\approx\frac{-\omega_t}{q_c}=\approx 0.26.
             }
-        \end{equation}
+        \end{equation*}
 
         Notons que pour un moteur de Carnot entre $T_1$ et $T_3$ ($60~\si[]{\celsius}$ et $340~\si[]{\celsius}$), on a (température en $\si[]{\kelvin}$)
-        \begin{equation}
+        \begin{equation*}
             \eta_c=1-\frac{T_f}{T_c}=0.46.
-        \end{equation}
+        \end{equation*}
 
     \subsection{Réfrigérateur à compresseur}
         
@@ -349,12 +349,12 @@
         \end{itemize}
 
         Le coefficient de performance est 
-        \begin{equation}
+        \begin{equation*}
             \text{COP}=\frac{q_f}{\omega_c}\approx3.5.
-        \end{equation}
+        \end{equation*}
 
         Le cycle de Carnot donne 
-        \begin{equation}
+        \begin{equation*}
             \text{COP}=\frac{T_f}{T_c-T_f}=5.6,
-        \end{equation}
+        \end{equation*}
         avec $T_c=25~\si[]{\celsius}$ et $T_f=T_1=-20~\si{\celsius}$.
