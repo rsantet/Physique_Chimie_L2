@@ -1,0 +1,84 @@
+\section[Modèle de la conductivité complexe]{Modèle de la conductivité complexe : plasmas et métaux}
+
+\subsection{Le modèle}
+
+\subsubsection{Hypothèse}
+\begin{itemize}
+    \item Les ions sont fixes: comme on a
+    \begin{equation*}
+        \begin{aligned}
+            M\frac{\rmd\vec{v^{+}}}{\rmd t}&=+\rme\vec{E},\\
+            m\frac{\rmd\vec{v^{-}}}{\rmd t}&=-\rme\vec{E},
+        \end{aligned}
+    \end{equation*}
+    d'où~$\frac{\left\lVert\vec{a^{-}}\right\rVert}{\left\lVert\vec{a^{+}}\right\rVert}=\frac{M}{m}\gg1$ : les cations sont fixes (plasmas et métaux).
+    \item Le milieu est supposé localement neutre :
+    \begin{equation*}
+        \boxed{
+            n^{-}=n^{+}=n_0.
+        }
+    \end{equation*}
+    \item Le mouvement des électrons est non relativiste : l'électron est soumis au champ électromagnétique~$[\vec{E},\vec{B}]$ d'une onde électromagnétique. La force de Lorentz est~$\vec{F_L}=-\rme(\vec{E}+\vec{v^{-}}\wedge\vec{B})$. Comme~$\frac{\left\lVert\vec{v^{-}}\wedge\vec{B}\right\rVert}{\left\lVert\vec{E}\right\rVert}\sim\frac{vB}{E}\sim\frac{v}{c}\ll1$ (le plasma est dilué, on a~$\frac{B}{E}\sim\frac{1}{c}$ : OPP dans le vide). Ainsi, l'influence de~$\vec{B}$ de l'onde est négligeable, et on retient donc
+    \begin{equation*}
+        \boxed{
+            \vec{F_L}=-\rme\vec{E}.
+        }
+    \end{equation*}
+    \item Processus collisionneles : il y a des phénnomènes dissipatifs (interactions électrons/cations et électrons/électrons dans les plasmas, électrons libres et défauts du réseau : les \og phonons\fg). On modèlise ces collisions par une force moyenne
+    \begin{equation*}
+        \boxed{
+            \vec{f}=-\frac{m\vec{v}}{\tau},
+        }
+    \end{equation*}
+    où~$\tau$ est le temps de collision. Dans les métaux, on observe~$\tau\sim10^{-14}\si{\second}$, et dans tous les cas, on a toujours~$\tau\gg T$ où~$T$ est la période des variations du champ électrique de l'onde.
+\end{itemize}
+
+\subsubsection{Conductivité complexe}
+On va établir le lien entre~$\vec{j}$ et~$\vec{E}$. On applique la principe fondamental de la dynamique à un électron~\og moyen\fg:
+\begin{equation*}
+    m\frac{\rmd\vec{v}}{\rmd t}=-\rme\vec{E}-\frac{m\vec{v}}{\tau}\longrightarrow \boxed{
+        \frac{\rmd\vec{v}}{\rmd t}+\frac{\vec{v}}{\tau}=-\frac{\rme\vec{E}}{m}.
+    }
+\end{equation*}
+On cherche alors la solution en régime sinusoïdal forcé imposé par l'onde électromagnétique. On adopte la concention~$\rme^{\rmi\omega t}$. On trouve alors
+\begin{equation*}
+    \boxed{
+        \ubar{\vec{v}}=-\frac{\frac{e\tau}{m}}{1+\rmi\omega\tau}\ubar{\vec{E}}.
+    }
+\end{equation*}
+On calcule~$\ubar{\vec{j}}=\underbrace{\vec{0}}_{\text{cations fixes}}+(-n_0\rme)\ubar{\vec{v}}=\ubar{\sigma_{\rm comp}}(\omega)\ubar{\vec{E}}$ avec
+\begin{equation*}
+    \boxed{
+        \ubar{\sigma_{\rm comp}}(\omega)=\frac{\sigma_0}{1+\rmi\omega\tau},\qquad \sigma_{0}=\frac{n_0 e^{2}\tau}{m}.
+    }
+\end{equation*}
+La quantité~$\sigma_0$ est la conductivité statique du milieu. Cette expression est valable pour les plasmas et les métaux pour toutes les pulsations~$\omega$.
+
+\subsection{Plasmas dilués et métaux hautes fréquences}
+
+On se place dans l'hypothèse~$\omega\tau\gg1$. Dans ce cas,
+\begin{equation*}
+    \ubar{\sigma_{\rm comp}}(\omega)\approx-\rmi\frac{\sigma_0}{\omega\tau}=\boxed{-\rmi\frac{n_0 e^{2}}{m\omega}}\in\rmi\bbR,
+\end{equation*}
+et est indépendante de~$\tau$. Ainsi, comme~$\left\langle P_{\rm vol}\right\rangle=\left\langle\vec{j}\cdot\vec{E}\right\rangle=\frac{1}{2}\Re(\ubar{\vec{j}}\ubar{\vec{E}^{*}})$ et~$\vec{j}=\sigma\vec{E}$, on a
+\begin{equation*}
+    \boxed{
+        \left\langle P_{\rm vol}\right\rangle=\frac{\left\lvert \vec{E}\right\rvert^{2}}{2}\Re(\ubar{\sigma})=0.
+    }
+\end{equation*}
+Ainsi, il n'y a aucun échange d'énergie en moyenne entre le champ et les charges.
+
+\subsection{Métaux en basses fréquences}
+On se place dans l'hypothèse~$\omega\tau\ll1$. Dans ce cas, on a
+\begin{equation*}
+    \boxed{
+        \sigma(\omega)\approx\sigma_0=\frac{n_0 e^{2}\tau}{m},
+    }
+\end{equation*}
+qui est une constante strictement positive. On retrouve alors la loi d'Ohm:
+\begin{equation*}
+    \boxed{
+        \vec{j}=\sigma_0\vec{E}.
+    }
+\end{equation*}
+La moyenne de la puissance volumique est alors~$\left\langle P_{\rm vol}\right\rangle=\sigma_0 E_0^{2}/2>0$ : c'est l'effet Joule. Pour le cuivre, on observe~$\sigma_{0}\sim 5.7\,10^{7}\si{\siemens\per\metre}$.
